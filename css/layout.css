@@ -249,14 +249,3 @@ body {
   border-left: 3px solid #ccc;
   padding-left: 10px;
 }
-
-.experience-card:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 10px;
-  height: 10px;
-  width: 10px;
-  background: #4CAF50; /* Change to your preferred color */
-  border-radius: 50%;
-}
