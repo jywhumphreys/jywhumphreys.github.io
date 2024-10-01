@@ -231,20 +231,31 @@ body {
 }
 
 .experience-card {
+    display: flex;
     margin-bottom: 20px;
     position: relative;
-    padding-left: 40px; /* Space for the bullet */
+    align-items: flex-start; /* Align items vertically */
 }
 
-.experience-card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px; /* Adjust vertical position */
-    width: 12px; /* Bullet size */
-    height: 12px; /* Bullet size */
-    background-color: green; /* Bullet color */
-    border-radius: 50%; /* Circular */
+.experience-image {
+    width: 60px; /* Adjust the width as needed */
+    height: 60px; /* Keep it square */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 5px; /* Optional: to make the image rounded */
+}
+
+.experience-content {
+    flex: 1; /* Allow text to take remaining space */
+}
+
+.experience-title-date {
+    display: flex;
+    justify-content: space-between; /* Space out title and date */
+}
+
+.experience-title {
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .experience-date {
@@ -252,22 +263,6 @@ body {
     color: #777; /* Gray color */
 }
 
-.experience-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
 .experience-description {
     margin-top: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .experience-card {
-        padding-left: 20px; /* Reduce padding for smaller screens */
-    }
-    .experience-card::before {
-        left: -10px; /* Adjust bullet position */
-    }
 }
