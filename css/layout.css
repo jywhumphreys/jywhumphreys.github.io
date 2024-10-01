@@ -246,8 +246,9 @@ body {
     flex: 1; /* Allow text to take remaining space */
 }
 
+
 .experience-title-date {
-    display: flex;
+    display: flex; /* Use flexbox */
     justify-content: space-between; /* Space out title and date */
     align-items: center; /* Center align vertically */
 }
@@ -255,13 +256,16 @@ body {
 .experience-title {
     font-size: 1.1em;
     font-weight: bold;
+    flex: 1; /* Allow title to take remaining space */
 }
 
 .experience-date {
     font-weight: bold;
     color: #777; /* Gray color */
     margin-left: 10px; /* Space between title and date */
+    white-space: nowrap; /* Prevent wrapping */
 }
+
 
 .experience-description {
     margin-top: 5px;
