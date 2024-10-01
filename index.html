@@ -1,224 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-
-    <!--
-      TODO
-
-      Upload your Unemployable (or whatever photo you like) to the assets/images folder
-      and change the name of the image below to match the uploaded one
-
-      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
-
-      This should be the same across all pages.
-     -->
+<head>
+    <meta charset="utf-8">
     <link rel="icon" href="./assets/images/1311.png" />
-		<title>Justin Humphreys</title>
+    <title>Justin Humphreys</title>
     <meta name="description" content="Justin's portfolio.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/typography.css">
     <link rel="stylesheet" href="./css/utilities.css">
 
-		<script defer src="./js/script.js"></script>
-	</head>
-	<body>
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
     <!-- NAVBAR -->
     <div class="navbar">
-      <a class="nav-title-link" href="./index.html">
-        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
-        <span class="nav-title">Portfolio</span>
-         <!-- TODO - Change the email after 'mailto:' to your email address for contact -->
-        <a class="button" href="mailto:jhumphreys@ucla.edu">
-          <span class="button-text">Contact Me</span>
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Portfolio</span>
+            <a class="button" href="mailto:jhumphreys@ucla.edu">
+                <span class="button-text">Contact Me</span>
+            </a>
         </a>
-      </a>
     </div>
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
 
-      <!-- PORTFOLIO HEADER -->
-      <div id="portfolio-header">
-        <div id="portfolio-header-image-container">
-          <!--
-            TODO
-
-            - Change the img "src" attribute to point to the Unemployable image you uploaded (or whatever image).
-            - Change the number to point to your Unemployable & replace the OpenSea link with your own
-            - If you aren't using an Unemployable as your image, remove the entire "a" element
-          -->
-          <img src="./assets/images/1311.png" class="portfolio-header-image">
+        <!-- PORTFOLIO HEADER -->
+        <div id="portfolio-header">
+            <div id="portfolio-header-image-container">
+                <img src="./assets/images/1311.png" class="portfolio-header-image">
+            </div>
+            <div id="portfolio-header-text-container">
+                <div class="header-text">
+                    <span class="main-title">Hi! I'm Justin.</span>
+                    <div class="body-text">
+                        I’m a junior at UCLA studying mechanical engineering, computational mathematics, and philosophy with a passion for tackling unique challenges and driving meaningful solutions.
+                    </div>
+                </div>
+                <a class="button" id="my-work-link">
+                    <span class="button-text">Check out my projects</span>
+                    <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
+                </a>
+            </div>
         </div>
 
-          <!--
-            TODO
-
-            - Change the main-title to whatver you want
-            - Change the body-text after that to a quick introduction to what you do
-            - Edit the button text if you feel like it. It will link to the projects section below.
-          -->
-        <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hi! I'm Justin.</span>
-              <div class="body-text">I’m a a junior at UCLA studying mechanical engineering, computational mathematics, and philosophy with a passion for tackling unique challenges and driving meaningful solutions.</div>
+        <!-- ABOUT SECTION -->
+        <div id="about-section">
+            <span class="subheader-text">My Background</span>
+            <div class="about-section-content">
+                <div class="body-text">With over 5 years of diverse engineering and leadership experience, I have honed my skills in design, testing, and project management through involvement in competitive student teams, personal projects, and professional roles.</div>
+                <div class="body-text">I am currently involved with UCLA’s Formula SAE team, where I lead the Controls subteam, and am also the Responsible Engineer for the Brakes & Pedalbox subsystem. Before university, I was heavily involved in the FIRST Robotics Competition, founding the first community team serving our area and leading the Electronics subteam.</div>
+                <div class="body-text">Beyond my technical pursuits, I am an Eagle Scout and enjoy working on automotive projects in my free time. I am always eager to expand my knowledge and take on new challenges.</div>
+                <div class="body-text">If you have any questions about my work or would like to get in contact with me, my email and socials are below. Thank you for visiting!</div>
             </div>
-            <a class="button" id="my-work-link">
-              <span class="button-text">Check out my projects</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
         </div>
-      </div>
 
-      <!-- ABOUT SECTION -->
-      <!--
-        TODO
+        <!-- EXPERIENCE SECTION -->
+        <div id="experience-section">
+            <span class="subheader-text">Experience</span>
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <div class="experience-date">August 2023 - Present</div>
+                    <div class="experience-title">Controls Lead, UCLA Formula SAE</div>
+                    <div class="experience-description">
+                        <div class="body-text">Leading the Controls subteam in designing and implementing the vehicle control systems. Responsible for the Brakes & Pedalbox subsystem.</div>
+                    </div>
+                </div>
 
-        - Change the subheader-text to whatever header you want
-        - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
-      -->
-      <div id="about-section">
-        <span class="subheader-text">My Background</span>
-        <div class="about-section-content">
-          <div class="body-text">With over 5 years of diverse engineering and leadership experience, I have honed my skills in design, testing, and project management through involvement in competitive student teams, personal projects, and professional roles.</div>
-          <div class="body-text">I am currently involved with UCLA’s Formula SAE team, where I lead the Controls subteam, and am also the Responsible Engineer for the Brakes & Pedalbox subsystem. Before university, I was heavily involved in the FIRST Robotics Competition, founding the first community team serving our area and leading the Electronics subteam.</div>
-           <div class="body-text">Beyond my technical pursuits, I am an Eagle Scout and enjoy working on automotive projects in my free time. I am always eager to expand my knowledge and take on new challenges.</div>
-           <div class="body-text">If you have any questions about my work or would like to get in contact with me, my email and socials are below. Thank you for visiting!</div>
+                <div class="experience-card">
+                    <div class="experience-date">June 2022 - August 2023</div>
+                    <div class="experience-title">Engineering Intern, XYZ Corp</div>
+                    <div class="experience-description">
+                        <div class="body-text">Assisted in the design and testing of mechanical components for various projects. Collaborated with cross-functional teams to optimize product designs.</div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-date">September 2021 - June 2022</div>
+                    <div class="experience-title">Team Lead, FIRST Robotics Community Team</div>
+                    <div class="experience-description">
+                        <div class="body-text">Founded and led a community robotics team, focusing on electronics and programming. Guided students in design and fabrication of competitive robots.</div>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-date">January 2020 - December 2020</div>
+                    <div class="experience-title">Summer Research Assistant, UCLA</div>
+                    <div class="experience-description">
+                        <div class="body-text">Conducted research in computational mathematics, focusing on optimization algorithms for engineering applications.</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-<!-- EXPERIENCE SECTION -->
-<div id="experience-section">
-  <span class="subheader-text">Experience</span>
-  <div class="experience-timeline">
-    <div class="experience-card">
-      <div class="experience-date">August 2023 - Present</div>
-      <div class="experience-title">Controls Lead, UCLA Formula SAE</div>
-      <div class="experience-description">
-        <div class="body-text">Leading the Controls subteam in designing and implementing the vehicle control systems. Responsible for the Brakes & Pedalbox subsystem.</div>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <div class="experience-date">June 2022 - August 2023</div>
-      <div class="experience-title">Engineering Intern, XYZ Corp</div>
-      <div class="experience-description">
-        <div class="body-text">Assisted in the design and testing of mechanical components for various projects. Collaborated with cross-functional teams to optimize product designs.</div>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <div class="experience-date">September 2021 - June 2022</div>
-      <div class="experience-title">Team Lead, FIRST Robotics Community Team</div>
-      <div class="experience-description">
-        <div class="body-text">Founded and led a community robotics team, focusing on electronics and programming. Guided students in design and fabrication of competitive robots.</div>
-      </div>
-    </div>
-
-    <div class="experience-card">
-      <div class="experience-date">January 2020 - December 2020</div>
-      <div class="experience-title">Summer Research Assistant, UCLA</div>
-      <div class="experience-description">
-        <div class="body-text">Conducted research in computational mathematics, focusing on optimization algorithms for engineering applications.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <!-- PROJECTS / MY WORK SECTION -->
-      <div id="my-work-section">
-        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
-        <span class="subheader-text">My Work / My Projects</span>
-
-        <div class="projects-container">
-          <!--
-            TODO
-
-            This is where the project cards live. Here's a base level project card for you to copy:
-            <div class="project-card">
-              <img src="./assets/images/IMAGE_NAME" class="project-image">
-              <div class="project-card-text-container">
-                <div class="subheader-text project-title">PROJECT_NAME</div>
-                <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
-              </div>
-              <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
-                <span class="button-text">Read More</span>
-                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-              </a>
+        <!-- PROJECTS / MY WORK SECTION -->
+        <div id="my-work-section">
+            <span class="subheader-text">My Work / My Projects</span>
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="./assets/images/desktop.jpeg" class="project-image" alt="Project Image">
+                    <div class="project-card-text-container">
+                        <div class="subheader-text project-title">Project Name</div>
+                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
+                    </div>
+                    <a class="button" href="./project-pages/project-template.html">
+                        <span class="button-text">Read More</span>
+                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
+                    </a>
+                </div>
+                <div class="project-card">
+                    <img src="./assets/images/code.jpeg" class="project-image" alt="Project Image">
+                    <div class="project-card-text-container">
+                        <div class="subheader-text project-title">Project Name</div>
+                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
+                    </div>
+                    <a class="button" href="./project-pages/project-template.html">
+                        <span class="button-text">Read More</span>
+                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
+                    </a>
+                </div>
+                <div class="project-card">
+                    <img src="./assets/images/sketchbook.jpeg" class="project-image" alt="Project Image">
+                    <div class="project-card-text-container">
+                        <div class="subheader-text project-title">Super Long Project Name That Should be Hidden</div>
+                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
+                    </div>
+                    <a class="button" href="./project-pages/project-template.html">
+                        <span class="button-text">Read More</span>
+                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
+                    </a>
+                </div>
             </div>
-
-            - To add a project to the this area, copy the above, paste it below this comment, and change the following:
-                - IMAGE_NAME: the name of the image file in assets/images
-                - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
-                - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
-                - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
-          -->
-          <div class="project-card">
-            <img src="./assets/images/desktop.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/code.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Project Name</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-          <div class="project-card">
-            <img src="./assets/images/sketchbook.jpeg" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Super Long Project Name That Should be Hidden</div>
-              <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- FOOTER -->
     <div id="footer">
-      <!--
-        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram)
-
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="./assets/icons/instagram.svg" class="footer-icon"/>
-      </a>
-      <!--
-        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter)
-
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
-        <image src="./assets/icons/twitter.svg" class="footer-icon"/>
-      </a>
-      <!--
-        TODO - Change the email after "mailto" to your contact email
-
-        This should be the same across all pages.
-      -->
-      <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon"/>
-      </a>
+        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
+            <img src="./assets/icons/instagram.svg" class="footer-icon" alt="Instagram Icon" />
+        </a>
+        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
+            <img src="./assets/icons/twitter.svg" class="footer-icon" alt="Twitter Icon" />
+        </a>
+        <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
+            <img src="./assets/icons/mail.svg" class="footer-icon" alt="Mail Icon" />
+        </a>
     </div>
-
-	</body>
+</body>
 </html>
