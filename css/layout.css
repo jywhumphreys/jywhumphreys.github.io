@@ -222,30 +222,52 @@ body {
 
 
 #experience-section {
-  margin: 50px 0;
+    margin: 40px 0;
 }
 
 .experience-timeline {
-  position: relative;
-  padding-left: 30px;
+    position: relative;
+    padding-left: 20px; /* Space for the timeline line */
 }
 
 .experience-card {
-  margin-bottom: 30px;
-  position: relative;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 40px; /* Space for the bullet */
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px; /* Adjust vertical position */
+    width: 12px; /* Bullet size */
+    height: 12px; /* Bullet size */
+    background-color: green; /* Bullet color */
+    border-radius: 50%; /* Circular */
 }
 
 .experience-date {
-  font-weight: bold;
-  margin-bottom: 5px;
+    font-weight: bold;
+    color: #777; /* Gray color */
 }
 
 .experience-title {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 5px 0;
 }
 
 .experience-description {
-  border-left: 3px solid #ccc;
-  padding-left: 10px;
+    margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .experience-card {
+        padding-left: 20px; /* Reduce padding for smaller screens */
+    }
+    .experience-card::before {
+        left: -10px; /* Adjust bullet position */
+    }
 }
