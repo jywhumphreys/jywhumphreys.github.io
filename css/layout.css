@@ -226,14 +226,12 @@ body {
 }
 
 .experience-timeline {
-    position: relative;
     padding-left: 20px; /* Space for the timeline line */
 }
 
 .experience-card {
     display: flex;
     margin-bottom: 20px;
-    position: relative;
     align-items: flex-start; /* Align items vertically */
 }
 
@@ -251,6 +249,7 @@ body {
 .experience-title-date {
     display: flex;
     justify-content: space-between; /* Space out title and date */
+    align-items: center; /* Center align vertically */
 }
 
 .experience-title {
@@ -261,6 +260,7 @@ body {
 .experience-date {
     font-weight: bold;
     color: #777; /* Gray color */
+    margin-left: 10px; /* Space between title and date */
 }
 
 .experience-description {
