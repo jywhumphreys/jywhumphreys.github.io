@@ -4,9 +4,6 @@
 
 html {
   text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
 }
 
 body {
@@ -15,28 +12,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
 /* Main Page Layout */
-
 #main-content {
-  margin: 225px 425px;
+  margin: 225px auto; /* Centered with automatic horizontal margins */
   display: flex;
   flex-direction: column;
   gap: 96px;
+  max-width: 1200px; /* Max width for larger screens */
 }
 
 .subheader-text {
-    font-size: 3em; /* Adjust the size as needed */
-    font-weight: bold; /* Optional: make it bold */
-    margin-bottom: 1em; /* Optional: add some space below */
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
-
-
 /* Portfolio Header */
-
 #portfolio-header {
   display: flex;
   gap: 20px;
@@ -44,12 +35,9 @@ body {
 }
 
 #portfolio-header-image-container {
+  flex: 1; /* Let the image container take available space */
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-basis: 50%;
   justify-content: center;
-  align-items: center;
 }
 
 .portfolio-header-image {
@@ -59,14 +47,13 @@ body {
 }
 
 #portfolio-header-text-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 34px;
-  flex-basis: 50%;
 }
 
 /* About Section */
-
 #about-section {
   display: flex;
   flex-direction: column;
@@ -79,11 +66,7 @@ body {
   gap: 34px;
 }
 
-
-
-
 /* Project Section */
-
 #my-work-section {
   display: flex;
   flex-direction: column;
@@ -96,33 +79,27 @@ body {
   flex-wrap: wrap;
 }
 
-    /* Project Cards */
+/* Project Cards */
+.project-card {
+  flex: 1 1 calc((100% - 32px) / 3); /* Responsive width */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-    .project-card {
-      max-width: calc((100% - 32px) / 3);
-      display: flex;
-      flex-direction: column;
-      gap: 34px;
-    }
+.project-card-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
-    .project-card-text-container {
-      flex-direction: column;
-      display: flex;
-      gap: 16px
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-
-
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
 
 /* Project Pages */
-
 #project-header {
   display: flex;
   flex-direction: column;
@@ -140,65 +117,53 @@ body {
   gap: 16px;
 }
 
-.project-details-content {
+/* Project Gallery */
+#project-gallery {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 16px;
 }
 
-    /* Project Gallery */
+.project-gallery-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px 16px;
+}
 
-    #project-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+.gallery-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-    .project-gallery-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 34px 16px;
-    }
+.gallery-image-container.half-width {
+  flex: 1 1 calc((100% - 16px) / 2);
+}
 
-    .gallery-image-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
 
-    .gallery-image-container.half-width {
-      width: calc((100% - 16px) / 2);
-    }
-
-    .gallery-image {
-      width: 100%;
-      height: auto;
-    }
-
-
-/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
+/* Media Queries */
 @media only screen and (max-width: 1600px) {
   #main-content {
     margin: 225px 275px;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and below) */
 @media only screen and (max-width: 1200px) {
   #main-content {
     margin: 225px 175px;
   }
 }
 
-/* Large devices (laptops/desktops, 1000px and below) */
 @media only screen and (max-width: 1000px) {
   #main-content {
     margin: 225px 75px;
   }
 }
 
-/* Small devices (portrait tablets and large phones, 800px and below) */
 @media only screen and (max-width: 800px) {
   #main-content {
     margin: 150px 50px;
@@ -209,70 +174,65 @@ body {
   }
 
   .project-card {
-    max-width: calc((100% - 16px) / 2);
+    flex: 1 1 calc((100% - 16px) / 2);
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and below) */
 @media only screen and (max-width: 600px) {
   #main-content {
     margin: 125px 20px;
   }
 
   .project-card {
-    max-width: 100%;
+    flex: 1 1 100%;
   }
 }
 
-
-
+/* Experience Section */
 #experience-section {
-    margin: 40px 0;
-    margin-top: 40px;
+  margin: 40px 0;
 }
 
 .experience-timeline {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .experience-card {
-    display: flex;
-    margin-bottom: 20px;
-    align-items: flex-start; /* Align items vertically */
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
 }
 
 .experience-image {
-    width: 60px; /* Adjust the width as needed */
-    height: 60px; /* Keep it square */
-    margin-right: 20px; /* Space between image and text */
-    border-radius: 5px; /* Optional: to make the image rounded */
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 5px;
 }
 
 .experience-content {
-    flex: 1; /* Allow text to take remaining space */
+  flex: 1;
 }
 
-
 .experience-title-date {
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Space out title and date */
-    align-items: center; /* Center align vertically */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .experience-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    flex: 1; /* Allow title to take remaining space */
+  font-size: 1.1em;
+  font-weight: bold;
+  flex: 1;
 }
 
 .experience-date {
-    font-weight: bold;
-    color: #777; /* Gray color */
-    margin-left: 10px; /* Space between title and date */
-    white-space: nowrap; /* Prevent wrapping */
+  font-weight: bold;
+  color: #777;
+  margin-left: 10px;
+  white-space: nowrap;
 }
 
-
 .experience-description {
-    margin-top: 5px;
+  margin-top: 5px;
 }

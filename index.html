@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="./assets/images/1311.png" />
-    <title>justin humphreys</title>
+    <title>Justin Humphreys</title>
     <meta name="description" content="Justin's portfolio.">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -14,240 +14,96 @@
     <script defer src="./js/script.js"></script>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <div class="navbar">
+    <!-- HEADER -->
+    <header class="navbar">
         <a class="nav-title-link" href="./index.html">
-            <span class="nav-title">justin humphreys</span>
-            <a class="button" href="mailto:jhumphreys@ucla.edu">
-                <span class="button-text">contact me</span>
-            </a>
+            <span class="nav-title">Justin Humphreys</span>
         </a>
-    </div>
+        <a class="button" href="mailto:jhumphreys@ucla.edu">
+            <span class="button-text">Contact Me</span>
+        </a>
+    </header>
 
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
 
         <!-- PORTFOLIO HEADER -->
-        <div id="portfolio-header">
+        <section id="portfolio-header">
             <div id="portfolio-header-image-container">
-                <img src="./assets/images/headshot.jpg" class="portfolio-header-image">
+                <img src="./assets/images/headshot.jpg" class="portfolio-header-image" alt="Justin's Headshot">
             </div>
             <div id="portfolio-header-text-container">
-                <div class="header-text">
-                    <span class="main-title">Hi! I'm Justin.</span>
-                    <div class="body-text">
-                        I’m a junior at UCLA studying mechanical engineering, computational mathematics, and philosophy with a passion for tackling unique challenges and driving meaningful solutions.
-                    </div>
-                </div>
+                <h1 class="main-title">Hi! I'm Justin.</h1>
+                <p class="body-text">I’m a junior at UCLA studying mechanical engineering, computational mathematics, and philosophy with a passion for tackling unique challenges and driving meaningful solutions.</p>
                 <a class="button" id="my-work-link">
-                    <span class="button-text">Check out my projects</span>
+                    <span class="button-text">Check Out My Projects</span>
                     <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
                 </a>
             </div>
-        </div>
+        </section>
 
         <!-- ABOUT SECTION -->
-        <div id="about-section">
+        <section id="about-section">
             <h2 class="section-title">My Background</h2>
             <div class="about-section-content">
-                <div class="body-text">With over 5 years of diverse engineering and leadership experience, I have honed my skills in design, testing, and project management through involvement in competitive student teams, personal projects, and professional roles.</div>
-                <div class="body-text">I am currently involved with UCLA’s Formula SAE team, where I lead the Controls subteam, and am also the Responsible Engineer for the Brakes & Pedalbox subsystem. Before university, I was heavily involved in the FIRST Robotics Competition, founding the first community team serving our area and leading the Electronics subteam.</div>
-                <div class="body-text">Beyond my technical pursuits, I am an Eagle Scout and enjoy working on automotive projects in my free time. I am always eager to expand my knowledge and take on new challenges.</div>
-                <div class="body-text">If you have any questions about my work or would like to get in contact with me, my email and socials are below. Thank you for visiting!</div>
+                <p class="body-text">With over 5 years of diverse engineering and leadership experience, I have honed my skills in design, testing, and project management through involvement in competitive student teams, personal projects, and professional roles.</p>
+                <p class="body-text">I am currently involved with UCLA’s Formula SAE team, where I lead the Controls subteam, and am also the Responsible Engineer for the Brakes & Pedalbox subsystem. Before university, I was heavily involved in the FIRST Robotics Competition, founding the first community team serving our area and leading the Electronics subteam.</p>
+                <p class="body-text">Beyond my technical pursuits, I am an Eagle Scout and enjoy working on automotive projects in my free time. I am always eager to expand my knowledge and take on new challenges.</p>
+                <p class="body-text">If you have any questions about my work or would like to get in contact with me, my email and socials are below. Thank you for visiting!</p>
             </div>
-        </div>
+        </section>
 
         <!-- EXPERIENCE SECTION -->
-        <div id="experience-section">
-          <h2 class="section-title">Experience</h2>
-          <div class="experience-timeline">
-            <div class="experience-card">
-              <img src="./assets/images/bfr.png" alt="Bruin Formula Racing" class="experience-image">
-              <div class="experience-content">
-                <div class="experience-title-date">
-                  <div class="experience-title">Software Lead, Bruin Formula Racing</div>
-                  <div class="experience-date">June 2024 - Present</div>
+        <section id="experience-section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <!-- Repeat this block for each experience card -->
+                <div class="experience-card">
+                    <img src="./assets/images/bfr.png" alt="Bruin Formula Racing" class="experience-image">
+                    <div class="experience-content">
+                        <div class="experience-title-date">
+                            <div class="experience-title">Software Lead, Bruin Formula Racing</div>
+                            <div class="experience-date">June 2024 - Present</div>
+                        </div>
+                        <p class="experience-description body-text">Leading the software subteam in designing and implementing the vehicle control systems. Responsible for the Brakes & Pedalbox subsystem.</p>
+                    </div>
                 </div>
-                <div class="experience-description body-text">
-                  Leading the software subteam in designing and implementing the vehicle control systems. Responsible for the Brakes & Pedalbox subsystem.
-                </div>
-              </div>
+                <!-- Add more experience cards here -->
             </div>
+        </section>
 
-            <div class="experience-card">
-              <img src="./assets/images/spacex.jpg" alt="SpaceX" class="experience-image">
-              <div class="experience-content">
-                <div class="experience-title-date">
-                  <div class="experience-title">Hardware Reliability Engineering Intern, SpaceX</div>
-                  <div class="experience-date">June 2024 - September 2024</div>
-                </div>
-                <div class="experience-description body-text">
-                  Assisted in the design and testing of mechanical components for various projects. Collaborated with cross-functional teams to optimize product designs.
-                </div>
-              </div>
-            </div>
-
-            <div class="experience-card">
-              <img src="./assets/images/bfr.png" alt="Bruin Formula Racing" class="experience-image">
-              <div class="experience-content">
-                <div class="experience-title-date">
-                  <div class="experience-title">Controls Lead + Brakes & Pedalbox Responsible Engineer, Bruin Formula Racing</div>
-                  <div class="experience-date">May 2023 - June 2024</div>
-                </div>
-                <div class="experience-description body-text">
-                  Assisted in the design and testing of mechanical components for various projects. Collaborated with cross-functional teams to optimize product designs.
-                </div>
-              </div>
-            </div>
-
-            <div class="experience-card">
-              <img src="./assets/images/bfr.png" alt="Bruin Formula Racing" class="experience-image">
-              <div class="experience-content">
-                <div class="experience-title-date">
-                  <div class="experience-title">Controls + Powertrain General Member, Bruin Formula Racing</div>
-                  <div class="experience-date">September 2022 - May 2023</div>
-                </div>
-                <div class="experience-description body-text">
-                  Assisted in the design and testing of mechanical components for various projects. Collaborated with cross-functional teams to optimize product designs.
-                </div>
-              </div>
-            </div>
-
-            <div class="experience-card">
-              <img src="./assets/images/robotics.jpg" alt="FIRST Robotics" class="experience-image">
-              <div class="experience-content">
-                <div class="experience-title-date">
-                  <div class="experience-title">Electronics Lead, FIRST Robotics Community Team</div>
-                  <div class="experience-date">August 2018 - September 2022</div>
-                </div>
-                <div class="experience-description body-text">
-                  Founded and led a community robotics team, focusing on electronics and programming. Guided students in design and fabrication of competitive robots.
-                </div>
-              </div>
-            </div>
-
-            <div class="experience-card">
-              <img src="./assets/images/oreilly.jpg" alt="O'Reilly Auto Parts" class="experience-image">
-              <div class="experience-content">
-                <div class="experience-title-date">
-                  <div class="experience-title">Parts Specialist, O'Reilly Auto Parts</div>
-                  <div class="experience-date">January 2020 - December 2020</div>
-                </div>
-                <div class="experience-description body-text">
-                  Conducted research in computational mathematics, focusing on optimization algorithms for engineering applications.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- PROJECTS / MY WORK SECTION -->
-        <div id="my-work-section">
+        <!-- PROJECTS SECTION -->
+        <section id="my-work-section">
             <h2 class="section-title">Projects</h2>
             <div class="projects-container">
-
+                <!-- Repeat this block for each project card -->
                 <div class="project-card">
-                    <img src="./assets/images/weather.webp" class="project-image" alt="Project Image">
+                    <img src="./assets/images/weather.webp" class="project-image" alt="SpaceX Ingress Protection Test Chambers">
                     <div class="project-card-text-container">
-                        <div class="subheader-text project-title">SpaceX: Ingress Protection Test Chambers</div>
-                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
+                        <h3 class="subheader-text project-title">SpaceX: Ingress Protection Test Chambers</h3>
+                        <p class="body-text project-card-text">Description of the project...</p>
                     </div>
                     <a class="button" href="./project-pages/spray-chamber.html">
                         <span class="button-text">Read More</span>
                         <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
                     </a>
                 </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/car.png" class="project-image" alt="Project Image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Formula SAE: Bruin Formula Racing</div>
-                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
-                    </div>
-                    <a class="button" href="./project-pages/formula.html">
-                        <span class="button-text">Read More</span>
-                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/robot.png" class="project-image" alt="Project Image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">First Robotics Competition: Team 7461</div>
-                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
-                    </div>
-                    <a class="button" href="./project-pages/robotics.html">
-                        <span class="button-text">Read More</span>
-                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/miata.jpg" class="project-image" alt="Project Image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Project Car: 1991 Mazda Miata</div>
-                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
-                    </div>
-                    <a class="button" href="./project-pages/miata.html">
-                        <span class="button-text">Read More</span>
-                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
-                    </a>
-                </div>
-
-
-
-                <div class="project-card">
-                    <img src="./assets/images/os.png" class="project-image" alt="Project Image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Windows/Linux/macOS Triple Boot (on a PC!)</div>
-                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
-                    </div>
-                    <a class="button" href="./project-pages/triple-boot.html">
-                        <span class="button-text">Read More</span>
-                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/bob.png" class="project-image" alt="Project Image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">BruinsOnBoard</div>
-                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
-                    </div>
-                    <a class="button" href="./project-pages/bruinsonboard.html">
-                        <span class="button-text">Read More</span>
-                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/code.jpeg" class="project-image" alt="Project Image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Eagle Scout Project</div>
-                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
-                    </div>
-                    <a class="button" href="./project-pages/eagle-project.html">
-                        <span class="button-text">Read More</span>
-                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
-                    </a>
-                </div>
-
+                <!-- Add more project cards here -->
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <div id="footer">
-        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
+    <footer id="footer">
+        <a class="icon-link" target="_blank" href="https://instagram.com/yourprofile">
             <img src="./assets/icons/instagram.svg" class="footer-icon" alt="Instagram Icon" />
         </a>
-        <a class="icon-link" target="_blank" href="https://twitter.com/whitevans_eth">
+        <a class="icon-link" target="_blank" href="https://twitter.com/yourprofile">
             <img src="./assets/icons/twitter.svg" class="footer-icon" alt="Twitter Icon" />
         </a>
         <a class="icon-link" href="mailto:whitevans.eth@gmail.com">
             <img src="./assets/icons/mail.svg" class="footer-icon" alt="Mail Icon" />
         </a>
-    </div>
+    </footer>
 </body>
 </html>
