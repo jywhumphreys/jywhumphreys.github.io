@@ -59,12 +59,6 @@ body {
   flex-basis: 50%;
 }
 
-.body-text {
-    font-size: 18px; /* Increase this value as needed */
-    line-height: 1.5; /* Adjust line height for better readability */
-}
-
-
 /* About Section */
 
 #about-section {
@@ -228,10 +222,11 @@ body {
 
 #experience-section {
     margin: 40px 0;
+    margin-top: 40px;
 }
 
 .experience-timeline {
-    padding-left: 20px; /* Space for the timeline line */
+    margin-top: 20px;
 }
 
 .experience-card {
