@@ -12,6 +12,33 @@
     <link rel="stylesheet" href="../css/utilities.css">
 
 		<script defer src="../js/script.js"></script>
+    <style>
+      .project-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .text-content {
+        width: 60%;
+      }
+      .image-gallery {
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+      }
+      .image-container {
+        margin-bottom: 20px;
+      }
+      .project-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+      }
+      .image-caption {
+        font-style: italic;
+        font-size: 0.9em;
+      }
+    </style>
 	</head>
 	<body>
     <!-- NAVBAR -->
@@ -30,14 +57,14 @@
       <!-- PROJECT HEADER -->
       <div id="project-header">
         <div class="main-title">Custom Multi-Boot System</div>
-        <div class="body-text">After taking a software construction class that covered Unix file system organization and shell scripting, I was inspired to install Linux, and then went even further and installed macOS on unsupported hardware. The whole project took a couple months of research, troubleshooting, and configuration before I finally got it working.</div>
-        <image class="project-header-image" src="../assets/images/multi-boot-system.jpg">
       </div>
 
       <!-- PROJECT DETAILS -->
-      <div id="project-details">
-        <div class="subheader-text">Steps taken:</div>
-        <div class="project-details-content">
+      <div class="project-content">
+        <div class="text-content">
+          <div class="body-text">After taking a software construction class that covered Unix file system organization and shell scripting, I was inspired to install Linux, and then went even further and installed macOS on unsupported hardware. The whole project took a couple months of research, troubleshooting, and configuration before I finally got it working.</div>
+
+          <div class="subheader-text">Steps taken:</div>
           <ul class="project-list">
             <li>Partitioned NVMe SSD into dedicated partitions for each OS (NTFS, ext4, APFS) and an EFI System Partition</li>
             <li>Installed Windows 11 on the NTFS partition, ensuring the creation of the ESP</li>
@@ -66,6 +93,29 @@
               </ul>
             </li>
           </ul>
+        </div>
+
+        <div class="image-gallery">
+          <div class="image-container">
+            <img src="../assets/images/opencore-bootloader.jpg" alt="OpenCore bootloader" class="project-image">
+            <div class="image-caption">OpenCore bootloader</div>
+          </div>
+          <div class="image-container">
+            <img src="../assets/images/disk-partitions.png" alt="Disk partitions" class="project-image">
+            <div class="image-caption">Disk partitions</div>
+          </div>
+          <div class="image-container">
+            <img src="../assets/images/macos-amd-hardware.png" alt="macOS running on AMD hardware" class="project-image">
+            <div class="image-caption">macOS running on AMD hardware</div>
+          </div>
+          <div class="image-container">
+            <img src="../assets/images/customized-arch-linux.png" alt="Customized Arch Linux setup" class="project-image">
+            <div class="image-caption">Customized Arch Linux setup</div>
+          </div>
+          <div class="image-container">
+            <img src="../assets/images/customized-emacs-linux.png" alt="Customized Emacs setup in Linux" class="project-image">
+            <div class="image-caption">Customized Emacs setup in Linux</div>
+          </div>
         </div>
       </div>
 
