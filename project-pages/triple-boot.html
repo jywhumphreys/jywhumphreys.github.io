@@ -24,9 +24,11 @@
       .image-gallery {
         width: 35%;
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
       .image-container {
+        width: 48%;
         margin-bottom: 20px;
       }
       .project-image {
@@ -37,6 +39,7 @@
       .image-caption {
         font-style: italic;
         font-size: 0.9em;
+        text-align: center;
       }
     </style>
 	</head>
@@ -101,19 +104,23 @@
             <div class="image-caption">OpenCore bootloader</div>
           </div>
           <div class="image-container">
-            <img src="../assets/images/disk-partitions.png" alt="Disk partitions" class="project-image">
+            <img src="../assets/images/disk-partitions.jpg" alt="Disk partitions" class="project-image">
             <div class="image-caption">Disk partitions</div>
           </div>
           <div class="image-container">
-            <img src="../assets/images/macos-amd-hardware.png" alt="macOS running on AMD hardware" class="project-image">
+            <img src="../assets/images/macos-amd-hardware.jpg" alt="macOS running on AMD hardware" class="project-image">
             <div class="image-caption">macOS running on AMD hardware</div>
           </div>
           <div class="image-container">
-            <img src="../assets/images/customized-arch-linux.png" alt="Customized Arch Linux setup" class="project-image">
+            <img src="../assets/images/amd-power-gadget.png" alt="AMD Power Gadget" class="project-image">
+            <div class="image-caption">AMD Power Gadget</div>
+          </div>
+          <div class="image-container">
+            <img src="../assets/images/customized-arch-linux.jpg" alt="Customized Arch Linux setup" class="project-image">
             <div class="image-caption">Customized Arch Linux setup</div>
           </div>
           <div class="image-container">
-            <img src="../assets/images/customized-emacs-linux.png" alt="Customized Emacs setup in Linux" class="project-image">
+            <img src="../assets/images/customized-emacs-linux.jpg" alt="Customized Emacs setup in Linux" class="project-image">
             <div class="image-caption">Customized Emacs setup in Linux</div>
           </div>
         </div>
