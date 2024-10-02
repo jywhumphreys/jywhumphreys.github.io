@@ -1,132 +1,140 @@
+/* Global Styles */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   text-size-adjust: none;
   -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  -ms-text-size-adjust: none;
 }
 
 body {
   margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
 /* Main Page Layout */
-
 #main-content {
-  margin: 225px 425px;
+  margin: 150px auto;
+  max-width: 1200px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 96px;
+  gap: 64px;
 }
 
 .subheader-text {
-    font-size: 3em; /* Adjust the size as needed */
-    font-weight: bold; /* Optional: make it bold */
-    margin-bottom: 1em; /* Optional: add some space below */
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+  text-align: center;
+  color: #444;
 }
 
-
-
 /* Portfolio Header */
-
 #portfolio-header {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 30px;
   align-items: center;
 }
 
 #portfolio-header-image-container {
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-basis: 50%;
   justify-content: center;
   align-items: center;
 }
 
 .portfolio-header-image {
-  width: 50%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-header-image:hover {
+  transform: scale(1.05);
 }
 
 #portfolio-header-text-container {
+  flex: 2;
   display: flex;
   flex-direction: column;
-  gap: 34px;
-  flex-basis: 50%;
+  gap: 20px;
+  justify-content: center;
 }
 
 /* About Section */
-
 #about-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
 .about-section-content {
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 24px;
 }
 
-
-
-
 /* Project Section */
-
 #my-work-section {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 }
 
 .projects-container {
   display: flex;
-  gap: 34px 16px;
   flex-wrap: wrap;
+  gap: 16px;
 }
 
-    /* Project Cards */
-
-    .project-card {
-      max-width: calc((100% - 32px) / 3);
-      display: flex;
-      flex-direction: column;
-      gap: 34px;
-    }
-
-    .project-card-text-container {
-      flex-direction: column;
-      display: flex;
-      gap: 16px
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-
-
-
-/* Project Pages */
-
-#project-header {
+.project-card {
+  flex: 1 1 calc(33.333% - 16px);
   display: flex;
   flex-direction: column;
   gap: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.project-card-text-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Project Pages */
+#project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .project-header-image {
@@ -137,142 +145,114 @@ body {
 #project-details {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+}
+
+/* Project Gallery */
+#project-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-gallery-content {
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
-.project-details-content {
+.gallery-image-container {
+  flex: 1 1 calc(50% - 16px);
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 10px;
 }
 
-    /* Project Gallery */
-
-    #project-gallery {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .project-gallery-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 34px 16px;
-    }
-
-    .gallery-image-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .gallery-image-container.half-width {
-      width: calc((100% - 16px) / 2);
-    }
-
-    .gallery-image {
-      width: 100%;
-      height: auto;
-    }
-
-
-/* Extra Extra large devices (large laptops and desktops, 1200px and below) */
-@media only screen and (max-width: 1600px) {
-  #main-content {
-    margin: 225px 275px;
-  }
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and below) */
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Experience Section */
+#experience-section {
+  margin: 50px 0;
+}
+
+.experience-timeline {
+  margin-top: 30px;
+}
+
+.experience-card {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.experience-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.experience-content {
+  flex: 1;
+}
+
+.experience-title-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.experience-date {
+  font-weight: bold;
+  color: #777;
+}
+
+/* Media Queries for Responsiveness */
 @media only screen and (max-width: 1200px) {
   #main-content {
-    margin: 225px 175px;
+    margin: 100px 50px;
   }
 }
 
-/* Large devices (laptops/desktops, 1000px and below) */
 @media only screen and (max-width: 1000px) {
   #main-content {
-    margin: 225px 75px;
+    margin: 100px 30px;
   }
-}
 
-/* Small devices (portrait tablets and large phones, 800px and below) */
-@media only screen and (max-width: 800px) {
-  #main-content {
-    margin: 150px 50px;
+  .project-card {
+    flex: 1 1 calc(50% - 16px);
   }
 
   #portfolio-header {
     flex-direction: column;
   }
-
-  .project-card {
-    max-width: calc((100% - 16px) / 2);
-  }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and below) */
 @media only screen and (max-width: 600px) {
   #main-content {
-    margin: 125px 20px;
+    margin: 80px 20px;
   }
 
   .project-card {
-    max-width: 100%;
+    flex: 1 1 100%;
   }
-}
 
-
-
-#experience-section {
-    margin: 40px 0;
-    margin-top: 40px;
-}
-
-.experience-timeline {
-    margin-top: 20px;
-}
-
-.experience-card {
-    display: flex;
-    margin-bottom: 20px;
-    align-items: flex-start; /* Align items vertically */
-}
-
-.experience-image {
-    width: 60px; /* Adjust the width as needed */
-    height: 60px; /* Keep it square */
-    margin-right: 20px; /* Space between image and text */
-    border-radius: 5px; /* Optional: to make the image rounded */
-}
-
-.experience-content {
-    flex: 1; /* Allow text to take remaining space */
-}
-
-
-.experience-title-date {
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Space out title and date */
-    align-items: center; /* Center align vertically */
-}
-
-.experience-title {
-    font-size: 1.1em;
-    font-weight: bold;
-    flex: 1; /* Allow title to take remaining space */
-}
-
-.experience-date {
-    font-weight: bold;
-    color: #777; /* Gray color */
-    margin-left: 10px; /* Space between title and date */
-    white-space: nowrap; /* Prevent wrapping */
-}
-
-
-.experience-description {
-    margin-top: 5px;
+  .gallery-image-container {
+    flex: 1 1 100%;
+  }
 }
