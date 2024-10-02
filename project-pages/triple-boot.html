@@ -15,31 +15,44 @@
     <style>
       .project-content {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
       }
       .text-content {
-        width: 60%;
+        width: 100%;
+        margin-bottom: 30px;
       }
       .image-gallery {
-        width: 35%;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
       }
       .image-container {
         width: 48%;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
       .project-image {
         width: 100%;
         height: auto;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
       .image-caption {
         font-style: italic;
         font-size: 0.9em;
         text-align: center;
+      }
+      .main-title {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      .body-text, .project-list {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .subheader-text {
+        font-size: 1.5em;
+        margin-top: 30px;
+        margin-bottom: 15px;
       }
     </style>
 	</head>
@@ -104,7 +117,7 @@
             <div class="image-caption">OpenCore bootloader</div>
           </div>
           <div class="image-container">
-            <img src="../assets/images/disk-partitions.jpg" alt="Disk partitions" class="project-image">
+            <img src="../assets/images/disk-partitions.png" alt="Disk partitions" class="project-image">
             <div class="image-caption">Disk partitions</div>
           </div>
           <div class="image-container">
