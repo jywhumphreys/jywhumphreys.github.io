@@ -1,238 +1,202 @@
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/images/1311.png" />
+    <title>Justin Humphreys</title>
+    <meta name="description" content="Justin's portfolio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-html {
-  text-size-adjust: none;
-}
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/utilities.css">
 
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <a class="nav-title-link" href="./index.html">
+            <span class="nav-title">Justin Humphreys</span>
+            <a class="button" href="mailto:jhumphreys@ucla.edu">
+                <span class="button-text">Contact Me</span>
+            </a>
+        </a>
+    </div>
 
-/* Main Page Layout */
-#main-content {
-  margin: 225px auto; /* Centered with automatic horizontal margins */
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
-  max-width: 1200px; /* Max width for larger screens */
-}
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+        <!-- PORTFOLIO HEADER -->
+        <div id="portfolio-header">
+            <div id="portfolio-header-image-container">
+                <img src="./assets/images/headshot.jpg" class="portfolio-header-image" alt="Headshot of Justin Humphreys">
+            </div>
+            <div id="portfolio-header-text-container">
+                <div class="header-text">
+                    <span class="main-title">Hi! I'm Justin.</span>
+                    <div class="body-text">
+                        I’m a junior at UCLA studying mechanical engineering, computational mathematics, and philosophy with a passion for tackling unique challenges and driving meaningful solutions.
+                    </div>
+                </div>
+                <a class="button" id="my-work-link">
+                    <span class="button-text">Check Out My Projects</span>
+                    <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
+                </a>
+            </div>
+        </div>
 
-.subheader-text {
-  font-size: 3em;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
+        <!-- ABOUT SECTION -->
+        <div id="about-section">
+            <h2 class="section-title">My Background</h2>
+            <div class="about-section-content">
+                <div class="body-text">With over 5 years of diverse engineering and leadership experience, I have honed my skills in design, testing, and project management through involvement in competitive student teams, personal projects, and professional roles.</div>
+                <div class="body-text">I am currently involved with UCLA’s Formula SAE team, where I lead the Controls subteam, and am also the Responsible Engineer for the Brakes & Pedalbox subsystem. Before university, I was heavily involved in the FIRST Robotics Competition, founding the first community team serving our area and leading the Electronics subteam.</div>
+                <div class="body-text">Beyond my technical pursuits, I am an Eagle Scout and enjoy working on automotive projects in my free time. I am always eager to expand my knowledge and take on new challenges.</div>
+                <div class="body-text">If you have any questions about my work or would like to get in contact with me, my email and socials are below. Thank you for visiting!</div>
+            </div>
+        </div>
 
-/* Portfolio Header */
-#portfolio-header {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
+        <!-- EXPERIENCE SECTION -->
+        <div id="experience-section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <img src="./assets/images/bfr.png" alt="Bruin Formula Racing" class="experience-image">
+                    <div class="experience-content">
+                        <div class="experience-title-date">
+                            <div class="experience-title">Software Lead, Bruin Formula Racing</div>
+                            <div class="experience-date">June 2024 - Present</div>
+                        </div>
+                        <div class="experience-description body-text">
+                            Leading the software subteam in designing and implementing the vehicle control systems. Responsible for the Brakes & Pedalbox subsystem.
+                        </div>
+                    </div>
+                </div>
 
-#portfolio-header-image-container {
-  flex: 1; /* Let the image container take available space */
-  display: flex;
-  justify-content: center;
-}
+                <!-- Additional Experience Cards -->
+                <div class="experience-card">
+                    <img src="./assets/images/spacex.jpg" alt="SpaceX" class="experience-image">
+                    <div class="experience-content">
+                        <div class="experience-title-date">
+                            <div class="experience-title">Hardware Reliability Engineering Intern, SpaceX</div>
+                            <div class="experience-date">June 2024 - September 2024</div>
+                        </div>
+                        <div class="experience-description body-text">
+                            Assisted in the design and testing of mechanical components for various projects. Collaborated with cross-functional teams to optimize product designs.
+                        </div>
+                    </div>
+                </div>
 
-.portfolio-header-image {
-  width: 50%;
-  height: auto;
-  border-radius: 15px;
-}
+                <div class="experience-card">
+                    <img src="./assets/images/bfr.png" alt="Bruin Formula Racing" class="experience-image">
+                    <div class="experience-content">
+                        <div class="experience-title-date">
+                            <div class="experience-title">Controls Lead + Brakes & Pedalbox Responsible Engineer, Bruin Formula Racing</div>
+                            <div class="experience-date">May 2023 - June 2024</div>
+                        </div>
+                        <div class="experience-description body-text">
+                            Assisted in the design and testing of mechanical components for various projects. Collaborated with cross-functional teams to optimize product designs.
+                        </div>
+                    </div>
+                </div>
 
-#portfolio-header-text-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
-}
+                <div class="experience-card">
+                    <img src="./assets/images/bfr.png" alt="Bruin Formula Racing" class="experience-image">
+                    <div class="experience-content">
+                        <div class="experience-title-date">
+                            <div class="experience-title">Controls + Powertrain General Member, Bruin Formula Racing</div>
+                            <div class="experience-date">September 2022 - May 2023</div>
+                        </div>
+                        <div class="experience-description body-text">
+                            Assisted in the design and testing of mechanical components for various projects. Collaborated with cross-functional teams to optimize product designs.
+                        </div>
+                    </div>
+                </div>
 
-/* About Section */
-#about-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+                <div class="experience-card">
+                    <img src="./assets/images/robotics.jpg" alt="FIRST Robotics" class="experience-image">
+                    <div class="experience-content">
+                        <div class="experience-title-date">
+                            <div class="experience-title">Electronics Lead, FIRST Robotics Community Team</div>
+                            <div class="experience-date">August 2018 - September 2022</div>
+                        </div>
+                        <div class="experience-description body-text">
+                            Founded and led a community robotics team, focusing on electronics and programming. Guided students in design and fabrication of competitive robots.
+                        </div>
+                    </div>
+                </div>
 
-.about-section-content {
-  display: flex;
-  flex-direction: column;
-  gap: 34px;
-}
+                <div class="experience-card">
+                    <img src="./assets/images/oreilly.jpg" alt="O'Reilly Auto Parts" class="experience-image">
+                    <div class="experience-content">
+                        <div class="experience-title-date">
+                            <div class="experience-title">Parts Specialist, O'Reilly Auto Parts</div>
+                            <div class="experience-date">January 2020 - December 2020</div>
+                        </div>
+                        <div class="experience-description body-text">
+                            Conducted research in computational mathematics, focusing on optimization algorithms for engineering applications.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-/* Project Section */
-#my-work-section {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+        <!-- PROJECTS / MY WORK SECTION -->
+        <div id="my-work-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-container">
 
-.projects-container {
-  display: flex;
-  gap: 34px 16px;
-  flex-wrap: wrap;
-}
+                <div class="project-card">
+                    <img src="./assets/images/weather.webp" class="project-image" alt="Project Image">
+                    <div class="project-card-text-container">
+                        <div class="subheader-text project-title">SpaceX: Ingress Protection Test Chambers</div>
+                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
+                    </div>
+                    <a class="button" href="./project-pages/spray-chamber.html">
+                        <span class="button-text">Read More</span>
+                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
+                    </a>
+                </div>
 
-/* Project Cards */
-.project-card {
-  flex: 1 1 calc((100% - 32px) / 3); /* Responsive width */
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+                <div class="project-card">
+                    <img src="./assets/images/car.png" class="project-image" alt="Project Image">
+                    <div class="project-card-text-container">
+                        <div class="subheader-text project-title">Formula SAE: Bruin Formula Racing</div>
+                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
+                    </div>
+                    <a class="button" href="./project-pages/formula.html">
+                        <span class="button-text">Read More</span>
+                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
+                    </a>
+                </div>
 
-.project-card-text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+                <div class="project-card">
+                    <img src="./assets/images/robot.png" class="project-image" alt="Project Image">
+                    <div class="project-card-text-container">
+                        <div class="subheader-text project-title">Robotics: FIRST Robotics Community Team</div>
+                        <div class="body-text project-card-text">Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium.</div>
+                    </div>
+                    <a class="button" href="./project-pages/robotics.html">
+                        <span class="button-text">Read More</span>
+                        <img src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt="Arrow Icon" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-.project-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-/* Project Pages */
-#project-header {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.project-header-image {
-  width: 100%;
-  height: auto;
-}
-
-#project-details {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-/* Project Gallery */
-#project-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.project-gallery-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 34px 16px;
-}
-
-.gallery-image-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.gallery-image-container.half-width {
-  flex: 1 1 calc((100% - 16px) / 2);
-}
-
-.gallery-image {
-  width: 100%;
-  height: auto;
-}
-
-/* Media Queries */
-@media only screen and (max-width: 1600px) {
-  #main-content {
-    margin: 225px 275px;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  #main-content {
-    margin: 225px 175px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  #main-content {
-    margin: 225px 75px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  #main-content {
-    margin: 150px 50px;
-  }
-
-  #portfolio-header {
-    flex-direction: column;
-  }
-
-  .project-card {
-    flex: 1 1 calc((100% - 16px) / 2);
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  #main-content {
-    margin: 125px 20px;
-  }
-
-  .project-card {
-    flex: 1 1 100%;
-  }
-}
-
-/* Experience Section */
-#experience-section {
-  margin: 40px 0;
-}
-
-.experience-timeline {
-  margin-top: 20px;
-}
-
-.experience-card {
-  display: flex;
-  margin-bottom: 20px;
-  align-items: flex-start;
-}
-
-.experience-image {
-  width: 60px;
-  height: 60px;
-  margin-right: 20px;
-  border-radius: 5px;
-}
-
-.experience-content {
-  flex: 1;
-}
-
-.experience-title-date {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.experience-title {
-  font-size: 1.1em;
-  font-weight: bold;
-  flex: 1;
-}
-
-.experience-date {
-  font-weight: bold;
-  color: #777;
-  margin-left: 10px;
-  white-space: nowrap;
-}
-
-.experience-description {
-  margin-top: 5px;
-}
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/jhumphreys" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/justin-humphreys/" target="_blank">LinkedIn</a>
+                <a href="mailto:jhumphreys@ucla.edu">Email</a>
+            </div>
+            <div class="footer-credits">
+                <p>&copy; 2024 Justin Humphreys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
