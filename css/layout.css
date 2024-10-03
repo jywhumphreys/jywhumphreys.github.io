@@ -10,6 +10,7 @@ html {
   -webkit-text-size-adjust: none;
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -20,12 +21,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Main Page Layout */
-#main-content {
-  margin: 150px auto 20px; /* Increased top margin to 150px */
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f0f0f0;
+  padding: 15px 0; /* Increased padding for taller navbar */
+  z-index: 1000;
+}
+
+.navbar-content {
   max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
   padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Main Page Layout */
+#main-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 120px; /* Increased top padding to account for navbar height and extra space */
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -60,6 +85,7 @@ body {
 #my-work-section .section-title {
   font-size: 30px;
 }
+
 /* Portfolio Header */
 #portfolio-header {
   display: flex;
@@ -67,12 +93,14 @@ body {
   gap: 10px;
   align-items: center;
 }
+
 #portfolio-header-image-container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .portfolio-header-image {
   width: 100%;
   max-width: 350px;
@@ -80,6 +108,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
 #portfolio-header-text-container {
   flex: 2;
   display: flex;
@@ -94,6 +123,7 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+
 .about-section-content {
   display: flex;
   flex-direction: column;
@@ -102,8 +132,8 @@ body {
 
 #portfolio-header-text-container .body-text,
 #about-section .body-text {
-  font-size: 18px; /* Increase font size for these sections */
-  font-weight: bold; /* Make the text bold */
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /* Project Section */
@@ -116,11 +146,11 @@ body {
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Increased gap for better spacing */
+  gap: 20px;
 }
 
 .project-card {
-  flex: 0 1 calc(33.333% - 14px); /* Adjusted calculation */
+  flex: 0 1 calc(33.333% - 14px);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -130,7 +160,6 @@ body {
   background-color: #fff;
 }
 
-/* Ensure the last row aligns properly */
 .project-card:last-child {
   margin-right: auto;
 }
@@ -148,19 +177,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-/* Responsive adjustments for smaller screens */
-@media only screen and (max-width: 1000px) {
-  .project-card {
-    flex: 0 1 calc(50% - 10px);
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .project-card {
-    flex: 0 1 100%;
-  }
 }
 
 /* Experience Section */
@@ -215,63 +231,6 @@ body {
 .experience-description li {
   margin-bottom: 5px;
 }
-/* Responsive adjustments for smaller screens */
-@media only screen and (max-width: 1200px) {
-  #main-content {
-    max-width: 100%;
-    margin: 125px auto 20px; /* Increased top margin to 125px */
-  }
-}
-@media only screen and (max-width: 1000px) {
-  #main-content {
-    max-width: 95%;
-    margin: 125px auto 20px; /* Increased top margin to 125px */
-  }
-  .project-card {
-    flex: 1 1 calc(50% - 10px);
-  }
-  #portfolio-header {
-    flex-direction: column;
-  }
-}
-@media only screen and (max-width: 600px) {
-  #main-content {
-    max-width: 100%;
-    margin: 100px auto 10px; /* Increased top margin to 100px */
-  }
-  .project-card {
-    flex: 1 1 100%;
-  }
-}
-
-/* Navbar styles */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #f0f0f0;
-  padding: 10px 0;
-  z-index: 1000;
-}
-
-.navbar-content {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Main content container */
-#main-content {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 80px 15px 20px; /* Increased top padding to account for navbar height */
-}
 
 /* Responsive adjustments */
 @media only screen and (max-width: 1200px) {
@@ -281,8 +240,26 @@ body {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  .project-card {
+    flex: 0 1 calc(50% - 10px);
+  }
+  #portfolio-header {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #main-content {
+    padding-top: 140px; /* Further increased for smaller screens */
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #main-content {
-    padding-top: 100px; /* Increase top padding for smaller screens if needed */
+    padding-top: 160px; /* Even more padding for very small screens */
+  }
+  .project-card {
+    flex: 0 1 100%;
   }
 }
