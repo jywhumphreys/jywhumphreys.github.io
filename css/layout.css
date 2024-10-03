@@ -152,7 +152,8 @@ body {
   background-color: #fff;
   text-decoration: none;
   color: inherit;
-  height: 400px; /* Set a fixed height */
+  /* Remove fixed height to allow the card to grow with content */
+  height: auto; /* Allow height to adjust automatically */
 }
 
 .project-card:hover {
@@ -173,7 +174,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  overflow: hidden; /* Hide overflow */
+  /* Adjust overflow settings to allow title to grow */
+  overflow: visible; /* Allow overflow for the title */
 }
 
 .project-title {
@@ -182,11 +184,9 @@ body {
   color: #333;
   margin: 0;
   line-height: 1.3;
-  max-height: none; /* Allow the title to grow as needed */
-  overflow: visible; /* No overflow hiding */
-  display: block; /* Allow normal text wrapping */
-  -webkit-line-clamp: unset; /* Remove line clamping */
-  -webkit-box-orient: unset; /* Remove box orientation */
+  /* No need for max-height, overflow, or display settings */
+  overflow: visible; /* Allow for normal text wrapping */
+  white-space: normal; /* Ensure wrapping on normal whitespace */
 }
 
 .project-title.long-title {
