@@ -4,12 +4,10 @@
   margin: 0;
   padding: 0;
 }
-
 html {
   text-size-adjust: none;
   -webkit-text-size-adjust: none;
 }
-
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -22,15 +20,14 @@ body {
 
 /* Main Page Layout */
 #main-content {
-  margin: 20px auto; /* Center the content */
-  max-width: 1200px; /* Set maximum width to 1200px */
-  width: 100%; /* Make sure it shrinks responsively */
-  padding: 0 15px; /* Add padding to avoid content touching edges */
+  margin: 100px auto 20px; /* Added top margin of 100px */
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-
 .subheader-text {
   font-size: 2.5em;
   font-weight: bold;
@@ -46,14 +43,12 @@ body {
   gap: 10px;
   align-items: center;
 }
-
 #portfolio-header-image-container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .portfolio-header-image {
   width: 100%;
   max-width: 350px;
@@ -61,7 +56,6 @@ body {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 #portfolio-header-text-container {
   flex: 2;
   display: flex;
@@ -76,7 +70,6 @@ body {
   flex-direction: column;
   gap: 20px;
 }
-
 .about-section-content {
   display: flex;
   flex-direction: column;
@@ -89,13 +82,11 @@ body {
   flex-direction: column;
   gap: 24px;
 }
-
 .projects-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
-
 .project-card {
   flex: 1 1 calc(33.333% - 10px);
   display: flex;
@@ -106,7 +97,6 @@ body {
   transition: box-shadow 0.3s ease;
   background-color: #fff;
 }
-
 .project-image {
   width: 100%;
   height: 180px;
@@ -114,7 +104,6 @@ body {
   object-position: center;
   border-radius: 8px 8px 0 0;
 }
-
 .project-card-text-container {
   padding: 12px;
   display: flex;
@@ -126,21 +115,18 @@ body {
 #experience-section {
   margin: 20px 0;
 }
-
 .experience-card {
   display: flex;
   margin-bottom: 15px;
   align-items: flex-start;
   gap: 10px;
 }
-
 .experience-image {
   width: 50px;
   height: 50px;
   border-radius: 5px;
   object-fit: cover;
 }
-
 .experience-content {
   flex: 1;
 }
@@ -149,30 +135,26 @@ body {
 @media only screen and (max-width: 1200px) {
   #main-content {
     max-width: 100%;
-    margin: 20px auto;
+    margin: 100px auto 20px; /* Adjusted top margin to 100px */
   }
 }
-
 @media only screen and (max-width: 1000px) {
   #main-content {
     max-width: 95%;
+    margin: 100px auto 20px; /* Adjusted top margin to 100px */
   }
-
   .project-card {
     flex: 1 1 calc(50% - 10px);
   }
-
   #portfolio-header {
     flex-direction: column;
   }
 }
-
 @media only screen and (max-width: 600px) {
   #main-content {
     max-width: 100%;
-    margin: 10px auto;
+    margin: 80px auto 10px; /* Adjusted top margin to 80px */
   }
-
   .project-card {
     flex: 1 1 100%;
   }
