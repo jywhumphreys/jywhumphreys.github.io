@@ -269,8 +269,8 @@ body {
 #main-content {
   max-width: 1200px;
   width: 100%;
-  margin: 70px auto 0; /* Adjust top margin based on navbar height */
-  padding: 0 15px;
+  margin: 0 auto;
+  padding: 80px 15px 20px; /* Increased top padding to account for navbar height */
 }
 
 /* Responsive adjustments */
@@ -278,5 +278,11 @@ body {
   .navbar-content,
   #main-content {
     max-width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #main-content {
+    padding-top: 100px; /* Increase top padding for smaller screens if needed */
   }
 }
