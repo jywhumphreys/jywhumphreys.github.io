@@ -28,7 +28,7 @@ body {
   left: 0;
   right: 0;
   background-color: #f0f0f0;
-  padding: 15px 0; /* Increased padding for taller navbar */
+  padding: 15px 0;
   z-index: 1000;
 }
 
@@ -47,7 +47,7 @@ body {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 120px; /* Increased top padding to account for navbar height and extra space */
+  padding-top: 120px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 20px;
@@ -153,11 +153,18 @@ body {
   flex: 0 1 calc(33.333% - 14px);
   display: flex;
   flex-direction: column;
-  gap: 16px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   background-color: #fff;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 .project-card:last-child {
@@ -169,14 +176,27 @@ body {
   height: 180px;
   object-fit: cover;
   object-position: center;
-  border-radius: 8px 8px 0 0;
 }
 
 .project-card-text-container {
-  padding: 12px;
+  padding: 16px;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+}
+
+.project-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.project-card-text {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
 }
 
 /* Experience Section */
@@ -251,13 +271,13 @@ body {
 
 @media only screen and (max-width: 768px) {
   #main-content {
-    padding-top: 140px; /* Further increased for smaller screens */
+    padding-top: 140px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   #main-content {
-    padding-top: 160px; /* Even more padding for very small screens */
+    padding-top: 160px;
   }
   .project-card {
     flex: 0 1 100%;
