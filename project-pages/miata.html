@@ -58,14 +58,16 @@
             }
 
             .basic-upgrades-images {
-            grid-template-columns: repeat(1, 1fr);
-            }
-
-            .basic-upgrades-extra {
+            display: grid;
             grid-template-columns: repeat(3, 1fr);
-            margin-top: 10px;
+            gap: 10px;
             }
-
+            .basic-upgrades-extra {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            }
             .engine-replacement-images {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 1fr);
@@ -114,7 +116,6 @@
 
                 <div class="divider"></div>
 
-                <!-- BASIC UPGRADES -->
                 <section>
                   <h2 class="section-title">Basic Upgrades</h2>
                   <div class="section-content">
@@ -143,6 +144,7 @@
                     <img src="../assets/images/basic-upgrade-6.jpg" alt="Basic Upgrade 6">
                   </div>
                 </section>
+                <div class="divider"></div>
 
                 <!-- ENGINE REPLACEMENT -->
                 <section>
@@ -176,6 +178,7 @@
                         </div>
                     </div>
                 </section>
+                <div class="divider"></div>
 
                 <!-- PERFORMANCE UPGRADES AND TUNING -->
                 <section>
