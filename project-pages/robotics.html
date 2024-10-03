@@ -35,34 +35,26 @@
                 align-items: center;
             }
             .image-row-top img:first-child {
-                max-width: 35%;
+                max-width: 25%;
                 height: auto;
                 object-fit: contain;
             }
             .image-row-top img:last-child {
-                max-width: 85%;
+                max-width: 70%;
                 height: auto;
                 object-fit: contain;
             }
-
             .image-row-bottom {
                 display: flex;
                 justify-content: space-between;
                 gap: 20px;
                 align-items: center;
             }
-            .image-row-bottom img:first-child {
-                max-width: 35%;
+            .image-row-bottom img {
+                max-width: 48%;
                 height: auto;
                 object-fit: contain;
             }
-            .image-row-bottom img:last-child {
-                max-width: 35%;
-                height: auto;
-                object-fit: contain;
-            }
-
-            
             .content-with-images {
                 display: flex;
                 flex-direction: column;
@@ -77,12 +69,13 @@
             }
             .image-column {
                 width: 40%;
+                display: flex;
+                gap: 20px;
             }
             .image-column img {
-                width: 100%;
+                width: 48%;
                 height: auto;
                 object-fit: contain;
-                margin-bottom: 20px;
             }
             .bottom-images {
                 display: flex;
@@ -141,7 +134,7 @@
 
             <div class="divider"></div>
 
-            <div class="image-row-bottom">
+            <div class="image-row-top">
                 <img src="../assets/images/robot-1.jpg" alt="Robot in competition">
                 <img src="../assets/images/competition-field.gif" alt="Competition field">
             </div>
@@ -156,12 +149,12 @@
                         <p class="body-text">As the electronics lead, one of my primary responsibilities was ensuring that our robot was operational and ready to compete in every match. To achieve this, I focused on designing a reliable and robust electrical system that could be quickly and easily diagnosed. By strategically mounting all of the electronic components on the bottom of the robot, I created a system that was highly accessible, allowing for rapid maintenance and repairs without the need to navigate through or around complex mechanisms. This approach not only improved the robot's reliability but also resulted in a cleaner and more organized wiring layout. Through this design philosophy, I successfully maintained a 0% electrical failure rate in matches for four consecutive years, ensuring that our robot was always ready to perform at its best during competition.</p>
                         <p class="body-text">The electronics board, pocketed with a CNC-routed diamond pattern, allowed for easy component mounting and wire routing. The flipped electronics board provided quick access to all components, crucial for rapid repairs between matches at competition.</p>
                     </div>
-                    <div class="image-row">
+                    <div class="image-column">
                         <img src="../assets/images/electrical-board-1.png" alt="Electrical board 1">
                         <img src="../assets/images/electrical-board-2.png" alt="Electrical board 2">
                     </div>
                 </div>
-                <div class="bottom-images">
+                <div class="image-row-bottom">
                     <img src="../assets/images/robot-2.png" alt="Robot in action">
                     <img src="../assets/images/team-working.png" alt="Team working on robot">
                 </div>
