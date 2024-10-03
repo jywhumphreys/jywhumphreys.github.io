@@ -13,75 +13,92 @@
 
 		<script defer src="../js/script.js"></script>
         <style>
-            /* Full-width title and description */
-            .full-width-section {
-                width: 100%;
-            }
-            .divider {
-                width: 100%;
-                height: 1px;
-                background-color: #ccc;
-                margin: 20px 0;
-            }
+          /* Full-width title and description */
+          .full-width-section {
+              width: 100%;
+          }
 
-            .project-content {
-                display: flex;
-                gap: 20px;
-                align-items: flex-start;
-            }
+          .divider {
+              width: 100%;
+              height: 1px;
+              background-color: #ccc;
+              margin: 20px 0;
+          }
 
-            .text-content {
-                width: 50%;
-            }
+          /* Two-column layout */
+          .project-content {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+          }
 
-            .image-gallery {
-                width: 50%;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
+          .two-column-section {
+              display: flex;
+              gap: 20px;
+          }
 
-            .image-container {
-                width: 48%;
-                margin-bottom: 20px;
-            }
+          .text-column {
+              flex: 1;
+          }
 
-            .project-image {
-                width: 100%;
-                height: auto;
-                margin-bottom: 5px;
-            }
+          .image-column {
+              flex: 1;
+          }
 
-            .image-caption {
-                font-style: italic;
-                font-size: 0.8em;
-                text-align: center;
-            }
+          /* Main image style */
+          .main-image {
+              width: 100%;
+              height: auto;
+              object-fit: contain;
+          }
 
-            .main-title {
-                font-size: 2.5em;
-                margin-bottom: 20px;
-            }
+          /* Image gallery styling */
+          .image-gallery {
+              display: flex;
+              justify-content: space-between;
+              gap: 20px;
+              margin-top: 20px;
+              overflow-x: auto;
+          }
 
-            .body-text, .project-list {
-                font-size: 16px;
-                line-height: 1.6;
-            }
+          .image-gallery img {
+              flex: 0 0 auto;
+              width: calc(25% - 15px);
+              height: auto;
+              object-fit: cover;
+          }
 
-            .subheader-text {
-                font-size: 1.5em;
-                margin-top: 30px;
-                margin-bottom: 15px;
-            }
+          /* Text and bullet point styles */
+          .body-text {
+              font-size: 18px;
+              font-weight: bold;
+              line-height: 1.6;
+          }
 
-            .bullet-points {
-                margin-left: 20px;
-            }
+          .bullet-points ul {
+              list-style-type: disc;
+              margin-left: 40px;
+              font-size: 18px;
+              font-weight: bold;
+              line-height: 1.6;
+          }
 
-            .bullet-points ul {
-                list-style-type: disc;
-                margin-left: 20px;
-            }
+          /* Subheader styling */
+          .subheader-text {
+              font-size: 24px;
+              font-weight: bold;
+              margin-top: 30px;
+              margin-bottom: 15px;
+          }
+
+          /* Bullet point styling */
+          .project-list ul {
+              list-style-type: disc;
+              margin-left: 40px;
+              font-size: 18px;
+              font-weight: bold;
+              line-height: 1.6;
+          }
         </style>
 	</head>
 	<body class="project-page">
