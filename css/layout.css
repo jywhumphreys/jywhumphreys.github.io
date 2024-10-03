@@ -28,6 +28,7 @@ body {
   flex-direction: column;
   gap: 32px;
 }
+
 .subheader-text {
   font-size: 2.5em;
   font-weight: bold;
@@ -36,6 +37,27 @@ body {
   color: #444;
 }
 
+/* Main title styles */
+.main-title {
+  font-weight: 700;
+  font-size: 48px;
+  color: #2d2d2d;
+}
+
+/* Section title styles */
+.section-title {
+  font-weight: 700;
+  font-size: 48px;
+  color: #2d2d2d;
+  margin-bottom: 20px;
+}
+
+/* Ensure consistency for specific section titles if needed */
+#about-section .section-title,
+#experience-section .section-title,
+#my-work-section .section-title {
+  font-size: 48px;
+}
 /* Portfolio Header */
 #portfolio-header {
   display: flex;
