@@ -2,151 +2,146 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-     <link rel="icon" href="../assets/images/1311.png" />
-     <title>Custom Multi-Boot System | Justin's Portfolio</title>
-    <meta name="description" content="Details about Justin's custom multi-boot system project">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="../assets/images/1311.png" />
+        <title>Custom Multi-Boot System | Justin's Portfolio</title>
+        <meta name="description" content="Details about Justin's custom multi-boot system project">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/utilities.css">
+        <link rel="stylesheet" href="../css/typography.css">
+        <link rel="stylesheet" href="../css/utilities.css">
 
 		<script defer src="../js/script.js"></script>
-    <style>
-      .project-content {
-        display: flex;
-        justify-content: space-between;
-      }
-      .text-content {
-        width: 50%;
-      }
-      .image-gallery {
-        width: 50%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      .image-container {
-        width: 48%;
-        margin-bottom: 20px;
-      }
-      .project-image {
-        width: 100%;
-        height: auto;
-        margin-bottom: 5px;
-      }
-      .image-caption {
-        font-style: italic;
-        font-size: 0.8em;
-        text-align: center;
-      }
-      .main-title {
-        font-size: 2.5em;
-        margin-bottom: 20px;
-      }
-      .body-text, .project-list {
-        font-size: 16px;
-        line-height: 1.6;
-      }
-      .subheader-text {
-        font-size: 1.5em;
-        margin-top: 30px;
-        margin-bottom: 15px;
-      }
-    </style>
+        <style>
+            .project-content {
+                display: flex;
+                justify-content: space-between;
+            }
+            .text-content {
+                width: 50%;
+            }
+            .image-gallery {
+                width: 50%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .image-container {
+                width: 48%;
+                margin-bottom: 20px;
+            }
+            .project-image {
+                width: 100%;
+                height: auto;
+                margin-bottom: 5px;
+            }
+            .image-caption {
+                font-style: italic;
+                font-size: 0.8em;
+                text-align: center;
+            }
+            .main-title {
+                font-size: 2.5em;
+                margin-bottom: 20px;
+            }
+            .body-text, .project-list {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            .subheader-text {
+                font-size: 1.5em;
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+        </style>
 	</head>
-	<body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <a class="nav-title-link" href="../index.html">
-        <span class="nav-title">justin humphreys</span>
-        <a class="button" href="mailto:justin@example.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
-    </div>
+	<body class="project-page">
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <a class="nav-title-link" href="../index.html">
+                    <span class="nav-title">Justin Humphreys</span>
+                </a>
+                <div class="nav-social-links">
+                    <a class="icon-link" href="mailto:jhumphreys@ucla.edu" target="_blank">
+                        <img src="../assets/icons/mail.svg" class="nav-icon" alt="Email Icon">
+                    </a>
+                    <a class="icon-link" href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+                        <img src="../assets/icons/linkedin.svg" class="nav-icon" alt="LinkedIn Icon">
+                    </a>
+                    <a class="icon-link" href="https://www.instagram.com/your-instagram-profile" target="_blank">
+                        <img src="../assets/icons/instagram.svg" class="nav-icon" alt="Instagram Icon">
+                    </a>
+                </div>
+            </div>
+        </nav>
 
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
+        <!-- MAIN PAGE CONTENT -->
+        <main id="main-content">
+            <!-- PROJECT DETAILS -->
+            <section class="project-content">
+                <div class="text-content">
+                    <h1 class="main-title">Custom Multi-Boot System</h1>
+                    <p class="body-text">After taking a software construction class that covered Unix file system organization and shell scripting, I was inspired to install Linux, and then went even further and installed macOS on unsupported hardware. The whole project took a couple months of research, troubleshooting, and configuration before I finally got it working.</p>
 
-      <!-- PROJECT DETAILS -->
-      <div class="project-content">
-        <div class="text-content">
-          <div class="body-text">After taking a software construction class that covered Unix file system organization and shell scripting, I was inspired to install Linux, and then went even further and installed macOS on unsupported hardware. The whole project took a couple months of research, troubleshooting, and configuration before I finally got it working.</div>
+                    <h2 class="subheader-text">Steps taken:</h2>
+                    <ul class="project-list">
+                        <li>Partitioned NVMe SSD into dedicated partitions for each OS (NTFS, ext4, APFS) and an EFI System Partition</li>
+                        <li>Installed Windows 11 on the NTFS partition, ensuring the creation of the ESP</li>
+                        <li>Installed Arch Linux on the ext4 partition, configuring systemd-boot boot loader on the ESP</li>
+                        <li>Extensively customized and configured OpenCore boot loader for Hackintosh installation of macOS Sonoma
+                            <ul>
+                                <li>Enabled native GPU acceleration for AMD Radeon RX 6700S dGPU</li>
+                                <li>Implemented CPU power management with AMD Power Gadget and RyzenAdj utility</li>
+                                <li>Configured ACPI tables and kernel extensions (kexts) for hardware compatibility</li>
+                            </ul>
+                        </li>
+                        <li>Resolved hardware compatibility issues:
+                            <ul>
+                                <li>Enabled 120Hz HiDPI LCD with custom resolution using one-key-hidpi</li>
+                                <li>Enabled 4K/60Hz external display output via HDMI and USB-C ports</li>
+                                <li>Replaced WiFi card with Intel AX210 for macOS compatibility</li>
+                                <li>Configured PCIe 4.0 NVMe SSD, USB ports, keyboard, trackpad, and internal speakers</li>
+                                <li>Implemented S3 sleep with UMAF for power management</li>
+                            </ul>
+                        </li>
+                        <li>Overcame challenges related to:
+                            <ul>
+                                <li>Lack of iGPU (Radeon 680) support, preventing use of USB-C DisplayPort alt mode</li>
+                                <li>Hardware LCD and keyboard backlight brightness control limitations</li>
+                                <li>Reduced battery life compared to Windows due to lack of iGPU support</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
 
-          <div class="subheader-text">Steps taken:</div>
-          <ul class="project-list">
-            <li>Partitioned NVMe SSD into dedicated partitions for each OS (NTFS, ext4, APFS) and an EFI System Partition</li>
-            <li>Installed Windows 11 on the NTFS partition, ensuring the creation of the ESP</li>
-            <li>Installed Arch Linux on the ext4 partition, configuring systemd-boot boot loader on the ESP</li>
-            <li>Extensively customized and configured OpenCore boot loader for Hackintosh installation of macOS Sonoma
-              <ul>
-                <li>Enabled native GPU acceleration for AMD Radeon RX 6700S dGPU</li>
-                <li>Implemented CPU power management with AMD Power Gadget and RyzenAdj utility</li>
-                <li>Configured ACPI tables and kernel extensions (kexts) for hardware compatibility</li>
-              </ul>
-            </li>
-            <li>Resolved hardware compatibility issues:
-              <ul>
-                <li>Enabled 120Hz HiDPI LCD with custom resolution using one-key-hidpi</li>
-                <li>Enabled 4K/60Hz external display output via HDMI and USB-C ports</li>
-                <li>Replaced WiFi card with Intel AX210 for macOS compatibility</li>
-                <li>Configured PCIe 4.0 NVMe SSD, USB ports, keyboard, trackpad, and internal speakers</li>
-                <li>Implemented S3 sleep with UMAF for power management</li>
-              </ul>
-            </li>
-            <li>Overcame challenges related to:
-              <ul>
-                <li>Lack of iGPU (Radeon 680) support, preventing use of USB-C DisplayPort alt mode</li>
-                <li>Hardware LCD and keyboard backlight brightness control limitations</li>
-                <li>Reduced battery life compared to Windows due to lack of iGPU support</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <div class="image-gallery">
-          <div class="image-container">
-            <img src="../assets/images/opencore-bootloader.jpg" alt="OpenCore bootloader" class="project-image">
-            <div class="image-caption">OpenCore bootloader</div>
-          </div>
-          <div class="image-container">
-            <img src="../assets/images/disk-partitions.png" alt="Disk partitions" class="project-image">
-            <div class="image-caption">Disk partitions</div>
-          </div>
-          <div class="image-container">
-            <img src="../assets/images/macos-amd-hardware.png" alt="macOS running on AMD hardware" class="project-image">
-            <div class="image-caption">macOS running on AMD hardware</div>
-          </div>
-          <div class="image-container">
-            <img src="../assets/images/amd-power-gadget.png" alt="AMD Power Gadget" class="project-image">
-            <div class="image-caption">AMD Power Gadget</div>
-          </div>
-          <div class="image-container">
-            <img src="../assets/images/customized-arch-linux.png" alt="Customized Arch Linux setup" class="project-image">
-            <div class="image-caption">Customized Arch Linux setup</div>
-          </div>
-          <div class="image-container">
-            <img src="../assets/images/customized-emacs-linux.png" alt="Customized Emacs setup in Linux" class="project-image">
-            <div class="image-caption">Customized Emacs setup in Linux</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- FOOTER -->
-    <div id="footer">
-      <a class="icon-link" target="_blank" href="https://twitter.com/justinexample">
-        <image src="../assets/icons/instagram.svg" class="footer-icon"/>
-      </a>
-      <a class="icon-link" target="_blank" href="https://twitter.com/justinexample">
-        <image src="../assets/icons/twitter.svg" class="footer-icon"/>
-      </a>
-      <a class="icon-link" href="mailto:justin@example.com">
-        <image src="../assets/icons/mail.svg" class="footer-icon"/>
-      </a>
-    </div>
-
+                <div class="image-gallery">
+                    <div class="image-container">
+                        <img src="../assets/images/opencore-bootloader.jpg" alt="OpenCore bootloader" class="project-image">
+                        <div class="image-caption">OpenCore bootloader</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/images/disk-partitions.png" alt="Disk partitions" class="project-image">
+                        <div class="image-caption">Disk partitions</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/images/macos-amd-hardware.png" alt="macOS running on AMD hardware" class="project-image">
+                        <div class="image-caption">macOS running on AMD hardware</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/images/amd-power-gadget.png" alt="AMD Power Gadget" class="project-image">
+                        <div class="image-caption">AMD Power Gadget</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/images/customized-arch-linux.png" alt="Customized Arch Linux setup" class="project-image">
+                        <div class="image-caption">Customized Arch Linux setup</div>
+                    </div>
+                    <div class="image-container">
+                        <img src="../assets/images/customized-emacs-linux.png" alt="Customized Emacs setup in Linux" class="project-image">
+                        <div class="image-caption">Customized Emacs setup in Linux</div>
+                    </div>
+                </div>
+            </section>
+        </main>
 	</body>
 </html>
