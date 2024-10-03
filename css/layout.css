@@ -279,32 +279,6 @@ body {
   -webkit-box-orient: vertical;
 }
 
-/* Footer styles */
-#footer {
-  background-color: #f0f0f0;
-  padding: 20px 0;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-icon {
-  height: 24px;
-  width: 24px;
-  margin: 0 10px;
-  transition: opacity 0.3s ease;
-}
-
-.footer-icon:hover {
-  opacity: 0.7;
-}
 
 /* New styles for social icons under resume button */
 .resume-social-links {
@@ -327,8 +301,7 @@ body {
 /* Responsive adjustments */
 @media only screen and (max-width: 1200px) {
   .navbar-content,
-  #main-content,
-  .footer-content {
+  #main-content {
     max-width: 95%;
   }
 }
@@ -346,8 +319,8 @@ body {
   .projects-container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+
   .nav-icon,
-  .footer-icon,
   .resume-icon {
     height: 20px;
     width: 20px;
@@ -355,9 +328,7 @@ body {
   .nav-icon {
     margin-left: 15px;
   }
-  .footer-icon {
-    margin: 0 8px;
-  }
+
   .resume-icon {
     margin-right: 15px;
   }
