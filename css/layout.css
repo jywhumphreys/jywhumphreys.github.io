@@ -76,6 +76,12 @@ body {
   gap: 20px;
 }
 
+#portfolio-header-text-container .body-text,
+#about-section .body-text {
+  font-size: 18px; /* Increase font size for these sections */
+  font-weight: bold; /* Make the text bold */
+}
+
 /* Project Section */
 #my-work-section {
   display: flex;
@@ -115,22 +121,54 @@ body {
 #experience-section {
   margin: 20px 0;
 }
+
 .experience-card {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   align-items: flex-start;
-  gap: 10px;
+  gap: 20px;
 }
+
 .experience-image {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 5px;
   object-fit: cover;
 }
+
 .experience-content {
   flex: 1;
 }
 
+.experience-title-date {
+  margin-bottom: 10px;
+}
+
+.experience-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.experience-date {
+  font-style: italic;
+  color: #666;
+  font-size: 14px;
+}
+
+.experience-description {
+  color: #444;
+}
+
+.experience-description ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.experience-description li {
+  margin-bottom: 5px;
+}
 /* Responsive adjustments for smaller screens */
 @media only screen and (max-width: 1200px) {
   #main-content {
