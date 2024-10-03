@@ -107,7 +107,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  justify-content: center;
 }
 
 /* About Section */
@@ -152,8 +151,7 @@ body {
   background-color: #fff;
   text-decoration: none;
   color: inherit;
-  /* Remove fixed height to allow the card to grow with content */
-  height: auto; /* Allow height to adjust automatically */
+  min-height: 400px; /* Set a minimum height to maintain uniformity */
 }
 
 .project-card:hover {
@@ -174,8 +172,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  /* Adjust overflow settings to allow title to grow */
-  overflow: visible; /* Allow overflow for the title */
 }
 
 .project-title {
@@ -184,7 +180,6 @@ body {
   color: #333;
   margin: 0;
   line-height: 1.3;
-  /* No need for max-height, overflow, or display settings */
   overflow: visible; /* Allow for normal text wrapping */
   white-space: normal; /* Ensure wrapping on normal whitespace */
 }
@@ -197,10 +192,7 @@ body {
   font-size: 0.9rem;
   color: #666;
   margin: 0;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4; /* Limit to 4 lines */
-  -webkit-box-orient: vertical;
+  overflow: visible; /* Allow overflow for the description */
 }
 
 /* Experience Section */
