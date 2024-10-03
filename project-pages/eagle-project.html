@@ -18,20 +18,38 @@
                 flex-direction: column;
                 gap: 20px;
             }
-            .image-gallery {
+            .full-width-section {
+                width: 100%;
+            }
+            .divider {
+                width: 100%;
+                height: 1px;
+                background-color: #ccc;
+                margin: 20px 0;
+            }
+            .two-column-section {
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
                 gap: 20px;
             }
-            .image-gallery img {
-                width: calc(50% - 10px);
-                height: auto;
+            .text-column {
+                flex: 1;
+            }
+            .image-column {
+                flex: 1;
             }
             .main-image {
                 width: 100%;
                 height: auto;
-                margin-bottom: 20px;
+            }
+            .image-gallery {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                margin-top: 20px;
+            }
+            .image-gallery img {
+                width: calc(25% - 15px);
+                height: auto;
             }
         </style>
 	</head>
@@ -61,15 +79,22 @@
             <div class="project-content">
                 <h1 class="main-title">Eagle Scout Project:<br>Beet Washing Stations</h1>
 
-                <p class="body-text">For my Eagle Scout service project, I partnered with a local charity, Food Bank Farms, to help them expedite the process of delivering freshly harvested produce to their partnered food bank, HopeLink. One of the main vegetables they grew and harvested were beets, growing several tons worth every year. During the beet harvesting process, beets are collected in mesh onion sacks. However, before donating the produce, all the dirt must be rinsed off of the beets. In the past, this involved cutting open the bags and washing every individual vegetable one by one. Not only did this take forever, but once the bags were cut open, they could not be reused and the produce had to be re-bagged. As a solution to this inefficient process, I designed "beet dunkers", stations where a bag of beets could be attached and repeatedly dunked into a large tub of water, rinsing off all the dirt while the beets remained inside of the bag</p>
+                <div class="full-width-section">
+                    <p class="body-text">For my Eagle Scout service project, I partnered with a local charity, Food Bank Farms, to help them expedite the process of delivering freshly harvested produce to their partnered food bank, HopeLink. One of the main vegetables they grew and harvested were beets, growing several tons worth every year. During the beet harvesting process, beets are collected in mesh onion sacks. However, before donating the produce, all the dirt must be rinsed off of the beets. In the past, this involved cutting open the bags and washing every individual vegetable one by one. Not only did this take forever, but once the bags were cut open, they could not be reused and the produce had to be re-bagged. As a solution to this inefficient process, I designed "beet dunkers", stations where a bag of beets could be attached and repeatedly dunked into a large tub of water, rinsing off all the dirt while the beets remained inside of the bag</p>
+                </div>
 
-                <p class="body-text">The basic idea behind the beet dunker was to have a lever with the bag of beets attached to one end so that you could lift it up and down by moving the other end. This would allow for anyone to use the station without having to lift the full weight of the bag, which was roughly 20 pounds when full. An important aspect of the stations was also that they could easily be taken apart and stacked flat for easy transport and storage.</p>
+                <div class="divider"></div>
 
-                <p class="body-text">The inspiration for the design of station's structure was a trebuchet. Both the beet dunker and trebuchet shared the same mechanical properties - a solid base with a fulcrum for a lever. With this in mind, I sketched up a basic design, essentially a mini trebuchet, and constructed a prototype. After some testing of the prototype, I made changes to the geometry of the design to optimize it.</p>
-
-                <p class="body-text">Once the design was finalized, I purchased all the necessary materials, organized a group of volunteers, and got to work. Over the span of 2 days, we built 6 beet dunkers, each with 2 levers. They were delivered to the farm, and within days they were put to use with great results.</p>
-
-                <img src="../assets/images/eagle-scout-project-main.jpg" alt="Group photo with harvested beets" class="main-image">
+                <div class="two-column-section">
+                    <div class="text-column">
+                        <p class="body-text">The basic idea behind the beet dunker was to have a lever with the bag of beets attached to one end so that you could lift it up and down by moving the other end. This would allow for anyone to use the station without having to lift the full weight of the bag, which was roughly 20 pounds when full. An important aspect of the stations was also that they could easily be taken apart and stacked flat for easy transport and storage.</p>
+                        <p class="body-text">The inspiration for the design of station's structure was a trebuchet. Both the beet dunker and trebuchet shared the same mechanical properties - a solid base with a fulcrum for a lever. With this in mind, I sketched up a basic design, essentially a mini trebuchet, and constructed a prototype. After some testing of the prototype, I made changes to the geometry of the design to optimize it.</p>
+                        <p class="body-text">Once the design was finalized, I purchased all the necessary materials, organized a group of volunteers, and got to work. Over the span of 2 days, we built 6 beet dunkers, each with 2 levers. They were delivered to the farm, and within days they were put to use with great results.</p>
+                    </div>
+                    <div class="image-column">
+                        <img src="../assets/images/eagle-scout-project-main.jpg" alt="Group photo with harvested beets" class="main-image">
+                    </div>
+                </div>
 
                 <div class="image-gallery">
                     <img src="../assets/images/beet-dunker-1.jpg" alt="Beet dunker in the field">
