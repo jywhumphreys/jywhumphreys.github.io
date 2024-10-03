@@ -18,6 +18,32 @@
                 flex-direction: column;
                 gap: 20px;
             }
+            .project-header-content {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .project-header-text {
+                flex: 1;
+            }
+            .project-header-image {
+                flex: 1;
+                max-width: 50%;
+            }
+            .project-header-image img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+            
+            @media (max-width: 768px) {
+                .project-header-content {
+                    flex-direction: column;
+                }
+                .project-header-image {
+                    max-width: 100%;
+                }
+            }
             .section-content {
                 display: flex;
                 gap: 20px;
@@ -107,13 +133,19 @@
         <!-- MAIN PAGE CONTENT -->
         <main id="main-content">
             <div class="project-content">
+
                 <!-- PROJECT HEADER -->
                 <header id="project-header">
-                    <h1 class="main-title">Project Car: 1991 Mazda Miata</h1>
-                    <p class="project-description">In October of 2020, I bought a barely running, 30-year-old Mazda Miata with a bad engine, multiple leaks, and dozens of other problems I would discover throughout the process of restoring it. Knowing almost nothing about cars, I dove in head-first. Over the span of the last few years, I have taken apart and reassembled almost every component of this car and developed a thorough understanding of what it takes to build a reliable, high-performing vehicle.</p>
-                    <img src="../assets/images/mazda-miata.jpg" alt="1991 Mazda Miata" style="width: 100%; max-width: 800px;">
+                  <h1 class="main-title">Project Car: 1991 Mazda Miata</h1>
+                  <div class="project-header-content">
+                    <div class="project-header-text">
+                      <p class="project-description">In October of 2020, I bought a barely running, 30-year-old Mazda Miata with a bad engine, multiple leaks, and dozens of other problems I would discover throughout the process of restoring it. Knowing almost nothing about cars, I dove in head-first. Over the span of the last few years, I have taken apart and reassembled almost every component of this car and developed a thorough understanding of what it takes to build a reliable, high-performing vehicle.</p>
+                    </div>
+                    <div class="project-header-image">
+                      <img src="../assets/images/mazda-miata.jpg" alt="1991 Mazda Miata">
+                    </div>
+                  </div>
                 </header>
-
                 <div class="divider"></div>
 
                 <section>
