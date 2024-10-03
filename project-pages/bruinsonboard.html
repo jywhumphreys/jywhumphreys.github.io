@@ -12,6 +12,34 @@
         <link rel="stylesheet" href="../css/utilities.css">
 
 		<script defer src="../js/script.js"></script>
+        <style>
+            .project-content {
+                display: flex;
+                gap: 20px;
+            }
+            .text-column {
+                flex: 1;
+            }
+            .image-column {
+                flex: 1;
+            }
+            .github-link {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #000;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+            .screenshot {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-weight: bold;
+            }
+        </style>
 	</head>
 	<body class="project-page">
         <!-- NAVBAR -->
@@ -36,83 +64,79 @@
 
         <!-- MAIN PAGE CONTENT -->
         <main id="main-content">
-            <!-- PROJECT HEADER -->
             <header id="project-header">
                 <h1 class="main-title">BruinsOnBoard</h1>
                 <p class="body-text">BruinsOnBoard is a rideshare web application developed for UCLA students to share rides to and from LAX at a reduced cost. The app was built using the MERN stack (MongoDB, ExpressJS, ReactJS, and NodeJS).</p>
-                <p class="body-text">GitHub Link</p>
-                <img class="project-header-image" src="../assets/images/bruinsonboard.jpg" alt="BruinsOnBoard Project">
+                <a href="#" class="github-link">GitHub Link</a>
             </header>
 
-            <!-- PROJECT DETAILS -->
-            <section id="project-details">
-                <h2 class="subheader-text">Key features:</h2>
-                <div class="project-details-content">
-                    <ol class="project-list">
-                        <li>Ride arrangement: Users can create, find, and join rides using a user-friendly calendar interface. The react-big-calendar and react-datepicker libraries were used to create a clear and efficient user experience.</li>
-                        <li>User profiles: The app features an authenticated signup and login system. Users can create profiles linked to their email, add a bio, and search for other users dynamically.</li>
-                        <li>Email confirmations: When a user creates or joins a ride, the app sends a confirmation email with ride details. Group members also receive email updates when a new user joins or leaves the ride.</li>
-                        <li>Secure authentication: User passwords are encrypted using a JWT key, ensuring security. The authentication system verifies valid JWT tokens for API calls to fetch data from the database.</li>
-                        <li>User search functionality: Users can search for other registered members, making it easier to connect with potential rideshare partners.</li>
-                    </ol>
-                </div>
-            </section>
+            <div class="project-content">
+                <div class="text-column">
+                    <section>
+                        <h2>Key features:</h2>
+                        <ol class="project-list">
+                            <li>Ride arrangement: Users can create, find, and join rides using a user-friendly calendar interface. The react-big-calendar and react-datepicker libraries were used to create a clear and efficient user experience.</li>
+                            <li>User profiles: The app features an authenticated signup and login system. Users can create profiles linked to their email, add a bio, and search for other users dynamically.</li>
+                            <li>Email confirmations: When a user creates or joins a ride, the app sends a confirmation email with ride details. Group members also receive email updates when a new user joins or leaves the ride.</li>
+                            <li>Secure authentication: User passwords are encrypted using a JWT key, ensuring security. The authentication system verifies valid JWT tokens for API calls to fetch data from the database.</li>
+                            <li>User search functionality: Users can search for other registered members, making it easier to connect with potential rideshare partners.</li>
+                        </ol>
+                    </section>
 
-            <section id="project-details">
-                <h2 class="subheader-text">Key Contributions</h2>
-                <div class="project-details-content">
-                    <ul class="project-list">
-                        <li>Developed the profile page, view profiles page, login page, and signup page on the frontend.</li>
-                        <li>Designed and implemented intuitive user interfaces for these pages, enhancing the overall user experience and facilitating easy profile management and authentication.</li>
-                        <li>Connected the rides calendar to the backend by writing a function that formatted the data received from the backend API into the required format for the react-big-calendar library.</li>
-                        <li>Implemented routing between various pages of the application, including links to specific user profiles from the member search and rides pages.</li>
-                        <li>Implemented access controls for certain pages, ensuring that only authenticated users could view sensitive information and encouraging users to provide complete and accurate information.</li>
-                    </ul>
-                </div>
-            </section>
+                    <section>
+                        <h2>Key Contributions</h2>
+                        <ul class="project-list">
+                            <li>Developed the profile page, view profiles page, login page, and signup page on the frontend.</li>
+                            <li>Designed and implemented intuitive user interfaces for these pages, enhancing the overall user experience and facilitating easy profile management and authentication.</li>
+                            <li>Connected the rides calendar to the backend by writing a function that formatted the data received from the backend API into the required format for the react-big-calendar library.</li>
+                            <li>Implemented routing between various pages of the application, including links to specific user profiles from the member search and rides pages.</li>
+                            <li>Implemented access controls for certain pages, ensuring that only authenticated users could view sensitive information and encouraging users to provide complete and accurate information.</li>
+                        </ul>
+                    </section>
 
-            <section id="project-details">
-                <h2 class="subheader-text">Data Management and Communication</h2>
-                <div class="project-details-content">
-                    <ul class="project-list">
-                        <li>Facilitated efficient data management and communication between the frontend and backend using RESTful APIs.</li>
-                        <li>Utilized JavaScript's Fetch API to make HTTP requests to the backend server, enabling seamless data exchange.</li>
-                        <li>Retrieved user profile information, rides data, and other necessary details from the server to display on the frontend.</li>
-                    </ul>
-                </div>
-            </section>
+                    <section>
+                        <h2>Data Management and Communication</h2>
+                        <ul class="project-list">
+                            <li>Facilitated efficient data management and communication between the frontend and backend using RESTful APIs.</li>
+                            <li>Utilized JavaScript's Fetch API to make HTTP requests to the backend server, enabling seamless data exchange.</li>
+                            <li>Retrieved user profile information, rides data, and other necessary details from the server to display on the frontend.</li>
+                        </ul>
+                    </section>
 
-            <section id="project-details">
-                <h2 class="subheader-text">User Authentication and Authorization</h2>
-                <div class="project-details-content">
-                    <ul class="project-list">
-                        <li>Implemented secure user authentication and authorization mechanisms using JSON Web Tokens (JWT).</li>
-                        <li>Utilized local storage to store the JWT on the client-side, enabling persistent login sessions and easy access to user-specific data.</li>
-                    </ul>
-                </div>
-            </section>
+                    <section>
+                        <h2>User Authentication and Authorization</h2>
+                        <ul class="project-list">
+                            <li>Implemented secure user authentication and authorization mechanisms using JSON Web Tokens (JWT).</li>
+                            <li>Utilized local storage to store the JWT on the client-side, enabling persistent login sessions and easy access to user-specific data.</li>
+                        </ul>
+                    </section>
 
-            <section id="project-details">
-                <h2 class="subheader-text">User Interface and Experience</h2>
-                <div class="project-details-content">
-                    <ul class="project-list">
-                        <li>Incorporated various UI libraries and frameworks to enhance the user experience and provide a visually appealing interface.</li>
-                        <li>Used the react-big-calendar library to display the rides calendar, allowing users to easily view and select available rides.</li>
-                        <li>Employed HTML and CSS to structure and style the pages, creating visually appealing designs aligned with the app's overall aesthetic.</li>
-                    </ul>
-                </div>
-            </section>
+                    <section>
+                        <h2>User Interface and Experience</h2>
+                        <ul class="project-list">
+                            <li>Incorporated various UI libraries and frameworks to enhance the user experience and provide a visually appealing interface.</li>
+                            <li>Used the react-big-calendar library to display the rides calendar, allowing users to easily view and select available rides.</li>
+                            <li>Employed HTML and CSS to structure and style the pages, creating visually appealing designs aligned with the app's overall aesthetic.</li>
+                        </ul>
+                    </section>
 
-            <section id="project-details">
-                <h2 class="subheader-text">Version Control and Collaboration</h2>
-                <div class="project-details-content">
-                    <ul class="project-list">
-                        <li>Worked with Git and GitHub for version control and collaboration.</li>
-                        <li>Regularly committed code changes, created branches for specific features, and merged them back into the main branch after thorough testing and review.</li>
-                        <li>Enabled efficient collaboration with team members and ensured a smooth development process.</li>
-                    </ul>
+                    <section>
+                        <h2>Version Control and Collaboration</h2>
+                        <ul class="project-list">
+                            <li>Worked with Git and GitHub for version control and collaboration.</li>
+                            <li>Regularly committed code changes, created branches for specific features, and merged them back into the main branch after thorough testing and review.</li>
+                            <li>Enabled efficient collaboration with team members and ensured a smooth development process.</li>
+                        </ul>
+                    </section>
                 </div>
-            </section>
+
+                <div class="image-column">
+                    <!-- Placeholder for screenshots -->
+                    <img src="../assets/images/calendar.png" alt="Calendar Screenshot" class="screenshot">
+                    <img src="../assets/images/ride-details.png" alt="Ride Details Screenshot" class="screenshot">
+                    <img src="../assets/images/profile.png" alt="Profile Page Screenshot" class="screenshot">
+                </div>
+            </div>
         </main>
 	</body>
 </html>
