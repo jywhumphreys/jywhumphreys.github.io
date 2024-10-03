@@ -301,54 +301,48 @@ body {
 
 /* Styles for project pages */
 .project-page #main-content {
-  width: 100%;
+  width: 80%;
   max-width: none;
-  padding-left: 0;
-  padding-right: 0;
+  margin: 0 auto; /* Center the content */
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.project-page #my-work-section {
+.project-page #project-header,
+.project-page #project-details {
   width: 100%;
-  padding: 0 20px 60px;
 }
 
-.project-page .projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+.project-page .project-header-image {
   width: 100%;
-  max-width: 1400px; /* Adjust this value as needed */
-  margin: 0 auto;
-}
-
-.project-page .project-card {
-  width: 100%;
+  height: auto;
+  max-height: 600px; /* Adjust as needed */
+  object-fit: cover;
 }
 
 /* Responsive adjustments for project pages */
 @media only screen and (max-width: 1200px) {
-  .project-page .projects-container {
-    max-width: 95%;
+  .project-page #main-content {
+    width: 90%;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .project-page #my-work-section {
-    padding: 0 15px 40px;
-  }
-  .project-page .projects-container {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  .project-page #main-content {
+    width: 95%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
 @media only screen and (max-width: 480px) {
-  .project-page #my-work-section {
-    padding: 0 10px 30px;
-  }
-  .project-page .projects-container {
-    grid-template-columns: 1fr;
+  .project-page #main-content {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
+
 
 /* Responsive adjustments */
 @media only screen and (max-width: 1200px) {
