@@ -56,7 +56,7 @@ body {
 #about-section .section-title,
 #experience-section .section-title,
 #my-work-section .section-title {
-  font-size: 48px;
+  font-size: 30px;
 }
 /* Portfolio Header */
 #portfolio-header {
@@ -110,13 +110,15 @@ body {
   flex-direction: column;
   gap: 24px;
 }
+
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px; /* Increased gap for better spacing */
 }
+
 .project-card {
-  flex: 1 1 calc(33.333% - 10px);
+  flex: 0 1 calc(33.333% - 14px); /* Adjusted calculation */
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -125,6 +127,12 @@ body {
   transition: box-shadow 0.3s ease;
   background-color: #fff;
 }
+
+/* Ensure the last row aligns properly */
+.project-card:last-child {
+  margin-right: auto;
+}
+
 .project-image {
   width: 100%;
   height: 180px;
@@ -132,11 +140,25 @@ body {
   object-position: center;
   border-radius: 8px 8px 0 0;
 }
+
 .project-card-text-container {
   padding: 12px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 1000px) {
+  .project-card {
+    flex: 0 1 calc(50% - 10px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .project-card {
+    flex: 0 1 100%;
+  }
 }
 
 /* Experience Section */
