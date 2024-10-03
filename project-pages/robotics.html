@@ -34,8 +34,9 @@
                 gap: 20px;
             }
             .image-row img {
-                width: 48%;
+                max-width: 48%;
                 height: auto;
+                object-fit: contain;
             }
             .content-with-images {
                 display: flex;
@@ -49,6 +50,20 @@
             }
             .image-column img {
                 width: 100%;
+                height: auto;
+                object-fit: contain;
+                margin-bottom: 20px;
+            }
+            .small-image-row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 20px;
+            }
+            .small-image-row img {
+                max-width: 48%;
+                height: auto;
+                object-fit: contain;
                 margin-bottom: 20px;
             }
             .body-text {
@@ -100,27 +115,26 @@
 
             <div class="image-row">
                 <img src="../assets/images/robot-1.jpg" alt="Robot in competition">
-                <img src="../assets/images/competition-field.gif" alt="Competition field">
+                <img src="../assets/images/competition-field.jpg" alt="Competition field">
             </div>
 
             <div class="divider"></div>
 
             <div class="content-with-images">
-                <div class="image-column">
-                    <img src="../assets/images/electrical-board-1.png" alt="Electrical board 1">
-                    <img src="../assets/images/electrical-board-2.png" alt="Electrical board 2">
-                </div>
                 <div class="text-column">
                     <h2 class="subheader-text">"Flipped" Electrical Board</h2>
                     <p class="body-text">As a founding member of our area's first and only student-run community robotics team, I played a key role in establishing the team, forming relationships with local businesses and corporations to secure sponsorships, grants, and manufacturing resources. As electronics lead, I designed and wired reliable electrical systems for over 10 robots, achieving a 0% electrical failure rate for four consecutive years, and at competitions, I was a member of the "pit crew", a group of 5 people responsible for maintaining and repairing the robot.</p>
                     <p class="body-text">As the electronics lead, one of my primary responsibilities was ensuring that our robot was operational and ready to compete in every match. To achieve this, I focused on designing a reliable and robust electrical system that could be quickly and easily diagnosed. By strategically mounting all of the electronic components on the bottom of the robot, I created a system that was highly accessible, allowing for rapid maintenance and repairs without the need to navigate through or around complex mechanisms. This approach not only improved the robot's reliability but also resulted in a cleaner and more organized wiring layout. Through this design philosophy, I successfully maintained a 0% electrical failure rate in matches for four consecutive years, ensuring that our robot was always ready to perform at its best during competition.</p>
                     <p class="body-text">The electronics board, pocketed with a CNC-routed diamond pattern, allowed for easy component mounting and wire routing. The flipped electronics board provided quick access to all components, crucial for rapid repairs between matches at competition.</p>
                 </div>
-            </div>
-
-            <div class="image-row">
-                <img src="../assets/images/robot-2.png" alt="Robot in action">
-                <img src="../assets/images/team-working.png" alt="Team working on robot">
+                <div class="image-column">
+                    <div class="small-image-row">
+                        <img src="../assets/images/electrical-board-1.jpg" alt="Electrical board 1">
+                        <img src="../assets/images/electrical-board-2.jpg" alt="Electrical board 2">
+                        <img src="../assets/images/robot-2.jpg" alt="Robot in action">
+                        <img src="../assets/images/team-working.jpg" alt="Team working on robot">
+                    </div>
+                </div>
             </div>
         </main>
 	</body>
