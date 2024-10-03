@@ -152,6 +152,7 @@ body {
   background-color: #fff;
   text-decoration: none;
   color: inherit;
+  height: 400px; /* Set a fixed height */
 }
 
 .project-card:hover {
@@ -172,6 +173,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow: hidden; /* Hide overflow */
 }
 
 .project-title {
@@ -180,6 +182,11 @@ body {
   color: #333;
   margin: 0;
   line-height: 1.3;
+  max-height: 3.9rem; /* Allow for 3 lines of text */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .project-title.long-title {
@@ -190,6 +197,10 @@ body {
   font-size: 0.9rem;
   color: #666;
   margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Limit to 4 lines */
+  -webkit-box-orient: vertical;
 }
 
 /* Experience Section */
