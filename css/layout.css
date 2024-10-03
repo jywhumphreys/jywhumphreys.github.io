@@ -211,6 +211,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding-bottom: 60px; /* Add padding at the bottom */
 }
 
 .projects-container {
@@ -304,11 +305,17 @@ body {
   #main-content {
     max-width: 95%;
   }
+  #my-work-section {
+    padding-bottom: 50px; /* Slightly reduced padding for smaller screens */
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   #portfolio-header {
     flex-direction: column;
+  }
+  #my-work-section {
+    padding-bottom: 40px;
   }
 }
 
@@ -319,7 +326,6 @@ body {
   .projects-container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
-
   .nav-icon,
   .resume-icon {
     height: 20px;
@@ -328,15 +334,19 @@ body {
   .nav-icon {
     margin-left: 15px;
   }
-
   .resume-icon {
     margin-right: 15px;
+  }
+  #my-work-section {
+    padding-bottom: 30px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   #main-content {
     padding-top: 160px;
+    padding-left: 10px; /* Reduce side padding on very small screens */
+    padding-right: 10px;
   }
   .projects-container {
     grid-template-columns: 1fr;
@@ -350,5 +360,8 @@ body {
   }
   .nav-icon {
     margin: 0 10px;
+  }
+  #my-work-section {
+    padding-bottom: 20px;
   }
 }
