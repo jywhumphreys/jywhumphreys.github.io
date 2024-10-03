@@ -136,8 +136,11 @@
                     <div class="bullet-points">
                         <ul class="project-list">
                             <li>Partitioned NVMe SSD into dedicated partitions for each OS (NTFS, ext4, APFS) and an EFI System Partition</li>
+                          <br>
                             <li>Installed Windows 11 on the NTFS partition, ensuring the creation of the ESP</li>
+                            <br>
                             <li>Installed Arch Linux on the ext4 partition, configuring systemd-boot boot loader on the ESP</li>
+                            <br>
                             <li>Extensively customized and configured OpenCore boot loader for Hackintosh installation of macOS Sonoma
                                 <ul>
                                     <li>Enabled native GPU acceleration for AMD Radeon RX 6700S dGPU</li>
@@ -145,6 +148,7 @@
                                     <li>Configured ACPI tables and kernel extensions (kexts) for hardware compatibility</li>
                                 </ul>
                             </li>
+                            <br>
                             <li>Resolved hardware compatibility issues:
                                 <ul>
                                     <li>Enabled 120Hz HiDPI LCD with custom resolution using one-key-hidpi</li>
@@ -154,6 +158,7 @@
                                     <li>Implemented S3 sleep with UMAF for power management</li>
                                 </ul>
                             </li>
+                            <br>
                             <li>Overcame challenges related to:
                                 <ul>
                                     <li>Lack of iGPU (Radeon 680) support, preventing use of USB-C DisplayPort alt mode</li>
