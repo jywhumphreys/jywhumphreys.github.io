@@ -12,6 +12,59 @@
         <link rel="stylesheet" href="../css/utilities.css">
 
 		<script defer src="../js/script.js"></script>
+        <style>
+            .project-header-content {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            .project-description {
+                font-size: 22px;
+                font-weight: bold;
+                line-height: 1.4;
+                margin-bottom: 1em;
+            }
+            .divider {
+                border-top: 1px solid #ccc;
+                margin: 20px 0;
+            }
+            .image-row {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            }
+            .image-row img {
+                width: 48%;
+                height: auto;
+            }
+            .content-with-images {
+                display: flex;
+                gap: 20px;
+            }
+            .image-column {
+                width: 40%;
+            }
+            .text-column {
+                width: 60%;
+            }
+            .image-column img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .body-text {
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 1.6;
+            }
+            .main-title {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+            }
+            .subheader-text {
+                font-size: 1.5em;
+                margin-bottom: 15px;
+            }
+        </style>
 	</head>
 	<body class="project-page">
         <!-- NAVBAR -->
@@ -39,27 +92,36 @@
             <!-- PROJECT HEADER -->
             <header id="project-header">
                 <h1 class="main-title">FIRST Robotics Team 7461</h1>
-                <p class="body-text">The FIRST Robotics Competition (FRC) is an international robotics competition in which teams of high-school students are given 6 weeks to design, build, and program a functional robot which is able to fulfill the unique and complex challenges specific to that year's game. In addition to the technical aspects, teams must also engage in fundraising, develop a team brand, and participate in STEM outreach within their community.</p>
-                <img class="project-header-image" src="../assets/images/first-robotics-team-7461.jpg" alt="FIRST Robotics Team 7461">
+                <h2 class="subheader-text">Electronics Lead: August 2018 - July 2022</h2>
+                <p class="project-description">The FIRST Robotics Competition (FRC) is an international robotics competition in which teams of high-school students are given 6 weeks to design, build, and program a functional robot which is able to fulfill the unique and complex challenges specific to that year's game. In addition to the technical aspects, teams must also engage in fundraising, develop a team brand, and participate in STEM outreach within their community.</p>
             </header>
 
-            <!-- PROJECT DETAILS -->
-            <section id="project-details">
-                <h2 class="subheader-text">Project Details</h2>
-                <div class="project-details-content">
-                    <p class="body-text">As a founding member of our area's first and only student-run community robotics team, I played a key role in establishing the team, forming relationships with local businesses and corporations to secure sponsorships, grants, and manufacturing resources. As electronics lead, I designed and wired reliable electrical systems for over 10 robots, achieving a 0% electrical failure rate for four consecutive years, and at competitions, I was a member of the "pit crew", a group of 5 people responsible for maintaining and repairing the robot.</p>
-                    <p class="body-text">Electronics Lead: August 2018 - July 2022</p>
-                    <p class="body-text">As the electronics lead, one of my primary responsibilities was ensuring that our robot was operational and ready to compete in every match. To achieve this, I focused on designing a reliable and robust electrical system that could be quickly and easily diagnosed. By strategically mounting all of the electronic components on the bottom of the robot, I created a system that was highly accessible, allowing for rapid maintenance and repairs without the need to navigate through or around complex mechanisms. This approach not only improved the robot's reliability but also resulted in a cleaner and more organized wiring layout. Through this design philosophy, I successfully maintained a 0% electrical failure rate in matches for four consecutive years, ensuring that our robot was always ready to perform at its best during competition.</p>
-                </div>
-            </section>
+            <div class="divider"></div>
 
-            <section id="project-details">
-                <h2 class="subheader-text">"Flipped" Electrical Board</h2>
-                <div class="project-details-content">
-                    <p class="body-text">The electronics board, pocketed with a CNC-routed diamond pattern, allowed for easy component mounting and wire routing.</p>
-                    <p class="body-text">The flipped electronics board provided quick access to all components, crucial for rapid repairs between matches at competition</p>
+            <div class="image-row">
+                <img src="../assets/images/robot-1.jpg" alt="Robot in competition">
+                <img src="../assets/images/competition-field.gif" alt="Competition field">
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="content-with-images">
+                <div class="image-column">
+                    <img src="../assets/images/electrical-board-1.png" alt="Electrical board 1">
+                    <img src="../assets/images/electrical-board-2.png" alt="Electrical board 2">
                 </div>
-            </section>
+                <div class="text-column">
+                    <h2 class="subheader-text">"Flipped" Electrical Board</h2>
+                    <p class="body-text">As a founding member of our area's first and only student-run community robotics team, I played a key role in establishing the team, forming relationships with local businesses and corporations to secure sponsorships, grants, and manufacturing resources. As electronics lead, I designed and wired reliable electrical systems for over 10 robots, achieving a 0% electrical failure rate for four consecutive years, and at competitions, I was a member of the "pit crew", a group of 5 people responsible for maintaining and repairing the robot.</p>
+                    <p class="body-text">As the electronics lead, one of my primary responsibilities was ensuring that our robot was operational and ready to compete in every match. To achieve this, I focused on designing a reliable and robust electrical system that could be quickly and easily diagnosed. By strategically mounting all of the electronic components on the bottom of the robot, I created a system that was highly accessible, allowing for rapid maintenance and repairs without the need to navigate through or around complex mechanisms. This approach not only improved the robot's reliability but also resulted in a cleaner and more organized wiring layout. Through this design philosophy, I successfully maintained a 0% electrical failure rate in matches for four consecutive years, ensuring that our robot was always ready to perform at its best during competition.</p>
+                    <p class="body-text">The electronics board, pocketed with a CNC-routed diamond pattern, allowed for easy component mounting and wire routing. The flipped electronics board provided quick access to all components, crucial for rapid repairs between matches at competition.</p>
+                </div>
+            </div>
+
+            <div class="image-row">
+                <img src="../assets/images/robot-2.png" alt="Robot in action">
+                <img src="../assets/images/team-working.png" alt="Team working on robot">
+            </div>
         </main>
 	</body>
 </html>
