@@ -40,16 +40,16 @@ body {
 /* Main title styles */
 .main-title {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 30px;
   color: #2d2d2d;
 }
 
 /* Section title styles */
 .section-title {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 30px;
   color: #2d2d2d;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Ensure consistency for specific section titles if needed */
