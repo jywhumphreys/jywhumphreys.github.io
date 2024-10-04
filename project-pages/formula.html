@@ -14,95 +14,101 @@
 		    <script defer src="../js/script.js"></script>
 
 
-		<style>
-            /* Flexbox for two-column layout */
-            .two-columns {
-                display: flex;
-                justify-content: space-between;
-                gap: 20px;
-            }
 
-            /* Columns */
-            .text-content {
-                flex: 1;
-                max-width: 60%;
-            }
+    <style>
+        /* Flexbox for two-column layout */
+        .two-columns {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
 
-            .image-column {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                flex: 1;
-                align-items: center; /* Center the images horizontally */
-            }
+        /* Columns */
+        .text-content {
+            flex: 1;
+            max-width: 60%;
+        }
 
-            .image-column img {
-                max-width: 60%; /* Adjust this percentage as needed */
-                height: auto; /* Maintain aspect ratio */
-            }
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex: 1;
+            align-items: center; /* Center the images horizontally */
+        }
 
-            .image-row {
-                display: flex;
-                justify-content: space-between;
-                gap: 10px;
-            }
+        .image-column img {
+            max-width: 100%; /* Prevent stretching */
+            height: auto; /* Maintain aspect ratio */
+        }
 
-            .single-image {
-                margin-top: 15px;
-                display: block;
-                margin-left: auto;
-            }
+        .image-row {
+            display: flex;
+            justify-content: center; /* Center images in row */
+            gap: 10px;
+        }
 
-            /* General styling */
-            img {
-                max-width: 100%;
-                height: auto;
-            }
+        .image-row img {
+            max-width: 100%; /* Prevent stretching */
+            height: auto; /* Maintain aspect ratio */
+        }
 
-            hr {
-                margin: 40px 0;
-            }
+        .single-image {
+            margin-top: 15px;
+            display: block;
+            margin-left: auto;
+        }
 
-            ul.accomplishments {
-                list-style-type: disc;
-                margin-left: 20px;
-            }
+        /* General styling */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-            .project {
-                margin-bottom: 40px;
-            }
+        hr {
+            margin: 40px 0;
+        }
 
-            /* Main content */
-            main {
-                padding: 20px;
-            }
+        ul.accomplishments {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
 
-            header {
-                margin-bottom: 30px;
-            }
+        .project {
+            margin-bottom: 40px;
+        }
 
-            .project-title {
-                font-size: 20px;
-                font-weight: bold;
-                margin-bottom: 15px;
-            }
+        /* Main content */
+        main {
+            padding: 20px;
+        }
 
-            .description-content {
-                margin-bottom: 20px;
-            }
+        header {
+            margin-bottom: 30px;
+        }
 
-            .description-content p {
-                font-size: 16px;
-                line-height: 1.6;
-            }
+        .project-title {
+            font-size: 20px; /* Ensure font size consistency */
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
 
-            /* Body and container styling */
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                color: #333;
-            }
-        </style>
+        .description-content {
+            margin-bottom: 20px;
+        }
+
+        .description-content p {
+            font-size: 16px; /* Ensure font size consistency */
+            line-height: 1.6;
+        }
+
+        /* Body and container styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+    </style>
 		<script defer src="../js/script.js"></script>
 	</head>
 	<body class="project-page">
@@ -222,10 +228,11 @@
                   <img src="../assets/images/pedalbox.png" alt="CAD for the pedalbox">
                   <img src="../assets/images/brakes.png" alt="CAD for the brakes">
                 </div>
-              </div>
-              <div class="image-row">
-                <img src="../assets/images/brake-test-fit.png" alt="Test fitting of brakes with a 3d printed wheel">
-                <img src="../assets/images/brake-assembly.png" alt="Rotor and caliper assembly">
+                <div class="image-row">
+                  <img src="../assets/images/brake-test-fit.png" alt="Test fitting of brakes with a 3d printed wheel">
+                  <img src="../assets/images/brake-assembly.png" alt="Rotor and caliper assembly">
+                </div>
+
               </div>
             </section>
             <hr>
