@@ -28,22 +28,24 @@
                 border-top: 1px solid #ccc;
                 margin: 20px 0;
             }
-           .image-row-top {
-               display: flex;
-               justify-content: space-between;
-               gap: 20px;
-               align-items: center;
-           }
-           .image-row-top img:first-child {
-               max-width: 25%;
-               height: auto;
-               object-fit: contain;
-           }
-           .image-row-top img:last-child {
-               max-width: 70%;
-               height: auto;
-               object-fit: contain;
-           }
+            .image-row-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .image-row-top img:first-child {
+                width: 300px; /* Set a fixed width for the first image */
+                height: auto;
+                object-fit: contain;
+            }
+
+            .image-row-top img:last-child {
+                flex-grow: 1; /* Let the second image take up the remaining space */
+                height: auto;
+                object-fit: contain;
+            }
             .image-row-bottom {
                 display: flex;
                 justify-content: space-between;
