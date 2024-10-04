@@ -14,101 +14,95 @@
 		    <script defer src="../js/script.js"></script>
 
 
+		<style>
+            /* Flexbox for two-column layout */
+            .two-columns {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            }
 
-    <style>
-        /* Flexbox for two-column layout */
-        .two-columns {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-        }
+            /* Columns */
+            .text-content {
+                flex: 1;
+                max-width: 60%;
+            }
 
-        /* Columns */
-        .text-content {
-            flex: 1;
-            max-width: 60%;
-        }
+            .image-column {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                flex: 1;
+                align-items: center; /* Center the images horizontally */
+            }
 
-        .image-column {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            flex: 1;
-            align-items: center; /* Center the images horizontally */
-        }
+            .image-column img {
+                max-width: 60%; /* Adjust this percentage as needed */
+                height: auto; /* Maintain aspect ratio */
+            }
 
-        .image-column img {
-            max-width: 100%; /* Prevent stretching */
-            height: auto; /* Maintain aspect ratio */
-        }
+            .image-row {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
 
-        .image-row {
-            display: flex;
-            justify-content: center; /* Center images in row */
-            gap: 10px;
-        }
+            .single-image {
+                margin-top: 15px;
+                display: block;
+                margin-left: auto;
+            }
 
-        .image-row img {
-            max-width: 100%; /* Prevent stretching */
-            height: auto; /* Maintain aspect ratio */
-        }
+            /* General styling */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
 
-        .single-image {
-            margin-top: 15px;
-            display: block;
-            margin-left: auto;
-        }
+            hr {
+                margin: 40px 0;
+            }
 
-        /* General styling */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+            ul.accomplishments {
+                list-style-type: disc;
+                margin-left: 20px;
+            }
 
-        hr {
-            margin: 40px 0;
-        }
+            .project {
+                margin-bottom: 40px;
+            }
 
-        ul.accomplishments {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
+            /* Main content */
+            main {
+                padding: 20px;
+            }
 
-        .project {
-            margin-bottom: 40px;
-        }
+            header {
+                margin-bottom: 30px;
+            }
 
-        /* Main content */
-        main {
-            padding: 20px;
-        }
+            .project-title {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
 
-        header {
-            margin-bottom: 30px;
-        }
+            .description-content {
+                margin-bottom: 20px;
+            }
 
-        .project-title {
-            font-size: 20px; /* Ensure font size consistency */
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
+            .description-content p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
 
-        .description-content {
-            margin-bottom: 20px;
-        }
-
-        .description-content p {
-            font-size: 16px; /* Ensure font size consistency */
-            line-height: 1.6;
-        }
-
-        /* Body and container styling */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-    </style>
+            /* Body and container styling */
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+            }
+        </style>
 		<script defer src="../js/script.js"></script>
 	</head>
 	<body class="project-page">
