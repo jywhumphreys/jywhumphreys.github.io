@@ -48,12 +48,13 @@
             }
             .image-row-bottom {
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-end; /* Align images to the right */
+                align-items: flex-end;     /* Align images to the bottom */
                 gap: 20px;
-                align-items: center;
             }
+
             .image-row-bottom img {
-                max-width: 48%;
+                max-width: 48%; /* Ensure images are sized correctly */
                 height: auto;
                 object-fit: contain;
             }
