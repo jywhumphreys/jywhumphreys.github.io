@@ -14,116 +14,123 @@
 		    <script defer src="../js/script.js"></script>
 
 
-<style>
-    /* Flexbox for two-column layout */
-    .two-columns {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-    }
+        <style>
+          /* Flexbox for two-column layout */
 
-    /* Columns */
-    .text-content {
-        flex: 1;
-        max-width: 60%;
-    }
+          /* Full-width section */
+          .full-width-section {
+              width: 100%;
+          }
+          
+          .two-columns {
+              display: flex;
+              justify-content: space-between;
+              gap: 20px;
+          }
 
-    .image-column {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        flex: 1;
-        align-items: center;
-    }
+          /* Columns */
+          .text-content {
+              flex: 1;
+              max-width: 60%;
+          }
 
-    .image-column img {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
+          .image-column {
+              display: flex;
+              flex-direction: column;
+              gap: 15px;
+              flex: 1;
+              align-items: center;
+          }
 
-    .image-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-    }
+          .image-column img {
+              max-width: 100%;
+              height: auto;
+              object-fit: contain;
+          }
 
-    .image-row img {
-        max-width: 48%;
-        height: auto;
-        object-fit: contain;
-    }
+          .image-row {
+              display: flex;
+              justify-content: space-between;
+              gap: 10px;
+          }
 
-    .single-image {
-        margin-top: 15px;
-        display: block;
-        margin-left: auto;
-        max-width: 100%;
-        height: auto;
-    }
+          .image-row img {
+              max-width: 48%;
+              height: auto;
+              object-fit: contain;
+          }
 
-    /* General styling */
-    img {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
+          .single-image {
+              margin-top: 15px;
+              display: block;
+              margin-left: auto;
+              max-width: 100%;
+              height: auto;
+          }
 
-    hr {
-        margin: 40px 0;
-    }
+          /* General styling */
+          img {
+              max-width: 100%;
+              height: auto;
+              object-fit: contain;
+          }
 
-    .project {
-        margin-bottom: 40px;
-    }
+          hr {
+              margin: 40px 0;
+          }
 
-    /* Main content */
-    main {
-        padding: 20px;
-    }
+          .project {
+              margin-bottom: 40px;
+          }
 
-    header {
-        margin-bottom: 30px;
-    }
+          /* Main content */
+          main {
+              padding: 20px;
+          }
 
-    /* Text styles */
-    h1, .main-title {
-        font-size: 2.5em;
-        margin-bottom: 10px;
-    }
+          header {
+              margin-bottom: 30px;
+          }
 
-    h2, .project-title, .subheader-text {
-        font-size: 1.5em;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
+          /* Text styles */
+          h1, .main-title {
+              font-size: 2.5em;
+              margin-bottom: 10px;
+          }
 
-    h3 {
-        font-size: 1.2em;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+          h2, .project-title, .subheader-text {
+              font-size: 1.5em;
+              font-weight: bold;
+              margin-bottom: 15px;
+          }
 
-    .project-description, .description-content p, .body-text, ul.accomplishments, .project-list {
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 1.6;
-    }
+          h3 {
+              font-size: 1.2em;
+              margin-top: 20px;
+              margin-bottom: 10px;
+          }
 
-    ul.accomplishments, .project-list {
-        list-style-type: disc;
-        margin-left: 20px;
-    }
+          .project-description, .description-content p, .body-text, ul.accomplishments, .project-list {
+              font-size: 18px;
+              font-weight: bold;
+              line-height: 1.6;
+          }
 
-    /* Body and container styling */
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        font-size: 18px;
-        font-weight: bold;
-    }
-</style>
+          ul.accomplishments, .project-list {
+              list-style-type: disc;
+              margin-left: 20px;
+          }
+
+          /* Body and container styling */
+          body {
+              font-family: Arial, sans-serif;
+              line-height: 1.6;
+              color: #333;
+              font-size: 18px;
+              font-weight: bold;
+          }
+        </style>
+
 <script defer src="../js/script.js"></script>
 	</head>
 	<body class="project-page">
@@ -154,16 +161,12 @@
             </nav>
 
             <!-- Roles and Description -->
-            <section class="project">
-              <div class="description-content">
-                <div class="text-content">
-                  <h2 class="project-title">Software Lead: June 2024 - Present</h2>
-                  <h2 class="project-title">Controls Lead + Brakes & Pedalbox RE: May 2023 - June 2024</h2>
-                  <h2 class="project-title">Powertrain + Controls General Member: September 2022 - May 2023</h2>
-                  <p>UCLA's Bruin Formula Racing is a student-led engineering group that participates in the global Formula SAE competition. The competition challenges teams to develop a formula-style racecar from the ground up, which then competes in both static and dynamic events at multiple competitions annually. By taking part in this project, students face complex engineering obstacles, providing them with valuable hands-on experience and knowledge that prepares them for real-world engineering challenges.</p>
-                  <p>Currently, I serve as the team’s Controls Lead, overseeing a team of 6 engineers performing the design, analysis, manufacturing, and testing of the car’s brakes, ergonomics, and safety subsystems for Mk. IX, our first electric vehicle. My focus is ensuring rules compliance and safety while making the car as easy and comfortable to drive as possible. I am also responsible for designing the car’s pedalbox and braking system. As a general member my freshman year, I led the engine tuning and testing process for two of our cars, Mk. VII and Mk. VIII, improving our car’s overall power and helping us secure a 10th place finish out of 120 teams at the May 2023 FSAE IC competition.</p>
-                </div>
-              </div>
+            <section class="full-width-section">
+              <h2 class="project-title">Software Lead: June 2024 - Present</h2>
+              <h2 class="project-title">Controls Lead + Brakes & Pedalbox RE: May 2023 - June 2024</h2>
+              <h2 class="project-title">Powertrain + Controls General Member: September 2022 - May 2023</h2>
+              <p class="body-text">UCLA's Bruin Formula Racing is a student-led engineering group that participates in the global Formula SAE competition. The competition challenges teams to develop a formula-style racecar from the ground up, which then competes in both static and dynamic events at multiple competitions annually. By taking part in this project, students face complex engineering obstacles, providing them with valuable hands-on experience and knowledge that prepares them for real-world engineering challenges.</p>
+              <p class="body-text">Currently, I serve as the team's Controls Lead, overseeing a team of 6 engineers performing the design, analysis, manufacturing, and testing of the car's brakes, ergonomics, and safety subsystems for Mk. IX, our first electric vehicle. My focus is ensuring rules compliance and safety while making the car as easy and comfortable to drive as possible. I am also responsible for designing the car's pedalbox and braking system. As a general member my freshman year, I led the engine tuning and testing process for two of our cars, Mk. VII and Mk. VIII, improving our car's overall power and helping us secure a 10th place finish out of 120 teams at the May 2023 FSAE IC competition.</p>
             </section>
             <hr>
 
@@ -191,21 +194,20 @@
             <hr>
 
             <!-- Engine Tuning Section -->
-            <section class="project">
-              <div class="text-content">
-                <h2 class="project-title">Engine Tuning</h2>
-                <p>During my time as a general member on the team, my main role was the tuning and testing of our powertrain. This included optimizing the tune for our 2021-2022 car, Mk. VII, to compete in local events, as well as tuning Mk. VIII, the car we were competing with that year. When choosing powertrain components for Mk. VIII, we upgraded to an AEM Infinity Series 5 ECU, which required creating a new tune from scratch. I took the lead in this effort, aiming to improve the car’s power output and overall performance</p>
-                <p>My primary goal was to develop a tune that would maximize the car’s ability to score in events at competition, which required a powerful, reliable tune that our drivers liked. This required attending several dyno tuning sessions to perfect the fuel and ignition tables, as well as integrating advanced features such as flat-foot shifting and launch control to improve the car’s acceleration.</p>
-                <h3>Accomplishments:</h3>
-                <ul class="accomplishments">
-                  <li>Helped develop a comprehensive testing plan with #1 priority of maximizing drive and dyno time</li>
-                  <li>Actively participated in 6 dyno sessions with a total of 61 pulls, tuning fuel maps + ignition timing and managing to raise our power from 45hp to 68hp</li>
-                  <li>Tuned the start and idle for the car, ensuring the engine could reliably start and run regardless of the temperature</li>
-                  <li>Successfully implemented flat-foot shifting and launch control, contributing to a 0.19s faster acceleration time at competition</li>
-                  <li>Thoroughly logged and analyzed data collected by our ECU and custom DAQ boards, allowing us to pinpoint issues with the car and implement solutions</li>
-                </ul>
-                <p>The final optimized tune, along with the addition of flat foot-shifting and launch control, dramatically improved the car’s acceleration times. These improvements yielded a 51% increase in engine horsepower, 15% increase in acceleration score, and helped us place 10th out of 120 teams at competition. The success of this project highlighted my initiative and ability to contribute meaningfully to the team’s achievements, even as a general member.</p>
-              </div>
+            <section class="full-width-section">
+              <h2 class="project-title">Engine Tuning</h2>
+              <p>During my time as a general member on the team, my main role was the tuning and testing of our powertrain. This included optimizing the tune for our 2021-2022 car, Mk. VII, to compete in local events, as well as tuning Mk. VIII, the car we were competing with that year. When choosing powertrain components for Mk. VIII, we upgraded to an AEM Infinity Series 5 ECU, which required creating a new tune from scratch. I took the lead in this effort, aiming to improve the car’s power output and overall performance</p>
+              <p>My primary goal was to develop a tune that would maximize the car’s ability to score in events at competition, which required a powerful, reliable tune that our drivers liked. This required attending several dyno tuning sessions to perfect the fuel and ignition tables, as well as integrating advanced features such as flat-foot shifting and launch control to improve the car’s acceleration.</p>
+              <h3>Accomplishments:</h3>
+              <ul class="accomplishments">
+                <li>Helped develop a comprehensive testing plan with #1 priority of maximizing drive and dyno time</li>
+                <li>Actively participated in 6 dyno sessions with a total of 61 pulls, tuning fuel maps + ignition timing and managing to raise our power from 45hp to 68hp</li>
+                <li>Tuned the start and idle for the car, ensuring the engine could reliably start and run regardless of the temperature</li>
+                <li>Successfully implemented flat-foot shifting and launch control, contributing to a 0.19s faster acceleration time at competition</li>
+                <li>Thoroughly logged and analyzed data collected by our ECU and custom DAQ boards, allowing us to pinpoint issues with the car and implement solutions</li>
+              </ul>
+              <p>The final optimized tune, along with the addition of flat foot-shifting and launch control, dramatically improved the car’s acceleration times. These improvements yielded a 51% increase in engine horsepower, 15% increase in acceleration score, and helped us place 10th out of 120 teams at competition. The success of this project highlighted my initiative and ability to contribute meaningfully to the team’s achievements, even as a general member.</p>
+
               <div class="image-row">
                 <img src="../assets/images/tuning-1.png" alt="Mk. VIII being tuned on the dynamometer">
                 <img src="../assets/images/tuning-2.png" alt="Our final tune">
