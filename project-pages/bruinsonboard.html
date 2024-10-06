@@ -82,6 +82,12 @@
             .project-list li {
                 margin-bottom: 0.5em;
             }
+            .image-caption {
+                text-align: center;
+                margin-top: 10px;
+                font-style: italic;
+                color: #666;
+            }
             @media (max-width: 768px) {
                 .project-content {
                     flex-direction: column;
@@ -190,10 +196,18 @@
                 </div>
 
                 <div class="image-column">
-                    <!-- Placeholder for screenshots -->
-                    <img src="../assets/images/calendar.png" alt="Calendar Screenshot" class="screenshot">
-                    <img src="../assets/images/ride-details.png"  alt="Ride Details Screenshot" class="screenshot">
-                    <img src="../assets/images/profile.png" alt="Profile Page Screenshot" class="screenshot">
+                    <figure>
+                        <img src="../assets/images/calendar.png" alt="Calendar Screenshot" class="screenshot">
+                        <figcaption class="image-caption">Ride scheduling calendar interface</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/images/ride-details.png"  alt="Ride Details Screenshot" class="screenshot">
+                        <figcaption class="image-caption">Detailed view of a specific ride</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/images/profile.png" alt="Profile Page Screenshot" class="screenshot">
+                        <figcaption class="image-caption">User profile page</figcaption>
+                    </figure>
                 </div>
             </div>
         </main>
