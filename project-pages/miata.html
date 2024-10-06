@@ -360,5 +360,49 @@
                 </section>
             </div>
         </main>
-	</body>
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img src="" alt="Fullscreen image" id="lightbox-img">
+            </div>
+        </div>
+</div>
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.style.display = 'flex';
+        
+        // Center the image after it's loaded
+        lightboxImg.onload = function() {
+            this.style.marginLeft = '0';
+            this.style.marginTop = '0';
+        }
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+
+    document.querySelectorAll('.image-column img, .image-row img, .single-image').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            openLightbox(this.src);
+        });
+    });
+
+    lightbox.addEventListener('click', closeLightbox);
+    lightboxClose.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeLightbox();
+    });
+    lightboxImg.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+</script>
+
+</body>
 </html>

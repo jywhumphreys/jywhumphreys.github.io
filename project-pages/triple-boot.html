@@ -2,239 +2,283 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-        <link rel="icon" href="../assets/images/1311.png" />
-        <title>Custom Multi-Boot System | Justin's Portfolio</title>
-        <meta name="description" content="Details about Justin's custom multi-boot system project">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../assets/images/1311.png" />
+    <title>Custom Multi-Boot System | Justin's Portfolio</title>
+    <meta name="description" content="Details about Justin's custom multi-boot system project">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="../css/layout.css">
-        <link rel="stylesheet" href="../css/typography.css">
-        <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
 
 		<script defer src="../js/script.js"></script>
-        <style>
+    <style>
 
 
-          .full-width-section {
-              width: 100%;
-              margin-bottom: 30px;
-          }
+      .full-width-section {
+          width: 100%;
+          margin-bottom: 30px;
+      }
 
-          .divider {
-              width: 100%;
-              height: 1px;
-              background-color: #ccc;
-              margin: 30px 0;
-          }
+      .divider {
+          width: 100%;
+          height: 1px;
+          background-color: #ccc;
+          margin: 30px 0;
+      }
 
+      .project-details {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+      }
+
+      .text-content {
+          flex: 1;
+          min-width: 300px;
+      }
+
+      .image-gallery {
+          flex: 1;
+          min-width: 300px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+      }
+
+      .image-container {
+          width: 100%;
+      }
+
+      .project-image {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease;
+      }
+
+      .project-image:hover {
+          transform: scale(1.05);
+      }
+      
+      .project-description {
+          font-size: 18px;
+          line-height: 1.6;
+          margin-bottom: 1em;
+          color: #444;
+      }
+
+      .image-caption {
+          font-style: italic;
+          font-size: 0.9em;
+          text-align: center;
+          margin-top: 5px;
+          color: #666;
+      }
+
+      .body-text {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #555;
+      }
+
+      .bullet-points ul {
+          padding-left: 20px;
+          margin-bottom: 20px;
+      }
+
+      .subheader-text {
+          font-size: 24px;
+          font-weight: bold;
+          margin-top: 30px;
+          margin-bottom: 20px;
+          color: #333;
+      }
+
+      .project-list {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #555;
+      }
+
+      .project-list ul {
+          padding-left: 20px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+
+      .project-list li ul li {
+          font-size: 0.95em;
+      }
+
+      @media (max-width: 768px) {
           .project-details {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 30px;
-          }
-
-          .text-content {
-              flex: 1;
-              min-width: 300px;
+              flex-direction: column;
           }
 
           .image-gallery {
-              flex: 1;
-              min-width: 300px;
-              display: grid;
-              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-              gap: 20px;
-          }
-
-          .image-container {
-              width: 100%;
-          }
-
-          .project-image {
-              width: 100%;
-              height: 200px;
-              object-fit: cover;
-              border-radius: 8px;
-              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-              transition: transform 0.3s ease;
-          }
-
-          .project-image:hover {
-              transform: scale(1.05);
-          }
-          
-          .project-description {
-              font-size: 18px;
-              line-height: 1.6;
-              margin-bottom: 1em;
-              color: #444;
-          }
-
-          .image-caption {
-              font-style: italic;
-              font-size: 0.9em;
-              text-align: center;
-              margin-top: 5px;
-              color: #666;
-          }
-
-          .body-text {
-              font-size: 16px;
-              line-height: 1.6;
-              color: #555;
-          }
-
-          .bullet-points ul {
-              padding-left: 20px;
-              margin-bottom: 20px;
+              grid-template-columns: repeat(2, 1fr);
           }
 
           .subheader-text {
-              font-size: 24px;
-              font-weight: bold;
-              margin-top: 30px;
-              margin-bottom: 20px;
-              color: #333;
+              font-size: 22px;
           }
 
+          .project-description,
+          .body-text,
           .project-list {
-              font-size: 16px;
-              line-height: 1.6;
-              color: #555;
+              font-size: 14px;
           }
+      }
 
-          .project-list ul {
-              padding-left: 20px;
-              margin-top: 10px;
-              margin-bottom: 10px;
+      @media (max-width: 480px) {
+          .image-gallery {
+              grid-template-columns: 1fr;
           }
-
-          .project-list li ul li {
-              font-size: 0.95em;
-          }
-
-          @media (max-width: 768px) {
-              .project-details {
-                  flex-direction: column;
-              }
-
-              .image-gallery {
-                  grid-template-columns: repeat(2, 1fr);
-              }
-
-              .subheader-text {
-                  font-size: 22px;
-              }
-
-              .project-description,
-              .body-text,
-              .project-list {
-                  font-size: 14px;
-              }
-          }
-
-          @media (max-width: 480px) {
-              .image-gallery {
-                  grid-template-columns: 1fr;
-              }
-          }
-        </style>
+      }
+    </style>
 	</head>
 	<body class="project-page">
-        <!-- NAVBAR -->
-        <nav class="navbar">
-            <div class="navbar-content">
-                <a class="nav-title-link" href="../index.html">
-                    <span class="nav-title">Justin Humphreys</span>
-                </a>
-                <div class="nav-social-links">
-                    <a class="icon-link" href="mailto:jhumphreys@ucla.edu" target="_blank">
-                        <img src="../assets/icons/mail.svg" class="nav-icon" alt="Email Icon">
-                    </a>
-                    <a class="icon-link" href="https://www.linkedin.com/in/jywhumphreys" target="_blank">
-                        <img src="../assets/icons/linkedin.svg" class="nav-icon" alt="LinkedIn Icon">
-                    </a>
-                    <a class="icon-link" href="https://www.instagram.com/justin.humphreys" target="_blank">
-                        <img src="../assets/icons/instagram.svg" class="nav-icon" alt="Instagram Icon">
-                    </a>
-                </div>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-content">
+        <a class="nav-title-link" href="../index.html">
+          <span class="nav-title">Justin Humphreys</span>
+        </a>
+        <div class="nav-social-links">
+          <a class="icon-link" href="mailto:jhumphreys@ucla.edu" target="_blank">
+            <img src="../assets/icons/mail.svg" class="nav-icon" alt="Email Icon">
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/jywhumphreys" target="_blank">
+            <img src="../assets/icons/linkedin.svg" class="nav-icon" alt="LinkedIn Icon">
+          </a>
+          <a class="icon-link" href="https://www.instagram.com/justin.humphreys" target="_blank">
+            <img src="../assets/icons/instagram.svg" class="nav-icon" alt="Instagram Icon">
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main id="main-content">
+      <div class="project-content">
+        <div class="full-width-section">
+          <h1 class="main-title">Custom Multi-Boot System</h1>
+          <p class="project-description">After taking a software construction class that covered Unix file system organization and shell scripting, I was inspired to install Linux, and then went even further and installed macOS on unsupported hardware. The whole project took a couple months of research, troubleshooting, and configuration before I finally got it working.</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- PROJECT DETAILS -->
+        <section class="project-details">
+          <div class="text-content">
+            <h2 class="subheader-text">Steps taken:</h2>
+            <div class="bullet-points">
+              <ul class="project-list">
+                <li>Partitioned NVMe SSD into dedicated partitions for each OS (NTFS, ext4, APFS) and an EFI System Partition</li>
+                <li>Installed Windows 11 on the NTFS partition, ensuring the creation of the ESP</li>
+                <li>Installed Arch Linux on the ext4 partition, configuring systemd-boot boot loader on the ESP</li>
+                <li>Extensively customized and configured OpenCore boot loader for Hackintosh installation of macOS Sonoma
+                  <ul>
+                    <li>Enabled native GPU acceleration for AMD Radeon RX 6700S dGPU</li>
+                    <li>Implemented CPU power management with AMD Power Gadget and RyzenAdj utility</li>
+                    <li>Configured ACPI tables and kernel extensions (kexts) for hardware compatibility</li>
+                  </ul>
+                </li>
+                <li>Resolved hardware compatibility issues:
+                  <ul>
+                    <li>Enabled 120Hz HiDPI LCD with custom resolution using one-key-hidpi</li>
+                    <li>Enabled 4K/60Hz external display output via HDMI and USB-C ports</li>
+                    <li>Replaced WiFi card with Intel AX210 for macOS compatibility</li>
+                    <li>Configured PCIe 4.0 NVMe SSD, USB ports, keyboard, trackpad, and internal speakers</li>
+                    <li>Implemented S3 sleep with UMAF for power management</li>
+                  </ul>
+                </li>
+                <li>Overcame challenges related to:
+                  <ul>
+                    <li>Lack of iGPU (Radeon 680) support, preventing use of USB-C DisplayPort alt mode</li>
+                    <li>Hardware LCD and keyboard backlight brightness control limitations</li>
+                    <li>Reduced battery life compared to Windows due to lack of iGPU support</li>
+                  </ul>
+                </li>
+              </ul>
             </div>
-        </nav>
+          </div>
 
-        <!-- MAIN PAGE CONTENT -->
-        <main id="main-content">
-            <div class="project-content">
-                <div class="full-width-section">
-                    <h1 class="main-title">Custom Multi-Boot System</h1>
-                    <p class="project-description">After taking a software construction class that covered Unix file system organization and shell scripting, I was inspired to install Linux, and then went even further and installed macOS on unsupported hardware. The whole project took a couple months of research, troubleshooting, and configuration before I finally got it working.</p>
-                </div>
-
-                <div class="divider"></div>
-
-                <!-- PROJECT DETAILS -->
-                <section class="project-details">
-                    <div class="text-content">
-                        <h2 class="subheader-text">Steps taken:</h2>
-                        <div class="bullet-points">
-                            <ul class="project-list">
-                                <li>Partitioned NVMe SSD into dedicated partitions for each OS (NTFS, ext4, APFS) and an EFI System Partition</li>
-                                <li>Installed Windows 11 on the NTFS partition, ensuring the creation of the ESP</li>
-                                <li>Installed Arch Linux on the ext4 partition, configuring systemd-boot boot loader on the ESP</li>
-                                <li>Extensively customized and configured OpenCore boot loader for Hackintosh installation of macOS Sonoma
-                                    <ul>
-                                        <li>Enabled native GPU acceleration for AMD Radeon RX 6700S dGPU</li>
-                                        <li>Implemented CPU power management with AMD Power Gadget and RyzenAdj utility</li>
-                                        <li>Configured ACPI tables and kernel extensions (kexts) for hardware compatibility</li>
-                                    </ul>
-                                </li>
-                                <li>Resolved hardware compatibility issues:
-                                    <ul>
-                                        <li>Enabled 120Hz HiDPI LCD with custom resolution using one-key-hidpi</li>
-                                        <li>Enabled 4K/60Hz external display output via HDMI and USB-C ports</li>
-                                        <li>Replaced WiFi card with Intel AX210 for macOS compatibility</li>
-                                        <li>Configured PCIe 4.0 NVMe SSD, USB ports, keyboard, trackpad, and internal speakers</li>
-                                        <li>Implemented S3 sleep with UMAF for power management</li>
-                                    </ul>
-                                </li>
-                                <li>Overcame challenges related to:
-                                    <ul>
-                                        <li>Lack of iGPU (Radeon 680) support, preventing use of USB-C DisplayPort alt mode</li>
-                                        <li>Hardware LCD and keyboard backlight brightness control limitations</li>
-                                        <li>Reduced battery life compared to Windows due to lack of iGPU support</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="image-gallery">
-                        <div class="image-container">
-                            <img src="../assets/images/opencore-bootloader.jpg" alt="OpenCore bootloader" class="project-image">
-                            <div class="image-caption">OpenCore bootloader selection screen</div>
-                        </div>
-                        <div class="image-container">
-                            <img src="../assets/images/disk-partitions.png" alt="Disk partitions" class="project-image">
-                            <div class="image-caption">Disk partition layout for triple-boot system</div>
-                        </div>
-                        <div class="image-container">
-                            <img src="../assets/images/macos-amd-hardware.png" alt="macOS running on AMD hardware" class="project-image">
-                            <div class="image-caption">macOS Sonoma running on AMD hardware</div>
-                        </div>
-                        <div class="image-container">
-                            <img src="../assets/images/amd-power-gadget.png" alt="AMD Power Gadget" class="project-image">
-                            <div class="image-caption">AMD Power Gadget for CPU power management</div>
-                        </div>
-                        <div class="image-container">
-                            <img src="../assets/images/customized-arch-linux.png" alt="Customized Arch Linux setup" class="project-image">
-                            <div class="image-caption">Customized Arch Linux desktop environment</div>
-                        </div>
-                        <div class="image-container">
-                            <img src="../assets/images/customized-emacs-linux.png" alt="Customized Emacs setup in Linux" class="project-image">
-                            <div class="image-caption">Customized Emacs configuration in Linux</div>
-                        </div>
-                    </div>
-                </section>
+          <div class="image-gallery">
+            <div class="image-container">
+              <img src="../assets/images/opencore-bootloader.jpg" alt="OpenCore bootloader" class="project-image">
+              <div class="image-caption">OpenCore bootloader selection screen</div>
             </div>
-        </main>
-	</body>
+            <div class="image-container">
+              <img src="../assets/images/disk-partitions.png" alt="Disk partitions" class="project-image">
+              <div class="image-caption">Disk partition layout for triple-boot system</div>
+            </div>
+            <div class="image-container">
+              <img src="../assets/images/macos-amd-hardware.png" alt="macOS running on AMD hardware" class="project-image">
+              <div class="image-caption">macOS Sonoma running on AMD hardware</div>
+            </div>
+            <div class="image-container">
+              <img src="../assets/images/amd-power-gadget.png" alt="AMD Power Gadget" class="project-image">
+              <div class="image-caption">AMD Power Gadget for CPU power management</div>
+            </div>
+            <div class="image-container">
+              <img src="../assets/images/customized-arch-linux.png" alt="Customized Arch Linux setup" class="project-image">
+              <div class="image-caption">Customized Arch Linux desktop environment</div>
+            </div>
+            <div class="image-container">
+              <img src="../assets/images/customized-emacs-linux.png" alt="Customized Emacs setup in Linux" class="project-image">
+              <div class="image-caption">Customized Emacs configuration in Linux</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <div class="lightbox-content">
+        <img src="" alt="Fullscreen image" id="lightbox-img">
+      </div>
+    </div>
+</div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.querySelector('.lightbox-close');
+
+  function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+      
+      // Center the image after it's loaded
+      lightboxImg.onload = function() {
+          this.style.marginLeft = '0';
+          this.style.marginTop = '0';
+      }
+  }
+
+  function closeLightbox() {
+      lightbox.style.display = 'none';
+  }
+
+  document.querySelectorAll('.image-column img, .image-row img, .single-image').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+          openLightbox(this.src);
+      });
+  });
+
+  lightbox.addEventListener('click', closeLightbox);
+  lightboxClose.addEventListener('click', function(e) {
+      e.stopPropagation();
+      closeLightbox();
+  });
+  lightboxImg.addEventListener('click', function(e) {
+      e.stopPropagation();
+  });
+</script>
+
+</body>
 </html>

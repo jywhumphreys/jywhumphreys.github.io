@@ -179,8 +179,8 @@
 
                 <!-- Roles and Description -->
                 <section class="full-width-section">
-                  <h2 class="subheader-text">Electronics Lead: August 2018 - July 2022</h2>
-                  <p class="project-description">The FIRST Robotics Competition (FRC) is an international robotics competition in which teams of high-school students are given 6 weeks to design, build, and program a functional robot which is able to fulfill the unique and complex challenges specific to that year's game. In addition to the technical aspects, teams must also engage in fundraising, develop a team brand, and participate in STEM outreach within their community.</p>
+                    <h2 class="subheader-text">Electronics Lead: August 2018 - July 2022</h2>
+                    <p class="project-description">The FIRST Robotics Competition (FRC) is an international robotics competition in which teams of high-school students are given 6 weeks to design, build, and program a functional robot which is able to fulfill the unique and complex challenges specific to that year's game. In addition to the technical aspects, teams must also engage in fundraising, develop a team brand, and participate in STEM outreach within their community.</p>
                 </section>
                 <div class="divider"></div>
 
@@ -231,5 +231,49 @@
                 </div>
             </div>
         </main>
-	</body>
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img src="" alt="Fullscreen image" id="lightbox-img">
+            </div>
+        </div>
+</div>
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.style.display = 'flex';
+        
+        // Center the image after it's loaded
+        lightboxImg.onload = function() {
+            this.style.marginLeft = '0';
+            this.style.marginTop = '0';
+        }
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+
+    document.querySelectorAll('.image-column img, .image-row img, .single-image').forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            openLightbox(this.src);
+        });
+    });
+
+    lightbox.addEventListener('click', closeLightbox);
+    lightboxClose.addEventListener('click', function(e) {
+        e.stopPropagation();
+        closeLightbox();
+    });
+    lightboxImg.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+</script>
+
+</body>
 </html>

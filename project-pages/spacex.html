@@ -90,54 +90,98 @@
       }
     </style>
   </head>
-<body class="project-page">
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-content">
-      <a class="nav-title-link" href="../index.html">
-        <span class="nav-title">Justin Humphreys</span>
-      </a>
-      <div class="nav-social-links">
-        <a class="icon-link" href="mailto:jhumphreys@ucla.edu" target="_blank">
-          <img src="../assets/icons/mail.svg" class="nav-icon" alt="Email Icon">
+  <body class="project-page">
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-content">
+        <a class="nav-title-link" href="../index.html">
+          <span class="nav-title">Justin Humphreys</span>
         </a>
-        <a class="icon-link" href="https://www.linkedin.com/in/jywhumphreys" target="_blank">
-          <img src="../assets/icons/linkedin.svg" class="nav-icon" alt="LinkedIn Icon">
-        </a>
-        <a class="icon-link" href="https://www.instagram.com/justin.humphreys" target="_blank">
-          <img src="../assets/icons/instagram.svg" class="nav-icon" alt="Instagram Icon">
-        </a>
+        <div class="nav-social-links">
+          <a class="icon-link" href="mailto:jhumphreys@ucla.edu" target="_blank">
+            <img src="../assets/icons/mail.svg" class="nav-icon" alt="Email Icon">
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/jywhumphreys" target="_blank">
+            <img src="../assets/icons/linkedin.svg" class="nav-icon" alt="LinkedIn Icon">
+          </a>
+          <a class="icon-link" href="https://www.instagram.com/justin.humphreys" target="_blank">
+            <img src="../assets/icons/instagram.svg" class="nav-icon" alt="Instagram Icon">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- MAIN PAGE CONTENT -->
+    <main id="main-content">
+      <div class="project-header">
+        <h1 class="project-title">SpaceX</h1>
+        <h2 class="project-role">Intern, Starlink Hardware Reliability Engineering: June 2024 - September 2024</h2>
+        <p class="project-description">
+          During the summer of 2024, I interned at SpaceX as a Hardware Reliability Engineering Intern on the Starlink team and had an amazing experience. <span class="extra-bold">Due to confidentiality reasons, I am limited in what I can disclose here.</span>
+          Throughout my internship, I developed a high-pressure, high temperature spray test chamber to recreate extreme cleaning conditions to test Starlink dishes. This involved designing a watertight enclosure, recirculating pump system, and UL508A compliant control panel to power everything. I also designed and tested a pressurized water tank to simulate water immersion up to 3.5 meters depth, used to test the IP ratings of Starlink hardware.</p>
+      </div>
+      <div class="divider"></div>
+      <div class="image-grid">
+        <figure>
+          <img src="../assets/images/spacex-1.jpg" alt="The team at Bastrop">
+          <figcaption>The Starlink team at Bastrop</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/weather.jpg" alt="Starlink dish in rain">
+          <figcaption>Starlink dish surviving in severe weather</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/ipx9.png" alt="Requirements for IPX9K test">
+          <figcaption>ISO requirements for IPX9K testing</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/starlink-globe.png" alt="Starlink satellite coverage">
+          <figcaption>Map of the Starlink satellite constellation</figcaption>
+        </figure>
+      </div>
+    </main>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <div class="lightbox-content">
+        <img src="" alt="Fullscreen image" id="lightbox-img">
       </div>
     </div>
-  </nav>
-  <!-- MAIN PAGE CONTENT -->
-  <main id="main-content">
-    <div class="project-header">
-      <h1 class="project-title">SpaceX</h1>
-      <h2 class="project-role">Intern, Starlink Hardware Reliability Engineering: June 2024 - September 2024</h2>
-      <p class="project-description">
-        During the summer of 2024, I interned at SpaceX as a Hardware Reliability Engineering Intern on the Starlink team and had an amazing experience. <span class="extra-bold">Due to confidentiality reasons, I am limited in what I can disclose here.</span>
- Throughout my internship, I developed a high-pressure, high temperature spray test chamber to recreate extreme cleaning conditions to test Starlink dishes. This involved designing a watertight enclosure, recirculating pump system, and UL508A compliant control panel to power everything. I also designed and tested a pressurized water tank to simulate water immersion up to 3.5 meters depth, used to test the IP ratings of Starlink hardware.</p>
-    </div>
-    <div class="divider"></div>
-    <div class="image-grid">
-      <figure>
-        <img src="../assets/images/spacex-1.jpg" alt="The team at Bastrop">
-        <figcaption>The Starlink team at Bastrop</figcaption>
-      </figure>
-      <figure>
-        <img src="../assets/images/weather.jpg" alt="Starlink dish in rain">
-        <figcaption>Starlink dish surviving in severe weather</figcaption>
-      </figure>
-      <figure>
-        <img src="../assets/images/ipx9.png" alt="Requirements for IPX9K test">
-        <figcaption>ISO requirements for IPX9K testing</figcaption>
-      </figure>
-      <figure>
-        <img src="../assets/images/starlink-globe.png" alt="Starlink satellite coverage">
-        <figcaption>Map of the Starlink satellite constellation</figcaption>
-      </figure>
-    </div>
-  </main>
+</div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.querySelector('.lightbox-close');
+
+  function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.style.display = 'flex';
+      
+      // Center the image after it's loaded
+      lightboxImg.onload = function() {
+          this.style.marginLeft = '0';
+          this.style.marginTop = '0';
+      }
+  }
+
+  function closeLightbox() {
+      lightbox.style.display = 'none';
+  }
+
+  document.querySelectorAll('.image-column img, .image-row img, .single-image').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+          openLightbox(this.src);
+      });
+  });
+
+  lightbox.addEventListener('click', closeLightbox);
+  lightboxClose.addEventListener('click', function(e) {
+      e.stopPropagation();
+      closeLightbox();
+  });
+  lightboxImg.addEventListener('click', function(e) {
+      e.stopPropagation();
+  });
+</script>
+
 </body>
 </html>
