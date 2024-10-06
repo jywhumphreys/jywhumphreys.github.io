@@ -384,34 +384,37 @@
         </div>
       </section>
     </main>
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close">&times;</span>
       <div class="lightbox-content">
-        <img src="" alt="Full screen image" id="lightbox-img" onclick="event.stopPropagation()">
+        <img src="" alt="Fullscreen image" id="lightbox-img">
       </div>
     </div>
+    </div>
     <script>
-      function openLightbox(imgSrc) {
-          const lightbox = document.getElementById('lightbox');
-          const img = document.getElementById('lightbox-img');
-          img.src = imgSrc;
-          lightbox.style.display = 'block';
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxClose = document.querySelector('.lightbox-close');
+
+      function openLightbox(src) {
+          lightboxImg.src = src;
+          lightbox.style.display = 'flex';
       }
 
       function closeLightbox() {
-          document.getElementById('lightbox').style.display = 'none';
+          lightbox.style.display = 'none';
       }
 
-      // Add click event to all images
       document.querySelectorAll('.image-column img, .image-row img, .single-image').forEach(img => {
-          img.style.cursor = 'zoom-in';
+          img.style.cursor = 'pointer';
           img.addEventListener('click', function() {
               openLightbox(this.src);
           });
       });
 
-      // Prevent lightbox from closing when clicking the image
-      document.getElementById('lightbox-img').addEventListener('click', function(e) {
+      lightbox.addEventListener('click', closeLightbox);
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxImg.addEventListener('click', function(e) {
           e.stopPropagation();
       });
     </script>
