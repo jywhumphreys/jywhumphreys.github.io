@@ -25,7 +25,6 @@
       }
       .project-description {
           font-size: 18px;
-          font-weight: bold;
           line-height: 1.6;
           margin-bottom: 25px;
       }
@@ -42,16 +41,27 @@
           grid-template-columns: repeat(2, 1fr);
           gap: 20px;
       }
+      .image-grid figure {
+          margin: 0;
+      }
       .image-grid img {
           width: 100%;
           height: auto;
           object-fit: cover;
-          border-radius: 8px;
+          border-radius: 8px 8px 0 0;
           box-shadow: 0 4px 8px rgba(0,0,0,0.1);
           transition: transform 0.3s ease;
       }
       .image-grid img:hover {
           transform: scale(1.05);
+      }
+      .image-grid figcaption {
+          background-color: #f8f8f8;
+          padding: 10px;
+          text-align: center;
+          font-size: 14px;
+          color: #444;
+          border-radius: 0 0 8px 8px;
       }
       @media only screen and (max-width: 768px) {
           .project-title {
@@ -111,10 +121,22 @@
     </div>
     <div class="divider"></div>
     <div class="image-grid">
-      <img src="../assets/images/spacex-1.jpg" alt="The team at Bastrop">
-      <img src="../assets/images/weather.jpg" alt="Starlink dish in rain">
-      <img src="../assets/images/ipx9.png" alt="Requirements for IPX9K test">
-      <img src="../assets/images/starlink-globe.png" alt="Starlink satellite coverage">
+      <figure>
+        <img src="../assets/images/spacex-1.jpg" alt="The team at Bastrop">
+        <figcaption>The team at Bastrop</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/images/weather.jpg" alt="Starlink dish in rain">
+        <figcaption>Starlink dish in rain</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/images/ipx9.png" alt="Requirements for IPX9K test">
+        <figcaption>Requirements for IPX9K test</figcaption>
+      </figure>
+      <figure>
+        <img src="../assets/images/starlink-globe.png" alt="Starlink satellite coverage">
+        <figcaption>Starlink satellite coverage</figcaption>
+      </figure>
     </div>
   </main>
 </body>
