@@ -16,108 +16,139 @@
             .project-content {
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
+                gap: 30px;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
             }
             .project-header-content {
                 display: flex;
-                gap: 20px;
+                gap: 30px;
                 align-items: flex-start;
+                flex-wrap: wrap;
             }
             .project-header-text {
                 flex: 1;
+                min-width: 300px;
             }
             .project-header-image {
                 flex: 1;
                 max-width: 50%;
+                min-width: 300px;
             }
             .project-header-image img {
-                width: 85%;
+                width: 100%;
                 height: auto;
                 object-fit: cover;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             }
             
-            @media (max-width: 768px) {
-                .project-header-content {
-                    flex-direction: column;
-                }
-                .project-header-image {
-                    max-width: 100%;
-                }
-            }
             .section-content {
                 display: flex;
-                gap: 20px;
+                gap: 30px;
+                flex-wrap: wrap;
             }
             .text-column {
                 flex: 1;
+                min-width: 300px;
             }
             .image-column {
                 flex: 1;
+                min-width: 300px;
             }
             .divider {
                 border-top: 1px solid #ccc;
-                margin: 20px 0;
+                margin: 30px 0;
             }
             .project-description {
-                font-size: 22px;
-                font-weight: bold;
-                line-height: 1.4;
+                font-size: 18px;
+                line-height: 1.6;
                 margin-bottom: 1em;
+                color: #444;
             }
             .section-title {
                 font-size: 24px;
                 font-weight: bold;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
+                color: #333;
             }
             .body-text, .project-list {
-                font-size: 18px;
-                font-weight: bold;
+                font-size: 16px;
                 line-height: 1.6;
+                color: #555;
             }
 
             .project-list {
                 padding-left: 20px;
+                margin-bottom: 20px;
             }
             .image-grid {
                 display: grid;
-                gap: 10px;
+                gap: 20px;
             }
 
-            /* Basic Upgrades Images */
-            .basic-upgrades-images {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 20px; /* Add spacing between the images */
-            }
-
-            /* Performance Upgrades Images */
+            .basic-upgrades-images,
             .performance-upgrades-images {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr); /* Set to three columns */
-                gap: 20px; /* Add spacing between the images */
-            }
-
-            /* If you want to control the number of rows */
-            .image-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr); /* Three columns */
-                gap: 20px; /* Add spacing between images */
-            }
-
-            /* You may want to limit the height for better control */
-            .image-grid img {
-                height: auto; /* Ensure images maintain aspect ratio */
-                max-height: 200px; /* Limit height as needed */
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .engine-replacement-images {
                 grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(2, 1fr);
             }
             .image-grid img {
                 width: 100%;
-                height: 100%;
+                height: 200px;
                 object-fit: cover;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+            .image-grid img:hover {
+                transform: scale(1.05);
+            }
+
+            h3 {
+                font-size: 20px;
+                color: #444;
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+
+            @media (max-width: 768px) {
+                .project-header-content,
+                .section-content {
+                    flex-direction: column;
+                }
+                .project-header-image,
+                .text-column,
+                .image-column {
+                    max-width: 100%;
+                }
+                .basic-upgrades-images,
+                .performance-upgrades-images,
+                .engine-replacement-images {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .section-title {
+                    font-size: 22px;
+                }
+                h3 {
+                    font-size: 18px;
+                }
+                .project-description,
+                .body-text,
+                .project-list {
+                    font-size: 14px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .basic-upgrades-images,
+                .performance-upgrades-images,
+                .engine-replacement-images {
+                    grid-template-columns: 1fr;
+                }
             }
         </style>
 	</head>
@@ -159,7 +190,7 @@
                   </div>
                 </header>
                 <div class="divider"></div>
-
+                
                 <section>
                   <h2 class="section-title">Basic Upgrades</h2>
                   <div class="section-content">
