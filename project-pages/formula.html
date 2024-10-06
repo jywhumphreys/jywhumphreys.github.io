@@ -2,335 +2,374 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-        <link rel="icon" href="../assets/images/1311.png" />
-        <title>Bruin Formula Racing | Justin Humphreys</title>
-        <meta name="description" content="Justin's Engineering Portfolio showcasing projects from Bruin Formula Racing.">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../assets/images/1311.png" />
+    <title>Bruin Formula Racing | Justin Humphreys</title>
+    <meta name="description" content="Justin's Engineering Portfolio showcasing projects from Bruin Formula Racing.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<link rel="stylesheet" href="../css/layout.css">
-        <link rel="stylesheet" href="../css/typography.css">
-        <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
 
 		<script defer src="../js/script.js"></script>
 
-        <style>
-          /* Flexbox for two-column layout */
-          .full-width-section {
-              width: 100%;
-              margin-bottom: 40px;
+    <style>
+      /* Flexbox for two-column layout */
+      .full-width-section {
+          width: 100%;
+          margin-bottom: 40px;
+      }
+      
+      .two-columns {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          flex-wrap: wrap;
+      }
+
+      /* Columns */
+      .text-content {
+          flex: 1;
+          min-width: 300px;
+      }
+
+      .image-column {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          flex: 1;
+          align-items: center;
+          min-width: 300px;
+      }
+
+      .image-column img {
+          max-width: 100%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease;
+      }
+
+      .image-column img:hover {
+          transform: scale(1.05);
+      }
+
+      .image-row {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          flex-wrap: wrap;
+      }
+
+      .image-row img {
+          max-width: 48%;
+          height: auto;
+          object-fit: cover;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease;
+      }
+
+      .image-row img:hover {
+          transform: scale(1.05);
+      }
+
+      .single-image {
+          margin-top: 15px;
+          display: block;
+          margin-left: auto;
+          max-width: 100%;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease;
+      }
+
+      .single-image:hover {
+          transform: scale(1.05);
+      }
+
+      /* General styling */
+      hr {
+          margin: 40px 0;
+          border: none;
+          border-top: 1px solid #ccc;
+      }
+
+      .project {
+          margin-bottom: 40px;
+      }
+
+      /* Main content */
+      main {
+          padding: 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+
+      header {
+          margin-bottom: 30px;
+      }
+
+      /* Text styles */
+      h1, .main-title {
+          font-size: 2.5em;
+          margin-bottom: 20px;
+          color: #333;
+      }
+
+      h2, .project-title, .subheader-text {
+          font-size: 1.8em;
+          font-weight: bold;
+          margin-bottom: 15px;
+          color: #444;
+      }
+
+      h3 {
+          font-size: 1.4em;
+          margin-top: 20px;
+          margin-bottom: 10px;
+          color: #555;
+      }
+
+      .project-description, .description-content p, .body-text, ul.accomplishments, .project-list {
+          font-size: 18px;
+          line-height: 1.6;
+          color: #666;
+      }
+
+      ul.accomplishments, .project-list {
+          list-style-type: disc;
+          margin-left: 20px;
+          margin-bottom: 20px;
+      }
+
+      /* Body and container styling */
+      body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          color: #333;
+          font-size: 18px;
+          background-color: #f9f9f9;
+      }
+
+      /* Responsive adjustments */
+      @media only screen and (max-width: 768px) {
+          .two-columns {
+              flex-direction: column;
           }
           
-          .two-columns {
-              display: flex;
-              justify-content: space-between;
-              gap: 20px;
-              flex-wrap: wrap;
-          }
-
-          /* Columns */
-          .text-content {
-              flex: 1;
-              min-width: 300px;
-          }
-
-          .image-column {
-              display: flex;
-              flex-direction: column;
-              gap: 15px;
-              flex: 1;
-              align-items: center;
-              min-width: 300px;
-          }
-
-          .image-column img {
+          .text-content, .image-column {
               max-width: 100%;
-              height: auto;
-              object-fit: cover;
-              border-radius: 8px;
-              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-              transition: transform 0.3s ease;
           }
 
-          .image-column img:hover {
-              transform: scale(1.05);
-          }
-
-          .image-row {
-              display: flex;
-              justify-content: space-between;
-              gap: 10px;
-              flex-wrap: wrap;
-          }
-
-          .image-row img {
-              max-width: 48%;
-              height: auto;
-              object-fit: cover;
-              border-radius: 8px;
-              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-              transition: transform 0.3s ease;
-          }
-
-          .image-row img:hover {
-              transform: scale(1.05);
-          }
-
-          .single-image {
-              margin-top: 15px;
-              display: block;
-              margin-left: auto;
-              max-width: 100%;
-              height: auto;
-              border-radius: 8px;
-              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-              transition: transform 0.3s ease;
-          }
-
-          .single-image:hover {
-              transform: scale(1.05);
-          }
-
-          /* General styling */
-          hr {
-              margin: 40px 0;
-              border: none;
-              border-top: 1px solid #ccc;
-          }
-
-          .project {
-              margin-bottom: 40px;
-          }
-
-          /* Main content */
-          main {
-              padding: 20px;
-              max-width: 1200px;
-              margin: 0 auto;
-          }
-
-          header {
-              margin-bottom: 30px;
-          }
-
-          /* Text styles */
           h1, .main-title {
-              font-size: 2.5em;
-              margin-bottom: 20px;
-              color: #333;
+              font-size: 2em;
           }
 
           h2, .project-title, .subheader-text {
-              font-size: 1.8em;
-              font-weight: bold;
-              margin-bottom: 15px;
-              color: #444;
+              font-size: 1.5em;
           }
 
           h3 {
-              font-size: 1.4em;
-              margin-top: 20px;
-              margin-bottom: 10px;
-              color: #555;
+              font-size: 1.2em;
           }
 
           .project-description, .description-content p, .body-text, ul.accomplishments, .project-list {
-              font-size: 18px;
-              line-height: 1.6;
-              color: #666;
+              font-size: 16px;
           }
-
-          ul.accomplishments, .project-list {
-              list-style-type: disc;
-              margin-left: 20px;
-              margin-bottom: 20px;
-          }
-
-          /* Body and container styling */
-          body {
-              font-family: Arial, sans-serif;
-              line-height: 1.6;
-              color: #333;
-              font-size: 18px;
-              background-color: #f9f9f9;
-          }
-
-          /* Responsive adjustments */
-          @media only screen and (max-width: 768px) {
-              .two-columns {
-                  flex-direction: column;
-              }
-              
-              .text-content, .image-column {
-                  max-width: 100%;
-              }
-
-              h1, .main-title {
-                  font-size: 2em;
-              }
-
-              h2, .project-title, .subheader-text {
-                  font-size: 1.5em;
-              }
-
-              h3 {
-                  font-size: 1.2em;
-              }
-
-              .project-description, .description-content p, .body-text, ul.accomplishments, .project-list {
-                  font-size: 16px;
-              }
-          }
-        </style>
+      }
+    </style>
 	</head>
 	<body class="project-page">
-        <!-- MAIN PAGE CONTENT -->
-        <main id="main-content">
-            <header>
-                <h1>Bruin Formula Racing</h1>
-            </header>
+    <!-- MAIN PAGE CONTENT -->
+    <main id="main-content">
+      <header>
+        <h1>Bruin Formula Racing</h1>
+      </header>
 
-            <!-- NAVBAR -->
-            <nav class="navbar">
-              <div class="navbar-content">
-                <a class="nav-title-link" href="../index.html">
-                  <span class="nav-title">Justin Humphreys</span>
-                </a>
-                <div class="nav-social-links">
-                  <a class="icon-link" href="mailto:jhumphreys@ucla.edu" target="_blank">
-                    <img src="../assets/icons/mail.svg" class="nav-icon" alt="Email Icon">
-                  </a>
-                  <a class="icon-link" href="https://www.linkedin.com/in/jywhumphreys" target="_blank">
-                    <img src="../assets/icons/linkedin.svg" class="nav-icon" alt="LinkedIn Icon">
-                  </a>
-                  <a class="icon-link" href="https://www.instagram.com/justin.humphreys" target="_blank">
-                    <img src="../assets/icons/instagram.svg" class="nav-icon" alt="Instagram Icon">
-                  </a>
-                </div>
-              </div>
-            </nav>
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <div class="navbar-content">
+          <a class="nav-title-link" href="../index.html">
+            <span class="nav-title">Justin Humphreys</span>
+          </a>
+          <div class="nav-social-links">
+            <a class="icon-link" href="mailto:jhumphreys@ucla.edu" target="_blank">
+              <img src="../assets/icons/mail.svg" class="nav-icon" alt="Email Icon">
+            </a>
+            <a class="icon-link" href="https://www.linkedin.com/in/jywhumphreys" target="_blank">
+              <img src="../assets/icons/linkedin.svg" class="nav-icon" alt="LinkedIn Icon">
+            </a>
+            <a class="icon-link" href="https://www.instagram.com/justin.humphreys" target="_blank">
+              <img src="../assets/icons/instagram.svg" class="nav-icon" alt="Instagram Icon">
+            </a>
+          </div>
+        </div>
+      </nav>
 
-            <!-- Roles and Description -->
-            <section class="full-width-section">
-              <h2 class="project-title">Software Lead: June 2024 - Present</h2>
-              <h2 class="project-title">Controls Lead + Brakes & Pedalbox RE: May 2023 - June 2024</h2>
-              <h2 class="project-title">Powertrain + Controls General Member: September 2022 - May 2023</h2>
-              <p class="body-text">UCLA's Bruin Formula Racing is a student-led engineering group that participates in the global Formula SAE competition. The competition challenges teams to develop a formula-style racecar from the ground up, which then competes in both static and dynamic events at multiple competitions annually. By taking part in this project, students face complex engineering obstacles, providing them with valuable hands-on experience and knowledge that prepares them for real-world engineering challenges.</p>
-              <p class="body-text">Currently, I am serving as the team's first Software Lead, overseeing the development of our car's control systems and custom data acquisition software. Last year, I served as the team's Controls Lead, overseeing a team of 6 engineers performing the design, analysis, manufacturing, and testing of the car's brakes, ergonomics, and safety subsystems for Mk. IX, our first electric vehicle. I was also responsible for designing the car's pedalbox and braking system. As a general member my freshman year, I led the engine tuning and testing process for two of our cars, Mk. VII and Mk. VIII, improving our car's overall power and helping us secure a 10th place finish out of 120 teams at the May 2023 FSAE IC competition.</p>
-            </section>
-            <hr>
+      <!-- Roles and Description -->
+      <section class="full-width-section">
+        <h2 class="project-title">Software Lead: June 2024 - Present</h2>
+        <h2 class="project-title">Controls Lead + Brakes & Pedalbox RE: May 2023 - June 2024</h2>
+        <h2 class="project-title">Powertrain + Controls General Member: September 2022 - May 2023</h2>
+        <p class="body-text">UCLA's Bruin Formula Racing is a student-led engineering group that participates in the global Formula SAE competition. The competition challenges teams to develop a formula-style racecar from the ground up, which then competes in both static and dynamic events at multiple competitions annually. By taking part in this project, students face complex engineering obstacles, providing them with valuable hands-on experience and knowledge that prepares them for real-world engineering challenges.</p>
+        <p class="body-text">Currently, I am serving as the team's first Software Lead, overseeing the development of our car's control systems and custom data acquisition software. Last year, I served as the team's Controls Lead, overseeing a team of 6 engineers performing the design, analysis, manufacturing, and testing of the car's brakes, ergonomics, and safety subsystems for Mk. IX, our first electric vehicle. I was also responsible for designing the car's pedalbox and braking system. As a general member my freshman year, I led the engine tuning and testing process for two of our cars, Mk. VII and Mk. VIII, improving our car's overall power and helping us secure a 10th place finish out of 120 teams at the May 2023 FSAE IC competition.</p>
+      </section>
+      <hr>
 
-            <!-- Racing Simulator Section -->
-            <section class="project">
-              <div class="two-columns">
-                <div class="text-content">
-                  <h2 class="project-title">Racing Simulator</h2>
-                  <p>As a new member, my first design project was redesigning the racing simulator in our shop, which was built using the chassis of our 2018 car. The simulator had a list of problems that needed fixing and upgrades that needed to be implemented, including improving ergonomics, adding adjustability, improving chassis component integrity, and overall safety.</p>
-                  <p>My primary goal was to enhance the simulator’s ergonomics, making it comfortable for extended use, while also improving its adjustability to accommodate users of various heights. Additionally, I aimed to reinforce the chassis components, ensure overall safety, and add some quality of life upgrades.</p>
-                  <h3>Key Improvements:</h3>
-                  <ul class="accomplishments">
-                    <li>Adjusted the pedalbox angle and steering wheel crossbeam position reduce back pain and ankle strain during prolonged use</li>
-                    <li>Added a slider to the seat, allowing users between 5’0” and 6’4” to comfortably reach the pedals</li>
-                    <li>Reinforced mounting points, removed sharp tabs, and covered the ends of tubes and 80/20 extrusion with caps to enhance structural integrity and safety.</li>
-                  </ul>
-                  <p>I manufactured and assembled all the necessary parts to implement these upgrades. After completing the upgrades, the simulator saw a significant increase in usage. The team successfully ran a full 24-hour endurance race during our yearly buildathon, and the simulator was used for Mk. VIII driver tryouts and training. The improvements in ergonomics, adjustability, and safety allowed for a more comfortable and accessible experience for all users.</p>
-                </div>
-                <div class="image-column">
-                  <img src="../assets/images/simulator-1.jpg" alt="The simulator, redesigned using SOLIDWORKS">
-                  <img src="../assets/images/simulator-2.jpg" alt="A team member using the simulator during the 24-hour endurance race">
-                </div>
-              </div>
-            </section>
-            <hr>
+      <!-- Racing Simulator Section -->
+      <section class="project">
+        <div class="two-columns">
+          <div class="text-content">
+            <h2 class="project-title">Racing Simulator</h2>
+            <p>As a new member, my first design project was redesigning the racing simulator in our shop, which was built using the chassis of our 2018 car. The simulator had a list of problems that needed fixing and upgrades that needed to be implemented, including improving ergonomics, adding adjustability, improving chassis component integrity, and overall safety.</p>
+            <p>My primary goal was to enhance the simulator’s ergonomics, making it comfortable for extended use, while also improving its adjustability to accommodate users of various heights. Additionally, I aimed to reinforce the chassis components, ensure overall safety, and add some quality of life upgrades.</p>
+            <h3>Key Improvements:</h3>
+            <ul class="accomplishments">
+              <li>Adjusted the pedalbox angle and steering wheel crossbeam position reduce back pain and ankle strain during prolonged use</li>
+              <li>Added a slider to the seat, allowing users between 5’0” and 6’4” to comfortably reach the pedals</li>
+              <li>Reinforced mounting points, removed sharp tabs, and covered the ends of tubes and 80/20 extrusion with caps to enhance structural integrity and safety.</li>
+            </ul>
+            <p>I manufactured and assembled all the necessary parts to implement these upgrades. After completing the upgrades, the simulator saw a significant increase in usage. The team successfully ran a full 24-hour endurance race during our yearly buildathon, and the simulator was used for Mk. VIII driver tryouts and training. The improvements in ergonomics, adjustability, and safety allowed for a more comfortable and accessible experience for all users.</p>
+          </div>
+          <div class="image-column">
+            <figure>
+              <img src="../assets/images/simulator-1.jpg" alt="The simulator, redesigned using SOLIDWORKS">
+              <figcaption>The simulator, redesigned using SOLIDWORKS</figcaption>
+            </figure>
+            <figure>
+              <img src="../assets/images/simulator-2.jpg" alt="A team member using the simulator during the 24-hour endurance race">
+              <figcaption>A team member using the simulator during the 24-hour endurance race</figcaption>
+            </figure>
+          </div>
+      </section>
+      <hr>
 
-            <!-- Engine Tuning Section -->
-            <section class="full-width-section">
-              <h2 class="project-title">Engine Tuning</h2>
-              <p>During my time as a general member on the team, my main role was the tuning and testing of our powertrain. This included optimizing the tune for our 2021-2022 car, Mk. VII, to compete in local events, as well as tuning Mk. VIII, the car we were competing with that year. When choosing powertrain components for Mk. VIII, we upgraded to an AEM Infinity Series 5 ECU, which required creating a new tune from scratch. I took the lead in this effort, aiming to improve the car’s power output and overall performance</p>
-              <p>My primary goal was to develop a tune that would maximize the car’s ability to score in events at competition, which required a powerful, reliable tune that our drivers liked. This required attending several dyno tuning sessions to perfect the fuel and ignition tables, as well as integrating advanced features such as flat-foot shifting and launch control to improve the car’s acceleration.</p>
-              <h3>Accomplishments:</h3>
-              <ul class="accomplishments">
-                <li>Helped develop a comprehensive testing plan with #1 priority of maximizing drive and dyno time</li>
-                <li>Actively participated in 6 dyno sessions with a total of 61 pulls, tuning fuel maps + ignition timing and managing to raise our power from 45hp to 68hp</li>
-                <li>Tuned the start and idle for the car, ensuring the engine could reliably start and run regardless of the temperature</li>
-                <li>Successfully implemented flat-foot shifting and launch control, contributing to a 0.19s faster acceleration time at competition</li>
-                <li>Thoroughly logged and analyzed data collected by our ECU and custom DAQ boards, allowing us to pinpoint issues with the car and implement solutions</li>
-              </ul>
-              <p>The final optimized tune, along with the addition of flat foot-shifting and launch control, dramatically improved the car’s acceleration times. These improvements yielded a 51% increase in engine horsepower, 15% increase in acceleration score, and helped us place 10th out of 120 teams at competition. The success of this project highlighted my initiative and ability to contribute meaningfully to the team’s achievements, even as a general member.</p>
+      <!-- Engine Tuning Section -->
+      <section class="full-width-section">
+        <h2 class="project-title">Engine Tuning</h2>
+        <p>During my time as a general member on the team, my main role was the tuning and testing of our powertrain. This included optimizing the tune for our 2021-2022 car, Mk. VII, to compete in local events, as well as tuning Mk. VIII, the car we were competing with that year. When choosing powertrain components for Mk. VIII, we upgraded to an AEM Infinity Series 5 ECU, which required creating a new tune from scratch. I took the lead in this effort, aiming to improve the car’s power output and overall performance</p>
+        <p>My primary goal was to develop a tune that would maximize the car’s ability to score in events at competition, which required a powerful, reliable tune that our drivers liked. This required attending several dyno tuning sessions to perfect the fuel and ignition tables, as well as integrating advanced features such as flat-foot shifting and launch control to improve the car’s acceleration.</p>
+        <h3>Accomplishments:</h3>
+        <ul class="accomplishments">
+          <li>Helped develop a comprehensive testing plan with #1 priority of maximizing drive and dyno time</li>
+          <li>Actively participated in 6 dyno sessions with a total of 61 pulls, tuning fuel maps + ignition timing and managing to raise our power from 45hp to 68hp</li>
+          <li>Tuned the start and idle for the car, ensuring the engine could reliably start and run regardless of the temperature</li>
+          <li>Successfully implemented flat-foot shifting and launch control, contributing to a 0.19s faster acceleration time at competition</li>
+          <li>Thoroughly logged and analyzed data collected by our ECU and custom DAQ boards, allowing us to pinpoint issues with the car and implement solutions</li>
+        </ul>
+        <p>The final optimized tune, along with the addition of flat foot-shifting and launch control, dramatically improved the car’s acceleration times. These improvements yielded a 51% increase in engine horsepower, 15% increase in acceleration score, and helped us place 10th out of 120 teams at competition. The success of this project highlighted my initiative and ability to contribute meaningfully to the team’s achievements, even as a general member.</p>
 
+        <div class="image-row">
+          <figure>
+            <img src="../assets/images/tuning-1.png" alt="Mk. VIII being tuned on the dynamometer">
+            <figcaption>Mk. VIII being tuned on the dynamometer</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/images/tuning-2.png" alt="Our final tune">
+            <figcaption>Our final tune</figcaption>
+          </figure>
+        </div>
+        <!-- Pedalbox Section -->
+        <section class="project">
+          <div class="two-columns">
+            <div class="text-content">
+              <h2 class="project-title">Mk. IX Brakes + Pedalbox</h2>
+              <p>As part of the team's transition to an electric powertrain, there was a need to design a drive-by-wire system for the pedalbox that would enable precise electronic control and seamless integration with the vehicle's control systems. Additionally, a 100lb+ increase in vehicle weight mean the braking subsystem required a redesign to improve stopping power, while still reducing overall weight./p>
+                <h3>Primary Objectives:</h3>
+                <ul class="accomplishments">
+                  <li>Design a drive-by-wire system for the pedalbox using SOLIDWORKS, facilitating the team's transition to an electric powertrain.</li>
+                  <li>Optimize the braking subsystem's performance through simulations, aiming to reduce weight while increasing stopping power.</li>
+                </ul>
+                <h3>Implementation:</h3>
+                <ul class="accomplishments">
+                  <li>I utilized SOLIDWORKS to design a drive-by-wire system for the pedalbox, incorporating linear potentiometers and ensuring seamless integration with the vehicle's control systems.</li>
+                  <li>I created detailed 3D models and technical drawings of the pedalbox and brake components, facilitating accurate manufacturing and assembly.</li>
+                  <li>I conducted extensive heat transfer simulations using MATLAB and ANSYS to analyze the brake rotor’s performance under various conditions.</li>
+                  <li>I iteratively refined the braking subsystem design based on simulation results in ANSYS and MATLAB, striking a balance between weight reduction and performance enhancement.</li>
+                </ul>
+              <p>The drive-by-wire system I designed using SOLIDWORKS successfully enabled precise electronic control of the pedalbox, facilitating a smooth transition to the electric powertrain. The system integrated seamlessly with the vehicle's control systems, ensuring reliable and responsive operation.</p>
+              <p>Through the optimization of the braking subsystem using MATLAB and ANSYS simulations, I achieved a 12% reduction in overall weight while simultaneously increasing stopping power by 21%. This optimization struck a balance between performance and efficiency, contributing to the vehicle's overall competitiveness.</p>
               <div class="image-row">
-                <img src="../assets/images/tuning-1.png" alt="Mk. VIII being tuned on the dynamometer">
-                <img src="../assets/images/tuning-2.png" alt="Our final tune">
+                <figure>
+                  <img src="../assets/images/brake-analysis.png" alt="MATLAB analysis of braking forces">
+                  <figcaption>MATLAB analysis of braking forces</figcaption>
+                </figure>
+                <figure>
+                  <img src="../assets/images/pedalbox-analysis-1.png" alt="ANSYS analysis of brake pedal">
+                  <figcaption>ANSYS analysis of brake pedal</figcaption>
+                </figure>
               </div>
-            </section>
-            <hr>
-
-            <!-- Pedalbox Section -->
-            <section class="project">
-              <div class="two-columns">
-                <div class="text-content">
-                  <h2 class="project-title">Mk. IX Brakes + Pedalbox</h2>
-                  <p>As part of the team's transition to an electric powertrain, there was a need to design a drive-by-wire system for the pedalbox that would enable precise electronic control and seamless integration with the vehicle's control systems. Additionally, a 100lb+ increase in vehicle weight mean the braking subsystem required a redesign to improve stopping power, while still reducing overall weight./p>
-                    <h3>Primary Objectives:</h3>
-                    <ul class="accomplishments">
-                      <li>Design a drive-by-wire system for the pedalbox using SOLIDWORKS, facilitating the team's transition to an electric powertrain.</li>
-                      <li>Optimize the braking subsystem's performance through simulations, aiming to reduce weight while increasing stopping power.</li>
-                    </ul>
-                    <h3>Implementation:</h3>
-                    <ul class="accomplishments">
-                      <li>I utilized SOLIDWORKS to design a drive-by-wire system for the pedalbox, incorporating linear potentiometers and ensuring seamless integration with the vehicle's control systems.</li>
-                      <li>I created detailed 3D models and technical drawings of the pedalbox and brake components, facilitating accurate manufacturing and assembly.</li>
-                      <li>I conducted extensive heat transfer simulations using MATLAB and ANSYS to analyze the brake rotor’s performance under various conditions.</li>
-                      <li>I iteratively refined the braking subsystem design based on simulation results in ANSYS and MATLAB, striking a balance between weight reduction and performance enhancement.</li>
-                    </ul>
-                  <p>The drive-by-wire system I designed using SOLIDWORKS successfully enabled precise electronic control of the pedalbox, facilitating a smooth transition to the electric powertrain. The system integrated seamlessly with the vehicle's control systems, ensuring reliable and responsive operation.</p>
-                  <p>Through the optimization of the braking subsystem using MATLAB and ANSYS simulations, I achieved a 12% reduction in overall weight while simultaneously increasing stopping power by 21%. This optimization struck a balance between performance and efficiency, contributing to the vehicle's overall competitiveness.</p>
-                  <div class="image-row">
-                    <img src="../assets/images/brake-analysis.png" alt="MATLAB analysis of braking forces">
-                    <img src="../assets/images/pedalbox-analysis-1.png" alt="ANSYS analysis of brake pedal">
-                  </div>
-                  <img class="single-image" src="../assets/images/pedalbox-analysis-2.png" alt="ANSYS analysis of pedalbox base">
-                </div>
-                <div class="image-column">
+              <figure>
+                <img class="single-image" src="../assets/images/pedalbox-analysis-2.png" alt="ANSYS analysis of pedalbox base">
+                <figcaption>ANSYS analysis of pedalbox base</figcaption>
+              </figure>
+              <div class="image-column">
+                <figure>
                   <img src="../assets/images/pedalbox.png" alt="CAD for the pedalbox">
+                  <figcaption>CAD for the pedalbox</figcaption>
+                </figure>
+                <figure>
                   <img src="../assets/images/brakes.png" alt="CAD for the brakes">
-                  <div class="image-row">
-                    <img src="../assets/images/brake-test-fit.png" alt="Test fitting of brakes with a 3d printed wheel">
-                    <img src="../assets/images/brake-assembly.png" alt="Rotor and caliper assembly">
-                  </div>
-
-                </div>
-              </div>
-            </section>
-            <hr>
-
-            <!-- VCU Section -->
-            <section class="project">
-              <div class="two-columns">
-                <div class="text-content">
-                  <h2 class="project-title">VCU Integration + Development</h2>
-                  <p>On Mk. IX, I was also responsible for integrating the Vehicle Control Unit (VCU) with the high voltage system and drive-by-wire system. This involved tuning the drive-by-wire system to control the motor through the VCU and ensure pedal input accuracy using the VCU's plausibility circuits. The successful integration of the VCU with the high voltage system allows the drive-by-wire system to effectively control the motor, enhancing the vehicle's performance and responsiveness. The VCU's plausibility circuit play a crucial role in verifying pedal input accuracy, ensuring the safety and reliability of the drive-by-wire system. The knowledge gained from this integration process gave us a foundation to start developing a custom VCU tailored to the team's specific needs.</p>
-                </div>
+                  <figcaption>CAD for the brakes</figcaption>
+                </figure>
                 <div class="image-row">
-                  <img src="../assets/images/test-bench.png" alt="VCU test setup">
-                  <img src="../assets/images/vcu300.png" alt="VCU testing">
+                  <figure>
+                    <img src="../assets/images/brake-test-fit.png" alt="Test fitting of brakes with a 3d printed wheel">
+                    <figcaption>Test fitting of brakes with a 3D printed wheel</figcaption>
+                  </figure>
+                  <figure>
+                    <img src="../assets/images/brake-assembly.png" alt="Rotor and caliper assembly">
+                    <figcaption>Rotor and caliper assembly</figcaption>
+                  </figure>
                 </div>
               </div>
-            </section>
-            <hr>
+            </div>
+        </section>
+        <hr>
 
-            <!-- Software Section -->
-            <section class="project">
-                <div class="two-columns">
-                    <div class="text-content">
-                        <h2 class="project-title">Software Lead</h2>
-                        <p>In my current role as software lead, I am overseeing the development of a custom Vehicle Control Unit (VCU), built using an STM32. I am also leading the development of custom data acquisition software, allowing sensor data from the car to be logged and viewed in real time. Additionally, I am programming the Battery Management System (BMS) that monitors our high voltage system.</p>
-                    </div>
-                    <div class="image-column">
-                        <img src="../assets/images/bms.png" alt="Image related to software">
-                        <img src="../assets/images/vcu.jpg" alt="Another image related to software">
-                    </div>
-                </div>
-            </section>
-        </main>
+        <!-- VCU Section -->
+        <section class="project">
+          <div class="two-columns">
+            <div class="text-content">
+              <h2 class="project-title">VCU Integration + Development</h2>
+              <p>On Mk. IX, I was also responsible for integrating the Vehicle Control Unit (VCU) with the high voltage system and drive-by-wire system. This involved tuning the drive-by-wire system to control the motor through the VCU and ensure pedal input accuracy using the VCU's plausibility circuits. The successful integration of the VCU with the high voltage system allows the drive-by-wire system to effectively control the motor, enhancing the vehicle's performance and responsiveness. The VCU's plausibility circuit play a crucial role in verifying pedal input accuracy, ensuring the safety and reliability of the drive-by-wire system. The knowledge gained from this integration process gave us a foundation to start developing a custom VCU tailored to the team's specific needs.</p>
+            </div>
+            <div class="image-row">
+              <figure>
+                <img src="../assets/images/test-bench.png" alt="VCU test setup">
+                <figcaption>VCU test setup</figcaption>
+              </figure>
+              <figure>
+                <img src="../assets/images/vcu300.png" alt="VCU testing">
+                <figcaption>VCU testing</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <hr>
+
+        <!-- Software Section -->
+        <section class="project">
+          <div class="two-columns">
+            <div class="text-content">
+              <h2 class="project-title">Software Lead</h2>
+              <p>In my current role as software lead, I am overseeing the development of a custom Vehicle Control Unit (VCU), built using an STM32. I am also leading the development of custom data acquisition software, allowing sensor data from the car to be logged and viewed in real time. Additionally, I am programming the Battery Management System (BMS) that monitors our high voltage system.</p>
+            </div>
+            <div class="image-column">
+              <figure>
+                <img src="../assets/images/bms.png" alt="Image related to software">
+                <figcaption>Battery Management System (BMS) interface</figcaption>
+              </figure>
+              <figure>
+                <img src="../assets/images/vcu.jpg" alt="Another image related to software">
+                <figcaption>Custom Vehicle Control Unit (VCU) development</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+    </main>
 	</body>
 </html>
