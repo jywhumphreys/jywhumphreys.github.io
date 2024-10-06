@@ -59,10 +59,13 @@
           overflow-x: auto;
           padding-bottom: 10px;
       }
-      .image-gallery img {
+      .image-gallery figure {
           flex: 0 0 auto;
           width: calc(25% - 15px);
-          height: 200px;
+      }
+      .image-gallery img {
+          width: 100%;
+          height: auto;  /* Changed from fixed height */
           object-fit: cover;
           border-radius: 8px;
           box-shadow: 0 4px 8px rgba(0,0,0,0.1);
