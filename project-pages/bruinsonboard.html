@@ -14,14 +14,20 @@
 		<script defer src="../js/script.js"></script>
         <style>
             .project-content {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
                 display: flex;
-                gap: 20px;
+                flex-wrap: wrap;
+                gap: 30px;
             }
             .text-column {
                 flex: 1;
+                min-width: 300px;
             }
             .image-column {
                 flex: 1;
+                min-width: 300px;
             }
             .github-link {
                 display: inline-block;
@@ -30,42 +36,65 @@
                 color: #fff;
                 text-decoration: none;
                 border-radius: 5px;
-                margin-top: 10px;
+                margin-top: 20px;
+                transition: background-color 0.3s ease;
+            }
+            .github-link:hover {
+                background-color: #333;
             }
             .screenshot {
                 width: 100%;
                 margin-bottom: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+            .screenshot:hover {
+                transform: scale(1.05);
             }
             h2 {
                 font-weight: bold;
                 font-size: 1.5em;
                 margin-top: 1.5em;
+                color: #333;
             }
-
             .divider {
                 width: 100%;
                 height: 1px;
                 background-color: #ccc;
-                margin: 20px 0;
+                margin: 30px 0;
             }
-
-            
             .body-text {
-                font-size: 18px;
-                font-weight: bold;
+                font-size: 16px;
                 line-height: 1.6;
+                color: #444;
             }
             .project-description {
-                font-size: 22px;
-                font-weight: bold;
-                line-height: 1.4;
+                font-size: 18px;
+                line-height: 1.6;
                 margin-bottom: 1em;
+                color: #555;
             }
             .project-list {
-                padding-left: 2em;
+                padding-left: 1.5em;
+                margin-bottom: 1em;
             }
             .project-list li {
                 margin-bottom: 0.5em;
+            }
+            @media (max-width: 768px) {
+                .project-content {
+                    flex-direction: column;
+                }
+                .text-column, .image-column {
+                    width: 100%;
+                }
+                h2 {
+                    font-size: 1.3em;
+                }
+                .body-text, .project-description {
+                    font-size: 14px;
+                }
             }
         </style>
 	</head>
@@ -92,15 +121,15 @@
 
         <!-- MAIN PAGE CONTENT -->
         <main id="main-content">
-            <header id="project-header">
-                <h1 class="main-title">BruinsOnBoard</h1>
-                <p class="project-description">BruinsOnBoard is a rideshare web application developed for UCLA students to share rides to and from LAX at a reduced cost. The app was built using the MERN stack (MongoDB, ExpressJS, ReactJS, and NodeJS).</p>
-                <a href="https://github.com/derekwu15/BruinsOnBoard" class="github-link">GitHub Link</a>
-            </header>
-
-            <div class="divider"></div>
-
             <div class="project-content">
+                <header id="project-header">
+                    <h1 class="main-title">BruinsOnBoard</h1>
+                    <p class="project-description">BruinsOnBoard is a rideshare web application developed for UCLA students to share rides to and from LAX at a reduced cost. The app was built using the MERN stack (MongoDB, ExpressJS, ReactJS, and NodeJS).</p>
+                    <a href="https://github.com/derekwu15/BruinsOnBoard" class="github-link">GitHub Link</a>
+                </header>
+
+                <div class="divider"></div>
+
                 <div class="text-column">
                     <section>
                         <h2>Key features:</h2>
