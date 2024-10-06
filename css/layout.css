@@ -440,10 +440,10 @@ body {
 }
 
 .lightbox img {
-    min-width: 75vw;
-    min-height: 75vh;
-    max-width: none;
-    max-height: none;
+    min-width: none;
+    min-height: none;
+    max-width: 75vw;
+    max-height: 75vh;
     width: auto;
     height: auto;
     object-fit: contain;
