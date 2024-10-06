@@ -187,6 +187,35 @@
               flex: 0 1 100%;
           }
       }
+
+      .lightbox {
+          display: none;
+          position: fixed;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.8);
+          justify-content: center;
+          align-items: center;
+      }
+
+      .lightbox img {
+          max-width: 90%;
+          max-height: 90%;
+          object-fit: contain;
+          border-radius: 4px;
+      }
+
+      .lightbox-close {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          color: white;
+          font-size: 30px;
+          cursor: pointer;
+      }
     </style>
 
   </head>
@@ -383,5 +412,34 @@
         </div>
       </section>
     </main>
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+      <img src="" alt="Enlarged image" id="lightbox-img">
+    </div>
+    <script>
+      function openLightbox(imgSrc) {
+          document.getElementById('lightbox-img').src = imgSrc;
+          document.getElementById('lightbox').style.display = 'flex';
+      }
+
+      function closeLightbox() {
+          document.getElementById('lightbox').style.display = 'none';
+      }
+
+      // Close lightbox when clicking outside the image
+      document.getElementById('lightbox').addEventListener('click', function(e) {
+          if (e.target !== this)
+              return;
+          closeLightbox();
+      });
+
+      // Add click event to all images
+      document.querySelectorAll('.image-column img, .image-row img, .single-image').forEach(img => {
+          img.style.cursor = 'pointer';
+          img.addEventListener('click', function() {
+              openLightbox(this.src);
+          });
+      });
+    </script>
 	</body>
 </html>
