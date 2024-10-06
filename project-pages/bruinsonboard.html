@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
         <link rel="icon" href="../assets/images/1311.png" />
         <title>BruinsOnBoard | Justin's Portfolio</title>
         <meta name="description" content="Details about Justin's BruinsOnBoard project">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/layout.css">
         <link rel="stylesheet" href="../css/typography.css">
         <link rel="stylesheet" href="../css/utilities.css">
 
-		<script defer src="../js/script.js"></script>
+        <script defer src="../js/script.js"></script>
         <style>
-            
-            .project-content {
+            /* Separate header section to stack vertically */
+            .header-container {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .divider {
+                width: 100%;
+                height: 1px;
+                background-color: #ccc;
+                margin: 30px 0;
+            }
+
+            /* Flex container for text and images side by side */
+            .content-container {
                 display: flex;
-                gap: 30px; /* Optional: Adjust the gap between the text and image columns */
+                gap: 30px;
+                justify-content: space-between;
             }
 
             .text-column {
                 flex: 1;
                 min-width: 300px;
             }
+
             .image-column {
                 flex: 1;
                 min-width: 300px;
                 display: flex;
                 flex-direction: column;
-                gap: 30px; /* Increased gap between images */
+                gap: 30px;
             }
+
             .github-link {
                 display: inline-block;
                 padding: 10px 20px;
@@ -40,75 +56,82 @@
                 margin-top: 20px;
                 transition: background-color 0.3s ease;
             }
+            
             .github-link:hover {
                 background-color: #333;
             }
+
             .screenshot {
                 width: 100%;
                 border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 transition: transform 0.3s ease;
             }
+
             .screenshot:hover {
                 transform: scale(1.05);
             }
+
             h2 {
                 font-weight: bold;
                 font-size: 1.5em;
                 margin-top: 1.5em;
                 color: #333;
             }
-            .divider {
-                width: 100%;
-                height: 1px;
-                background-color: #ccc;
-                margin: 30px 0;
-            }
+
             .body-text {
                 font-size: 16px;
                 line-height: 1.6;
                 color: #444;
             }
+
             .project-description {
                 font-size: 18px;
                 line-height: 1.6;
                 margin-bottom: 1em;
                 color: #555;
             }
+
             .project-list {
                 padding-left: 1.5em;
                 margin-bottom: 1em;
             }
+
             .project-list li {
                 margin-bottom: 0.5em;
             }
+
             figure {
-                margin: 0; /* Remove default margin */
+                margin: 0;
             }
+
             .image-caption {
                 text-align: center;
                 margin-top: 10px;
-                margin-bottom: 0; /* Remove bottom margin */
                 font-style: italic;
                 color: #666;
             }
+
             @media (max-width: 768px) {
-                .project-content {
+                .content-container {
                     flex-direction: column;
                 }
+
                 .text-column, .image-column {
                     width: 100%;
                 }
+
                 h2 {
                     font-size: 1.3em;
                 }
+
                 .body-text, .project-description {
                     font-size: 14px;
                 }
             }
         </style>
     </head>
-	<body class="project-page">
+    <body class="project-page">
         <!-- NAVBAR -->
         <nav class="navbar">
             <div class="navbar-content">
@@ -131,7 +154,8 @@
 
         <!-- MAIN PAGE CONTENT -->
         <main id="main-content">
-            <div class="project-content">
+            <!-- Header and divider section -->
+            <div class="header-container">
                 <header id="project-header">
                     <h1 class="main-title">BruinsOnBoard</h1>
                     <p class="project-description">BruinsOnBoard is a rideshare web application developed for UCLA students to share rides to and from LAX at a reduced cost. The app was built using the MERN stack (MongoDB, ExpressJS, ReactJS, and NodeJS).</p>
@@ -139,7 +163,10 @@
                 </header>
 
                 <div class="divider"></div>
+            </div>
 
+            <!-- Flex container for text and image columns -->
+            <div class="content-container">
                 <div class="text-column">
                     <section>
                         <h2>Key features:</h2>
@@ -151,7 +178,7 @@
                             <li>User search functionality: Users can search for other registered members, making it easier to connect with potential rideshare partners.</li>
                         </ol>
                     </section>
-
+                    
                     <section>
                         <h2>Key Contributions</h2>
                         <ul class="project-list body-text">
@@ -213,51 +240,22 @@
                         <figcaption class="image-caption">User profile page</figcaption>
                     </figure>
                 </div>
+
+                <div class="image-column">
+                    <figure>
+                        <img src="../assets/images/calendar.png" alt="Calendar Screenshot" class="screenshot">
+                        <figcaption class="image-caption">Ride scheduling calendar interface</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/images/ride-details.png" alt="Ride Details Screenshot" class="screenshot">
+                        <figcaption class="image-caption">Automated email after booking a ride</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="../assets/images/profile.png" alt="Profile Page Screenshot" class="screenshot">
+                        <figcaption class="image-caption">User profile page</figcaption>
+                    </figure>
+                </div>
             </div>
         </main>
-        <div class="lightbox" id="lightbox">
-            <span class="lightbox-close">&times;</span>
-            <div class="lightbox-content">
-                <img src="" alt="Fullscreen image" id="lightbox-img">
-            </div>
-        </div>
-</div>
-<script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const lightboxClose = document.querySelector('.lightbox-close');
-
-    function openLightbox(src) {
-        lightboxImg.src = src;
-        lightbox.style.display = 'flex';
-        
-        // Center the image after it's loaded
-        lightboxImg.onload = function() {
-            this.style.marginLeft = '0';
-            this.style.marginTop = '0';
-        }
-    }
-
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-    }
-
-    document.querySelectorAll('.image-column img, .image-row img, .single-image').forEach(img => {
-        img.style.cursor = 'pointer';
-        img.addEventListener('click', function() {
-            openLightbox(this.src);
-        });
-    });
-
-    lightbox.addEventListener('click', closeLightbox);
-    lightboxClose.addEventListener('click', function(e) {
-        e.stopPropagation();
-        closeLightbox();
-    });
-    lightboxImg.addEventListener('click', function(e) {
-        e.stopPropagation();
-    });
-</script>
-
-</body> 
+    </body>
 </html>
