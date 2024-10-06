@@ -7,31 +7,30 @@
         <meta name="description" content="Justin's Engineering Portfolio showcasing projects from Bruin Formula Racing.">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		    <link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/layout.css">
         <link rel="stylesheet" href="../css/typography.css">
         <link rel="stylesheet" href="../css/utilities.css">
 
-		    <script defer src="../js/script.js"></script>
-
+		<script defer src="../js/script.js"></script>
 
         <style>
           /* Flexbox for two-column layout */
-
-          /* Full-width section */
           .full-width-section {
               width: 100%;
+              margin-bottom: 40px;
           }
           
           .two-columns {
               display: flex;
               justify-content: space-between;
               gap: 20px;
+              flex-wrap: wrap;
           }
 
           /* Columns */
           .text-content {
               flex: 1;
-              max-width: 60%;
+              min-width: 300px;
           }
 
           .image-column {
@@ -40,24 +39,40 @@
               gap: 15px;
               flex: 1;
               align-items: center;
+              min-width: 300px;
           }
 
           .image-column img {
               max-width: 100%;
               height: auto;
-              object-fit: contain;
+              object-fit: cover;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              transition: transform 0.3s ease;
+          }
+
+          .image-column img:hover {
+              transform: scale(1.05);
           }
 
           .image-row {
               display: flex;
               justify-content: space-between;
               gap: 10px;
+              flex-wrap: wrap;
           }
 
           .image-row img {
               max-width: 48%;
               height: auto;
-              object-fit: contain;
+              object-fit: cover;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              transition: transform 0.3s ease;
+          }
+
+          .image-row img:hover {
+              transform: scale(1.05);
           }
 
           .single-image {
@@ -66,17 +81,20 @@
               margin-left: auto;
               max-width: 100%;
               height: auto;
+              border-radius: 8px;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+              transition: transform 0.3s ease;
+          }
+
+          .single-image:hover {
+              transform: scale(1.05);
           }
 
           /* General styling */
-          img {
-              max-width: 100%;
-              height: auto;
-              object-fit: contain;
-          }
-
           hr {
               margin: 40px 0;
+              border: none;
+              border-top: 1px solid #ccc;
           }
 
           .project {
@@ -86,6 +104,8 @@
           /* Main content */
           main {
               padding: 20px;
+              max-width: 1200px;
+              margin: 0 auto;
           }
 
           header {
@@ -95,30 +115,34 @@
           /* Text styles */
           h1, .main-title {
               font-size: 2.5em;
-              margin-bottom: 10px;
+              margin-bottom: 20px;
+              color: #333;
           }
 
           h2, .project-title, .subheader-text {
-              font-size: 1.5em;
+              font-size: 1.8em;
               font-weight: bold;
               margin-bottom: 15px;
+              color: #444;
           }
 
           h3 {
-              font-size: 1.2em;
+              font-size: 1.4em;
               margin-top: 20px;
               margin-bottom: 10px;
+              color: #555;
           }
 
           .project-description, .description-content p, .body-text, ul.accomplishments, .project-list {
               font-size: 18px;
-              font-weight: bold;
               line-height: 1.6;
+              color: #666;
           }
 
           ul.accomplishments, .project-list {
               list-style-type: disc;
               margin-left: 20px;
+              margin-bottom: 20px;
           }
 
           /* Body and container styling */
@@ -127,11 +151,36 @@
               line-height: 1.6;
               color: #333;
               font-size: 18px;
-              font-weight: bold;
+              background-color: #f9f9f9;
+          }
+
+          /* Responsive adjustments */
+          @media only screen and (max-width: 768px) {
+              .two-columns {
+                  flex-direction: column;
+              }
+              
+              .text-content, .image-column {
+                  max-width: 100%;
+              }
+
+              h1, .main-title {
+                  font-size: 2em;
+              }
+
+              h2, .project-title, .subheader-text {
+                  font-size: 1.5em;
+              }
+
+              h3 {
+                  font-size: 1.2em;
+              }
+
+              .project-description, .description-content p, .body-text, ul.accomplishments, .project-list {
+                  font-size: 16px;
+              }
           }
         </style>
-
-<script defer src="../js/script.js"></script>
 	</head>
 	<body class="project-page">
         <!-- MAIN PAGE CONTENT -->
