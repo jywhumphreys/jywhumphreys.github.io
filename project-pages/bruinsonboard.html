@@ -240,22 +240,51 @@
                         <figcaption class="image-caption">User profile page</figcaption>
                     </figure>
                 </div>
-
-                <div class="image-column">
-                    <figure>
-                        <img src="../assets/images/calendar.png" alt="Calendar Screenshot" class="screenshot">
-                        <figcaption class="image-caption">Ride scheduling calendar interface</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/images/ride-details.png" alt="Ride Details Screenshot" class="screenshot">
-                        <figcaption class="image-caption">Automated email after booking a ride</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="../assets/images/profile.png" alt="Profile Page Screenshot" class="screenshot">
-                        <figcaption class="image-caption">User profile page</figcaption>
-                    </figure>
-                </div>
             </div>
         </main>
-    </body>
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <img src="" alt="Fullscreen image" id="lightbox-img">
+            </div>
+        </div>
+</div>
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    function openLightbox(src) {
+        lightboxImg.src = src;
+    lightbox.style.display = 'flex';
+    
+    // Center the image after it's loaded
+    lightboxImg.onload = function() {
+    this.style.marginLeft = '0';
+    this.style.marginTop = '0';
+    }
+    }
+
+    function closeLightbox() {
+    lightbox.style.display = 'none';
+    }
+
+    document.querySelectorAll('.image-column img, .image-row img, .single-image, .project-header-image img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+    openLightbox(this.src);
+    });
+    });
+
+    lightbox.addEventListener('click', closeLightbox);
+    lightboxClose.addEventListener('click', function(e) {
+    e.stopPropagation();
+    closeLightbox();
+    });
+    lightboxImg.addEventListener('click', function(e) {
+    e.stopPropagation();
+    });
+</script>
+
+</body>
 </html>
