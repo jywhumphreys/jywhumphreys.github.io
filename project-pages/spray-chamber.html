@@ -6,114 +6,52 @@
     <title>SpaceX | Justin's Portfolio</title>
     <meta name="description" content="Justin's work at SpaceX">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
+
 		<script defer src="../js/script.js"></script>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
-        flex-wrap: wrap;
-      }
-      .navbar-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-      }
-      .nav-title-link {
-        text-decoration: none;
-        color: #333;
-      }
-      .nav-title {
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-      .nav-social-links {
-        display: flex;
-        gap: 1rem;
-      }
-      .icon-link {
-        display: inline-block;
-      }
-      .nav-icon {
-        width: 24px;
-        height: 24px;
-      }
       .project-header {
-        margin-bottom: 2rem;
+          margin-bottom: 20px;
       }
       .project-title {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-        color: #007bff;
+          font-size: 2.5em;
+          margin-bottom: 10px;
       }
       .project-role {
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-        color: #6c757d;
+          font-size: 1.5em;
+          margin-bottom: 10px;
       }
       .project-description {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 1.6;
+          margin-bottom: 20px;
       }
       .extra-bold {
-        font-weight: 700;
-        color: #dc3545;
+          font-weight: 900; /* Extra bold */
       }
       .divider {
-        border-top: 1px solid #dee2e6;
-        margin: 2rem 0;
+          border-top: 1px solid #ccc;
+          margin: 20px 0;
       }
       .image-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
       }
       .image-grid img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-      .image-grid img:hover {
-        transform: scale(1.05);
-      }
-      @media (max-width: 768px) {
-        .navbar-content {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .nav-social-links {
-          margin-top: 1rem;
-        }
-        .project-title {
-          font-size: 2rem;
-        }
-        .project-role {
-          font-size: 1rem;
-        }
-        .image-grid {
-          grid-template-columns: 1fr;
-        }
+          width: 100%;
+          height: auto;
+          object-fit: cover;
       }
     </style>
+
   </head>
 <body class="project-page">
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="navbar-content">
       <a class="nav-title-link" href="../index.html">
@@ -132,6 +70,8 @@
       </div>
     </div>
   </nav>
+
+  <!-- MAIN PAGE CONTENT -->
   <main id="main-content">
     <div class="project-header">
       <h1 class="project-title">SpaceX</h1>
@@ -140,7 +80,9 @@
         During the summer of 2024, I interned at SpaceX as a Hardware Reliability Engineering Intern on the Starlink team and had an amazing experience. <span class="extra-bold">Due to confidentiality reasons, I am limited in what I can disclose here.</span>
  I developed an IPX9 chamber capable of spraying at 3500 PSI, 6 GPM, and 98°C to simulate extreme cleaning conditions for consumer-grade satellite equipment. I engineered custom systems for the IPX9 chamber including a heated water tank, pump system and skid, drain pan, enclosure, and control panel using Siemens NX and EPLAN Pro Panel. Additionally, I created an IPX8 chamber to simulate water immersion up to 3.5 meters depth for Starlink user terminal testing. I performed structural analysis using ANSYS to ensure chamber integrity under high-pressure conditions.</p>
     </div>
+
     <div class="divider"></div>
+
     <div class="image-grid">
       <img src="../assets/images/spacex-1.jpg" alt="The team at Bastrop">
       <img src="../assets/images/weather.jpg" alt="Starlink dish in rain">
