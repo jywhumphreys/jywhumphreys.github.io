@@ -435,11 +435,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
 .lightbox img {
-    max-width: calc(100% - 40px);
-    max-height: calc(100% - 40px);
+    max-width: 95vw;
+    max-height: 95vh;
     object-fit: contain;
 }
 
@@ -450,4 +451,5 @@ body {
     color: white;
     font-size: 30px;
     cursor: pointer;
+    z-index: 1000;
 }

@@ -399,6 +399,12 @@
       function openLightbox(src) {
           lightboxImg.src = src;
           lightbox.style.display = 'flex';
+          
+          // Center the image after it's loaded
+          lightboxImg.onload = function() {
+              this.style.marginLeft = '0';
+              this.style.marginTop = '0';
+          }
       }
 
       function closeLightbox() {
@@ -413,7 +419,10 @@
       });
 
       lightbox.addEventListener('click', closeLightbox);
-      lightboxClose.addEventListener('click', closeLightbox);
+      lightboxClose.addEventListener('click', function(e) {
+          e.stopPropagation();
+          closeLightbox();
+      });
       lightboxImg.addEventListener('click', function(e) {
           e.stopPropagation();
       });
