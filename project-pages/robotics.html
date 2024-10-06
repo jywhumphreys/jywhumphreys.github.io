@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../css/utilities.css">
 
 		<script defer src="../js/script.js"></script>
-        <style>
+       <style>
             .project-header-content {
                 display: flex;
                 flex-direction: column;
@@ -33,13 +33,21 @@
                 justify-content: space-between;
                 align-items: center;
                 gap: 20px;
-                flex-wrap: wrap;
+            }
+
+            .image-row-top img:first-child {
+                width: 35%; /* Set a fixed width for the first image */
+                height: auto;
+                object-fit: contain;
+            }
+
+            .image-row-top img:last-child {
+                flex-grow: 1; /* Let the second image take up the remaining space */
+                height: auto;
+                object-fit: contain;
             }
 
             .image-row-top img {
-                max-width: 100%;
-                height: auto;
-                object-fit: cover;
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
                 transition: transform 0.3s ease;
@@ -132,13 +140,20 @@
                 .project-description, .body-text {
                     font-size: 14px;
                 }
-                .image-row-top img, .image-row-bottom img, .image-column img {
+                .image-row-bottom img, .image-column img {
                     max-width: 100%;
                 }
                 .main-content {
                     flex-direction: column;
                 }
                 .text-column, .image-column {
+                    width: 100%;
+                }
+                .image-row-top {
+                    flex-direction: column;
+                }
+                .image-row-top img:first-child,
+                .image-row-top img:last-child {
                     width: 100%;
                 }
             }
