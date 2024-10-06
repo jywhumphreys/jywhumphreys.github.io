@@ -6,36 +6,36 @@
     <title>SpaceX | Justin's Portfolio</title>
     <meta name="description" content="Justin's work at SpaceX">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
 		<link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/typography.css">
     <link rel="stylesheet" href="../css/utilities.css">
-
 		<script defer src="../js/script.js"></script>
     <style>
       .project-header {
-          margin-bottom: 20px;
+          margin-bottom: 30px;
       }
       .project-title {
           font-size: 2.5em;
-          margin-bottom: 10px;
+          margin-bottom: 15px;
       }
       .project-role {
           font-size: 1.5em;
-          margin-bottom: 10px;
+          margin-bottom: 15px;
+          color: #555;
       }
       .project-description {
           font-size: 18px;
           font-weight: bold;
           line-height: 1.6;
-          margin-bottom: 20px;
+          margin-bottom: 25px;
       }
       .extra-bold {
-          font-weight: 900; /* Extra bold */
+          font-weight: 900;
+          color: #d32f2f;
       }
       .divider {
           border-top: 1px solid #ccc;
-          margin: 20px 0;
+          margin: 30px 0;
       }
       .image-grid {
           display: grid;
@@ -46,9 +46,39 @@
           width: 100%;
           height: auto;
           object-fit: cover;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease;
+      }
+      .image-grid img:hover {
+          transform: scale(1.05);
+      }
+      @media only screen and (max-width: 768px) {
+          .project-title {
+              font-size: 2em;
+          }
+          .project-role {
+              font-size: 1.2em;
+          }
+          .project-description {
+              font-size: 16px;
+          }
+          .image-grid {
+              grid-template-columns: 1fr;
+          }
+      }
+      @media only screen and (max-width: 480px) {
+          .project-title {
+              font-size: 1.8em;
+          }
+          .project-role {
+              font-size: 1.1em;
+          }
+          .project-description {
+              font-size: 14px;
+          }
       }
     </style>
-
   </head>
 <body class="project-page">
   <!-- NAVBAR -->
@@ -70,7 +100,6 @@
       </div>
     </div>
   </nav>
-
   <!-- MAIN PAGE CONTENT -->
   <main id="main-content">
     <div class="project-header">
@@ -80,9 +109,7 @@
         During the summer of 2024, I interned at SpaceX as a Hardware Reliability Engineering Intern on the Starlink team and had an amazing experience. <span class="extra-bold">Due to confidentiality reasons, I am limited in what I can disclose here.</span>
  I developed an IPX9 chamber capable of spraying at 3500 PSI, 6 GPM, and 98°C to simulate extreme cleaning conditions for consumer-grade satellite equipment. I engineered custom systems for the IPX9 chamber including a heated water tank, pump system and skid, drain pan, enclosure, and control panel using Siemens NX and EPLAN Pro Panel. Additionally, I created an IPX8 chamber to simulate water immersion up to 3.5 meters depth for Starlink user terminal testing. I performed structural analysis using ANSYS to ensure chamber integrity under high-pressure conditions.</p>
     </div>
-
     <div class="divider"></div>
-
     <div class="image-grid">
       <img src="../assets/images/spacex-1.jpg" alt="The team at Bastrop">
       <img src="../assets/images/weather.jpg" alt="Starlink dish in rain">
