@@ -34,19 +34,34 @@
                 align-items: center;
                 gap: 20px;
             }
-            .image-row-top img:first-child {
-                width: 35%; /* Set a fixed width for the first image */
-                height: auto;
-                object-fit: contain;
-            }
-            .image-row-top img:last-child {
-                flex-grow: 1; /* Let the second image take up the remaining space */
-                height: auto;
-                object-fit: contain;
+            .image-row-top figure {
+                flex: 1;
+                margin: 0;
             }
             .image-row-top img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            .image-row-top figure:first-child {
+                flex: 0 0 35%; /* This will make the first image take up 35% of the row */
+            }
+            .image-row-top figure:last-child {
+                flex: 1; /* This will make the second image take up the remaining space */
+            }
+
+            @media (max-width: 768px) {
+                .image-row-top {
+                    flex-direction: column;
+                }
+                .image-row-top figure,
+                .image-row-top figure:first-child,
+                .image-row-top figure:last-child {
+                    width: 100%;
+                    flex: none;
+                }
             }
             .image-row-bottom {
                 display: flex;
