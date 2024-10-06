@@ -44,6 +44,19 @@
                 flex: 1;
                 min-width: 300px;
             }
+
+            .image-row-top img:first-child {
+                width: 35%; /* Set a fixed width for the first image */
+                height: auto;
+                object-fit: contain;
+            }
+
+            .image-row-top img:last-child {
+                flex-grow: 1; /* Let the second image take up the remaining space */
+                height: auto;
+                object-fit: contain;
+            }
+            
             .image-row-top img {
                 width: 100%;
                 height: auto;
