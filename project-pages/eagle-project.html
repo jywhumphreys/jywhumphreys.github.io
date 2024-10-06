@@ -203,7 +203,7 @@
       lightbox.style.display = 'none';
   }
 
-  document.querySelectorAll('.image-column img, .image-row img, .single-image').forEach(img => {
+  document.querySelectorAll('.image-column img, .image-row img, .single-image, .image-gallery img').forEach(img => {
       img.style.cursor = 'pointer';
       img.addEventListener('click', function() {
           openLightbox(this.src);
