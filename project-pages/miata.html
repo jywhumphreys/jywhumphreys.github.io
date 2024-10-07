@@ -14,24 +14,33 @@
 		<script defer src="../js/script.js"></script>
         <style>
 
+            .project-content {
+                width: 100%;
+            }
+
             .project-header-content {
                 display: flex;
-                flex-direction: column;
+                justify-content: space-between;
                 align-items: flex-start;
-                width: 100%;
+                gap: 30px;
                 margin-bottom: 30px;
             }
 
             .project-header-text {
-                width: 100%;
-                margin-bottom: 20px;
+                flex: 1;
+                min-width: 250px;
                 text-align: left;
+            }
+
+            .project-header-image-container {
+                flex: 2;
+                display: flex;
+                justify-content: center;
             }
 
             .project-header-image {
                 width: 75%;
-                max-width: 1000px; /* Adjust this value as needed */
-                align-self: center;
+                max-width: 800px; /* Adjust this value as needed */
             }
 
             .project-header-image figure {
@@ -61,10 +70,18 @@
             }
 
             @media (max-width: 768px) {
+                .project-header-content {
+                    flex-direction: column;
+                }
+
+                .project-header-image-container {
+                    width: 100%;
+                }
+
                 .project-header-image {
                     width: 100%;
                 }
-            }            
+            }
             .section-content {
                 display: flex;
                 gap: 30px;
@@ -215,11 +232,13 @@
                     <div class="project-header-text">
                         <p class="project-description">In October of 2020, I bought a barely running, 30-year-old Mazda Miata with a bad engine, multiple leaks, and dozens of other problems I would discover throughout the process of restoring it. Knowing almost nothing about cars, I dove in head-first. Over the span of the last few years, I have taken apart and reassembled almost every component of this car and developed a thorough understanding of what it takes to build a reliable, high-performing vehicle.</p>
                     </div>
-                    <div class="project-header-image">
-                        <figure>
-                            <img src="../assets/images/mazda-miata.jpg" alt="1991 Mazda Miata">
-                            <figcaption>My 1991 Mazda Miata after restoration</figcaption>
-                        </figure>
+                    <div class="project-header-image-container">
+                        <div class="project-header-image">
+                            <figure>
+                                <img src="../assets/images/mazda-miata.jpg" alt="1991 Mazda Miata">
+                                <figcaption>My 1991 Mazda Miata after restoration</figcaption>
+                            </figure>
+                        </div>
                     </div>
                 </div>
                 <div class="divider"></div>
