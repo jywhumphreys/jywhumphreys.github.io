@@ -44,8 +44,6 @@
 
       .image-grid figure {
           margin: 0;
-          display: flex;
-          flex-direction: column;
       }
 
       .image-grid img {
@@ -62,14 +60,11 @@
       }
 
       .image-grid figcaption {
-          background-color: #f8f8f8;
-          padding: 10px;
           text-align: center;
-          font-size: 14px;
-          color: #444;
-          margin-top: 8px;
+          margin-top: 10px;
+          font-style: italic;
+          color: #666;
       }
-
       @media only screen and (max-width: 768px) {
           .image-grid {
               grid-template-columns: 1fr;
@@ -174,23 +169,23 @@
   }
 
   function closeLightbox() {
-  lightbox.style.display = 'none';
+      lightbox.style.display = 'none';
   }
 
   document.querySelectorAll('.image-column img, .image-row img, .single-image, .image-grid img').forEach(img => {
-  img.style.cursor = 'pointer';
-  img.addEventListener('click', function() {
-  openLightbox(this.src);
-  });
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', function() {
+          openLightbox(this.src);
+      });
   });
 
   lightbox.addEventListener('click', closeLightbox);
   lightboxClose.addEventListener('click', function(e) {
-  e.stopPropagation();
-  closeLightbox();
+      e.stopPropagation();
+      closeLightbox();
   });
   lightboxImg.addEventListener('click', function(e) {
-  e.stopPropagation();
+      e.stopPropagation();
   });
 </script>
 
