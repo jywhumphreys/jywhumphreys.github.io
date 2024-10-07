@@ -35,6 +35,8 @@
                 object-fit: cover;
                 border-radius: 8px;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+
             }
             
             .section-content {
@@ -381,28 +383,28 @@
         lightboxImg.onload = function() {
             this.style.marginLeft = '0';
             this.style.marginTop = '0';
-        }
+    }
     }
 
     function closeLightbox() {
-        lightbox.style.display = 'none';
+    lightbox.style.display = 'none';
     }
 
     document.querySelectorAll('.image-column img, .image-row img, .single-image, .project-header-image img').forEach(img => {
         img.style.cursor = 'pointer';
         img.addEventListener('click', function() {
-            openLightbox(this.src);
+        openLightbox(this.src);
         });
-    });
+        });
 
-    lightbox.addEventListener('click', closeLightbox);
-    lightboxClose.addEventListener('click', function(e) {
+        lightbox.addEventListener('click', closeLightbox);
+        lightboxClose.addEventListener('click', function(e) {
         e.stopPropagation();
         closeLightbox();
-    });
-    lightboxImg.addEventListener('click', function(e) {
+        });
+        lightboxImg.addEventListener('click', function(e) {
         e.stopPropagation();
-    });
+        });
 </script>
 
 </body>
