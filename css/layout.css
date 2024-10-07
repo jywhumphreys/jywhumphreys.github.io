@@ -211,13 +211,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding-bottom: 60px; /* Add padding at the bottom */
+  padding-bottom: 60px;
 }
 
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
+  padding: 20px;
 }
 
 .image-caption {
@@ -288,7 +289,6 @@ body {
   -webkit-box-orient: vertical;
 }
 
-
 /* New styles for social icons under resume button */
 .resume-social-links {
   display: flex;
@@ -311,7 +311,7 @@ body {
 .project-page #main-content {
   width: 80%;
   max-width: none;
-  margin: 0 auto; /* Center the content */
+  margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -324,7 +324,7 @@ body {
 .project-page .project-header-image {
   width: 100%;
   height: auto;
-  max-height: 600px; /* Adjust as needed */
+  max-height: 600px;
   object-fit: cover;
 }
 
@@ -351,7 +351,6 @@ body {
   }
 }
 
-
 /* Responsive adjustments */
 @media only screen and (max-width: 1200px) {
   .navbar-content,
@@ -359,7 +358,7 @@ body {
     max-width: 95%;
   }
   #my-work-section {
-    padding-bottom: 50px; /* Slightly reduced padding for smaller screens */
+    padding-bottom: 50px;
   }
 }
 
@@ -378,6 +377,7 @@ body {
   }
   .projects-container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 10px;
   }
   .nav-icon,
   .resume-icon {
@@ -393,12 +393,27 @@ body {
   #my-work-section {
     padding-bottom: 30px;
   }
+  .project-image {
+    height: 180px;
+  }
+  .project-card-text-container {
+    padding: 12px;
+  }
+  .project-company {
+    font-size: 1.1rem;
+  }
+  .project-title {
+    font-size: 1rem;
+  }
+  .project-card-text {
+    font-size: 0.85rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   #main-content {
     padding-top: 160px;
-    padding-left: 10px; /* Reduce side padding on very small screens */
+    padding-left: 10px;
     padding-right: 10px;
   }
   .projects-container {
@@ -416,6 +431,21 @@ body {
   }
   #my-work-section {
     padding-bottom: 20px;
+  }
+  .project-image {
+    height: 160px;
+  }
+  .project-card-text-container {
+    padding: 10px;
+  }
+  .project-company {
+    font-size: 1rem;
+  }
+  .project-title {
+    font-size: 0.95rem;
+  }
+  .project-card-text {
+    font-size: 0.8rem;
   }
 }
 
@@ -458,6 +488,7 @@ body {
     cursor: pointer;
     z-index: 1000;
 }
+
 .footer {
   width: 100%;
   text-align: center;
